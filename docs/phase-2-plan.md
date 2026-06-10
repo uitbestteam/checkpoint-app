@@ -150,9 +150,9 @@ COMMIT
 | **M5** ✅ | FE: CHECK-IN bằng GPS → tạo thật end-to-end + toast XP | — |
 | **M6** ✅ | FE: checkpoint detail sheet + ảnh | — |
 | **M7** ✅ | FE: my checkpoints + nối Profile | — |
-| **M8** ⏳ | Polish (empty states ✅, optimistic), thêm tests, deploy | — |
+| **M8** ⏳ | Polish: tab Create = **trang full check-in GPS** ✅ (form/permission tách content↔Sheet, success → về Map); Map giữ sheet. Còn marker đẹp hơn, optimistic, test, deploy | — |
 
-Phase 2 **feature-complete (M1–M7)** — chỉ còn M8 (polish + test thêm + deploy).
+Phase 2 **feature-complete (M1–M7)** — M8 đang làm dần (tab Create đã wire). "Cắm cờ theo địa điểm" để Phase 4.
 
 ## 5. Test
 - **BE:** `levelForXP` (table-driven), service create (mock repo) — verify cộng XP & level; (tùy chọn) repo integration test với DB thật cho spatial.

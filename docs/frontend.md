@@ -27,6 +27,7 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **CreateCheckpointSheet**: CHECK-IN lấy GPS → form (name/category/note/rating/ảnh) → `POST /checkpoints` + upload ảnh → invalidate query → toast `+XP`.
 - **CheckpointDetailSheet**: tap marker → `GET /checkpoints/{id}` (ảnh, note, rating, author). Ảnh xem bằng **react-photo-view** (zoom / xoay / kéo).
 - **Image picker** (lúc tạo): thumbnail list + preview (react-photo-view) + xóa từng ảnh; object URL được revoke khi xóa/unmount.
+- **Check-in 2 kiểu** (content tách khỏi Sheet): `CreateCheckpointForm` + `LocationPermissionContent` render trong **Sheet** (nút Map, qua `useCheckin`) hoặc **full-page** (tab Create → success tự về Map).
 - **LocationPermissionSheet**: chưa grant → popup giải thích rồi mới gọi native prompt. Khi **denied** → hướng dẫn bật lại **theo nền tảng + chế độ PWA** (Android/iOS/desktop × standalone/tab) + tự phát hiện khi user bật lại (Permissions API `onchange` → auto continue). Không có web API mở settings nên chỉ hướng dẫn được.
 - **ProfilePage**: "Khoảnh khắc" nối `GET /checkpoints/me` (empty state khi chưa có).
 - `lib/maps.ts` (style + categories), `lib/api.ts` (checkpoint endpoints), `components/ui/{Sheet,Toast}`.

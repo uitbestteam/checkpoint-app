@@ -4,10 +4,10 @@
 
 ## TL;DR
 
-- **Đang ở Phase 1 (Foundation).**
-- **Backend:** Phase 1 *code xong* (auth + profile chạy thật, có CORS), chỉ còn **deploy thật** + **viết test**.
-- **Frontend:** vỏ giao diện 5 màn + **luồng auth đã nối thật** (Supabase login → exchange → token → `/users/me`). Các màn khác vẫn data giả.
-- **Auth end-to-end ✅:** login (email/Google) → BE exchange → app_token → Profile hiển thị user thật, auto-refresh khi 401.
+- **Phase 1 (Foundation): ✅ xong.** **Phase 2 (Checkpoint Core): M1–M7 ✅**, chỉ còn M8 (polish + deploy + test).
+- **Backend:** auth (JWKS + anonymous + upgrade), profile, checkpoint (check-in + XP atomic, spatial map, ảnh→R2) đều chạy thật. Còn: deploy thật, viết test.
+- **Frontend:** auth end-to-end, **map thật (MapLibre)** + check-in GPS + detail, PWA đầy đủ. Discover/AIPlan vẫn data giả.
+- **Đã làm thêm (ngoài roadmap):** anonymous + upgrade tài khoản, re-auth 2 tầng + single-flight, image preview/zoom/xoay, bottom-sheet kéo được, popup xin quyền vị trí, lưu object key (không lưu full URL).
 
 ```
 Phase 1  ██████████████████  done (auth + profile + PWA)
@@ -40,7 +40,7 @@ Phase 3+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 
 ✅ chạy thật · 🟡 UI/khung có nhưng chưa hoạt động · ❌ chưa làm
 
-**Đọc bảng:** BE chỉ làm đúng feature 1–2 (đúng Phase 1) nhưng *chạy được*. FE vẽ UI cho gần hết 16 feature nhưng *chưa cái nào nối backend*.
+**Đọc bảng:** feature 1–8 + 14 (Identity + Checkpoint Core + XP) **chạy thật end-to-end**. Còn lại 9–13, 15–16 (Journey, Discovery, Share, AI) là Phase 3+ — FE mới có mockup, BE chưa làm.
 
 ---
 
@@ -71,7 +71,8 @@ Phase 3+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 
 Phase 2–7 (Checkpoint Core → AI → Polish) **backend chưa động tới**. FE đã có sẵn mockup nên khi BE làm xong từng phase chỉ việc thay data giả bằng API. Chi tiết roadmap: [../CHECKPOINT.md](../CHECKPOINT.md).
 
-➡️ **Phase 2 đã có plan chi tiết:** [phase-2-plan.md](phase-2-plan.md) — check-in GPS + hiện checkpoint trên map (MapLibre + OpenFreeMap, TanStack Query, PostGIS, transaction + SELECT FOR UPDATE).
+➡️ **Phase 2 plan:** [phase-2-plan.md](phase-2-plan.md) (M1–M7 ✅).
+➡️ **Phase 4 Discovery plan:** [phase-4-discovery-plan.md](phase-4-discovery-plan.md) — Place (pg_trgm + PostGIS), search/nearby/feed/popular, + hoàn thiện auth Google redirect & gộp anonymous (`linkIdentity`).
 
 ---
 
