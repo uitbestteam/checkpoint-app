@@ -21,6 +21,15 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - `ProfilePage` nối `GET /users/me` (tên, @username, XP, level, số cờ, hành trình) + nút đăng xuất.
 - `components/UpgradeBanner.tsx` + `upgradeAccount()` — khách nâng cấp lên tài khoản thật (`updateUser`), giữ nguyên data.
 
+### Checkpoint / Map (Phase 2 ✅ — nối API thật)
+- **MapPage**: `react-map-gl/maplibre` + OpenFreeMap, fetch theo viewport (`?bbox`) qua **TanStack Query**, markers theo category. Lazy-load (maplibre ~284KB tách chunk riêng).
+- **CreateCheckpointSheet**: CHECK-IN lấy GPS → form (name/category/note/rating/ảnh) → `POST /checkpoints` + upload ảnh → invalidate query → toast `+XP`.
+- **CheckpointDetailSheet**: tap marker → `GET /checkpoints/{id}` (ảnh, note, rating, author). Ảnh xem bằng **react-photo-view** (zoom / xoay / kéo).
+- **Image picker** (lúc tạo): thumbnail list + preview (react-photo-view) + xóa từng ảnh; object URL được revoke khi xóa/unmount.
+- **LocationPermissionSheet**: chưa grant → popup giải thích rồi mới gọi native prompt. Khi **denied** → hướng dẫn bật lại **theo nền tảng + chế độ PWA** (Android/iOS/desktop × standalone/tab) + tự phát hiện khi user bật lại (Permissions API `onchange` → auto continue). Không có web API mở settings nên chỉ hướng dẫn được.
+- **ProfilePage**: "Khoảnh khắc" nối `GET /checkpoints/me` (empty state khi chưa có).
+- `lib/maps.ts` (style + categories), `lib/api.ts` (checkpoint endpoints), `components/ui/{Sheet,Toast}`.
+
 ### UI components & pages (tĩnh — chưa nối API)
 - **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`.
 - **BottomNav:** 5 tab Map · Discover · Create · AI Plan · Profile (active pill cam/xanh).
@@ -39,7 +48,7 @@ vite.config.ts  wrangler.jsonc  index.html
 
 ## Còn thiếu (quan trọng)
 
-- 🟡 **4 màn còn lại vẫn data giả** (Map/Discover/Create/AIPlan) — auth + Profile đã nối thật.
+- 🟡 **Discover + AIPlan vẫn data giả** — Map/Profile/auth đã nối thật. (CreatePage tab cũ giờ thừa, check-in thật qua sheet trên Map.)
 - ❌ Chưa có state management / data fetching cache (gợi ý: TanStack Query) — hiện gọi fetch trực tiếp.
 - ❌ Chưa có map thật (gợi ý: Mapbox GL), ảnh thật, hay xử lý GPS.
 - ⚠️ `npm audit` báo vài lỗ hổng từ dev-deps (không ảnh hưởng bundle production).

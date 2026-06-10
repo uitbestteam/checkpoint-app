@@ -10,8 +10,9 @@
 - **Auth end-to-end ✅:** login (email/Google) → BE exchange → app_token → Profile hiển thị user thật, auto-refresh khi 401.
 
 ```
-Phase 1  ██████████████████  BE ~92%  |  FE ~55% (auth wired)
-Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đầu (BE)
+Phase 1  ██████████████████  done (auth + profile + PWA)
+Phase 2  ████████████████░░  Checkpoint Core M1–M7 ✅ (chỉ còn M8 polish/deploy)
+Phase 3+ ░░░░░░░░░░░░░░░░░░  chưa bắt đầu
 ```
 
 ---
@@ -22,18 +23,18 @@ Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 |---|---------|:---:|:---:|---|
 | 1 | Authentication | ✅ | ✅ | **End-to-end**: BE exchange/refresh/logout + JWKS + CORS + **anonymous**; FE login (email/Google/khách) + token store + auto-refresh |
 | 2 | User Profile | ✅ | 🟡 | BE: get/update/avatar. FE: ProfilePage đã nối `GET /users/me` (header/stats thật); update/avatar chưa |
-| 3 | Map | ❌ | 🟡 | FE: MapPage tĩnh (chưa map thật) |
-| 4 | GPS Check-in | ❌ | 🟡 | FE: nút CHECK-IN (UI), chưa gửi GPS |
-| 5 | Create Checkpoint | ❌ | 🟡 | FE: CreatePage form (UI) |
-| 6 | Upload Image | 🟡 | 🟡 | BE: R2 client + avatar upload xong; chưa upload cho checkpoint |
-| 7 | Add Note / Review | ❌ | 🟡 | FE: textarea trong CreatePage |
-| 8 | Checkpoint Detail | ❌ | ❌ | chưa có 2 bên |
+| 3 | Map | ✅ | ✅ | BE `?bbox`/`/nearby` (PostGIS). FE **MapLibre** thật + markers theo viewport |
+| 4 | GPS Check-in | ✅ | ✅ | BE `POST /checkpoints` +XP. FE nút CHECK-IN lấy GPS → tạo thật + toast |
+| 5 | Create Checkpoint | ✅ | ✅ | BE create. FE CreateCheckpointSheet (name/category/note/rating/ảnh) |
+| 6 | Upload Image | ✅ | ✅ | BE `POST /{id}/images` → R2. FE chọn ảnh khi check-in |
+| 7 | Add Note / Review | ✅ | ✅ | note + rating trong check-in |
+| 8 | Checkpoint Detail | ✅ | ✅ | BE detail+images+author. FE detail sheet (ảnh, note, rating, author) |
 | 9 | Share Check-in Card | ❌ | ❌ | chưa có 2 bên |
 | 10 | Journey Timeline | ❌ | 🟡 | FE: timeline trong AIPlanPage (mock) |
 | 11 | Journey Map | ❌ | ❌ | chưa có 2 bên |
 | 12 | Place Detail | ❌ | ❌ | chưa có 2 bên |
 | 13 | Search Place | ❌ | 🟡 | FE: search bar (UI) trong MapPage |
-| 14 | Basic XP & Level | 🟡 | 🟡 | BE: cột `total_xp`/`level` trong schema, chưa có logic. FE: badge/level UI |
+| 14 | Basic XP & Level | ✅ | 🟡 | BE: +10 XP/check-in atomic + tính level (M1). FE: badge/level UI |
 | 15 | Discover Basic | ❌ | 🟡 | FE: DiscoverPage feed (mock) |
 | 16 | AI Plan Basic | ❌ | 🟡 | FE: AIPlanPage (mock) |
 
@@ -69,6 +70,8 @@ Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 ## Sau Phase 1
 
 Phase 2–7 (Checkpoint Core → AI → Polish) **backend chưa động tới**. FE đã có sẵn mockup nên khi BE làm xong từng phase chỉ việc thay data giả bằng API. Chi tiết roadmap: [../CHECKPOINT.md](../CHECKPOINT.md).
+
+➡️ **Phase 2 đã có plan chi tiết:** [phase-2-plan.md](phase-2-plan.md) — check-in GPS + hiện checkpoint trên map (MapLibre + OpenFreeMap, TanStack Query, PostGIS, transaction + SELECT FOR UPDATE).
 
 ---
 

@@ -16,10 +16,17 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 ### User Profile
 - `GET /users/me` · `PATCH /users/me` (display_name/bio) · `GET /users/{username}` · `POST /users/me/avatar` (multipart → R2).
 
+### Checkpoint — Phase 2 M1–M3 ✅ (domain `internal/checkpoint`)
+- `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level)
+- `GET /checkpoints?bbox=` ⭐(map, `ST_MakeEnvelope` + GIST) · `GET /checkpoints/nearby` (`ST_DWithin` + KNN)
+- `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner) · `DELETE /checkpoints/{id}` (owner)
+- Migration 0004 (`checkpoints` có `location` generated GEOGRAPHY + GIST, `checkpoint_images`). Tests: `levelForXP` (table-driven), service create + validation (mock repo).
+
 ### Hạ tầng & chất lượng
 - JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
 - **CORS** (`go-chi/cors`) — cho FE gọi API, origins qua env `CORS_ALLOWED_ORIGINS`.
 - R2 client tự viết bằng **AWS SigV4 thuần stdlib** (`pkg/storage`, 0 dep AWS).
+- **Lưu object key, không lưu full URL** (cột `avatar_key`, `checkpoint_images.object_key` — migration 0005). Public URL build lúc đọc từ `R2_PUBLIC_URL` (`storage.PublicURL`, defensive: row cũ lưu full URL vẫn chạy). → đổi CDN/bucket không cần migrate data.
 - Clean arch: `handler / service / repository`, DI qua interface (mock được).
 - `GET /health`, graceful shutdown, error wrapping `%w` + sentinel errors.
 - Migrations: `users` (có denormalized stats), `refresh_tokens` (lưu SHA-256 hash).
