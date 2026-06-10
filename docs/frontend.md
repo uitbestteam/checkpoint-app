@@ -32,6 +32,11 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **ProfilePage**: "Khoảnh khắc" nối `GET /checkpoints/me` (empty state khi chưa có).
 - `lib/maps.ts` (style + categories), `lib/api.ts` (checkpoint endpoints), `components/ui/{Sheet,Toast}`.
 
+### Discovery (Phase 4 ✅)
+- **DiscoverPage**: feed cộng đồng thật qua **`useInfiniteQuery`** (cursor) + infinite scroll (IntersectionObserver); search địa điểm (debounce, pg_trgm) → kết quả → **PlaceDetailSheet**.
+- **PlaceDetailSheet**: ảnh (react-photo-view), avg rating, số lượt cắm cờ, review gần đây, nút **"Cắm cờ tại đây"** → place-based check-in (gửi `place_id`, prefill+khóa tên).
+- **Auth Google + anonymous**: `loginGoogle` rẽ nhánh — khách → `linkIdentity` (giữ data), thường → `signInWithOAuth`; nút "Liên kết Google" trong UpgradeBanner; bắt lỗi OAuth redirect (identity trùng) hiển thị tiếng Việt.
+
 ### UI components & pages (tĩnh — chưa nối API)
 - **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`.
 - **BottomNav:** 5 tab Map · Discover · Create · AI Plan · Profile (active pill cam/xanh).

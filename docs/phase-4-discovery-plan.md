@@ -1,139 +1,147 @@
-# Phase 4 — Discovery (Plan)
+# Phase 4 — Discovery: Implementation Plan
 
-> Goal: tìm kiếm & khám phá **địa điểm (Place)** từ dữ liệu cộng đồng — search, nearby,
-> place detail, discover feed, popular. Kèm **hoàn thiện auth Google redirect + gộp tài
-> khoản anonymous**.
-> Roadmap: [../CHECKPOINT.md](../CHECKPOINT.md) · trạng thái: [STATUS.md](STATUS.md)
+> Khám phá **địa điểm (Place)** từ data cộng đồng: search · nearby · place detail · discover
+> feed · popular. Kèm **place-based check-in** (hoàn thiện tab Create) và **auth refinement**
+> (Google redirect + gộp anonymous).
+> Tổng quan: [STATUS.md](STATUS.md) · roadmap: [../CHECKPOINT.md](../CHECKPOINT.md)
 
-## Quyết định cốt lõi: tách khái niệm **Place**
-
-Hiện `checkpoint` = một lần check-in của 1 user. Discovery cần **Place** = địa điểm canonical
-mà nhiều người check-in vào.
-
-- Thêm bảng `places`. Mỗi checkpoint **gắn `place_id`**.
-- Khi check-in: **match** vào place gần + tên giống (pg_trgm + ST_DWithin ~75m); không có thì **tạo place mới**.
-- Discovery query trên `places`; place detail **tổng hợp** từ các checkpoint của place đó.
-- → Đây cũng là chỗ hiện thực **"cắm cờ theo địa điểm"** cho tab Create (check-in vào 1 place đã chọn).
-
-## Go patterns sẽ luyện
-- **pg_trgm** (fuzzy name match + GIN index), **full-text/`similarity()`** cho search.
-- **PostGIS** `ST_DWithin`/KNN cho nearby.
-- **singleflight** (`golang.org/x/sync/singleflight`) + **RWMutex TTL cache** cho "popular" (low cardinality, đổi chậm).
-- **Cursor pagination** cho feed.
+## Bối cảnh code hiện tại (đã khảo sát)
+- `checkpoint.repository.Create` chạy **transaction** (insert checkpoint → lock user → cộng XP). Place resolution sẽ thêm **vào chính tx này** để atomic.
+- `checkpoint.Service` đã có **geocoder** (Nominatim) → khi tạo place mới, **tái dùng `address` đã geocode**, không gọi lại.
+- Ảnh lưu **object key**; repo prepend `R2_PUBLIC_URL` lúc đọc → place detail (ảnh) cần `mediaBase` y như checkpoint repo.
+- Migration kế tiếp: **0006**. `golang.org/x/sync` đã có sẵn (dùng `singleflight`).
 
 ---
 
-## 1. Database (migration `0006_places`)
+## Quyết định thiết kế
+- **Place = địa điểm canonical**; mỗi checkpoint gắn `place_id`. Check-in **tự match** place gần
+  (~75m) + tên giống (pg_trgm) hoặc **tạo mới**.
+- **Resolution chạy trong tx của checkpoint** (atomic với XP). Đặt ở package `place` qua hàm
+  `ResolveInTx(ctx, tx, params)`; `checkpoint` import `place` (một chiều, không cycle).
+- Place **kế thừa** name/category/lat/lng/address từ checkpoint đầu tiên tạo nó.
+- Check-in có thể gửi **`place_id` tùy chọn** (place-based, từ màn Place detail) → bỏ qua resolution.
 
+---
+
+## D1 — BE: bảng Place + resolution trong check-in ✅
+
+**Migration `0006_places`:**
 ```sql
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
-
 CREATE TABLE places (
-  id            UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  name          TEXT NOT NULL,
-  category      TEXT NOT NULL DEFAULT 'other',
-  lat           DOUBLE PRECISION NOT NULL,
-  lng           DOUBLE PRECISION NOT NULL,
-  location      GEOGRAPHY(Point,4326)
-                GENERATED ALWAYS AS (ST_SetSRID(ST_MakePoint(lng,lat),4326)::geography) STORED,
-  address       TEXT,
-  checkin_count INT NOT NULL DEFAULT 0,   -- denormalized cho popular/ranking
-  created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL, category TEXT NOT NULL DEFAULT 'other',
+  lat DOUBLE PRECISION NOT NULL, lng DOUBLE PRECISION NOT NULL,
+  location GEOGRAPHY(Point,4326) GENERATED ALWAYS AS (ST_SetSRID(ST_MakePoint(lng,lat),4326)::geography) STORED,
+  address TEXT, checkin_count INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(), updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 CREATE INDEX idx_places_location ON places USING GIST (location);
 CREATE INDEX idx_places_name_trgm ON places USING GIN (name gin_trgm_ops);
 CREATE INDEX idx_places_checkin_count ON places (checkin_count DESC);
-
 ALTER TABLE checkpoints ADD COLUMN place_id UUID REFERENCES places(id);
 CREATE INDEX idx_checkpoints_place ON checkpoints(place_id);
 ```
 
-### Place resolution (trong transaction check-in hiện có)
+**Package mới `internal/place/`:** `model.go · repository.go · service.go · handler.go · doc.go`.
+
+**`place.Repository.ResolveInTx(ctx, tx, ResolveParams) (placeID string, err error)`** — match-or-create:
 ```sql
--- tìm place khớp: gần ~75m và tên đủ giống
+-- match
 SELECT id FROM places
 WHERE ST_DWithin(location, ST_MakePoint($lng,$lat)::geography, 75)
-  AND similarity(name, $name) > 0.3
-ORDER BY similarity(name, $name) DESC, location <-> ST_MakePoint($lng,$lat)::geography
-LIMIT 1;
--- không có → INSERT place mới
--- rồi: UPDATE places SET checkin_count = checkin_count + 1 WHERE id = $place
---      checkpoint.place_id = $place
-```
-→ Sửa `checkpoint.Repository.Create`: thêm bước resolve place **trong cùng tx** (atomic với insert checkpoint + cộng XP).
-
----
-
-## 2. Backend endpoints
-
-```
-GET /places/search?q=&lat=&lng=&limit=     full-text/trgm; lat/lng để ưu tiên gần
-GET /places/nearby?lat&lng&radius&limit     ST_DWithin, sort theo khoảng cách/popularity
-GET /places/{id}                            detail: avg rating, tổng check-in, ảnh gần đây, review gần đây
-GET /places/popular?lat&lng&limit           top theo checkin_count (cache + singleflight)
-GET /discover/feed?lat&lng&cursor&limit     ⭐ feed: checkpoint cộng đồng gần bạn, mới nhất (cursor)
+  AND similarity(name,$name) > 0.3
+ORDER BY similarity(name,$name) DESC, location <-> ST_MakePoint($lng,$lat)::geography LIMIT 1;
+-- nếu trống → INSERT places(...) RETURNING id
 ```
 
-Place detail = JOIN/aggregate từ `checkpoints` của place: `AVG(rating)`, `COUNT(*)`, N ảnh mới
-nhất (`checkpoint_images`), N review mới nhất (note + author).
+**Sửa `checkpoint`:**
+- `CreateParams` thêm `PlaceID *string` (nếu client gửi sẵn).
+- `checkpoint.repository.Create` (trong tx): nếu `PlaceID==nil` → `placeResolver.ResolveInTx(...)`; rồi
+  `UPDATE places SET checkin_count=checkin_count+1`; set `checkpoint.place_id`.
+- DI: thêm interface `placeResolver { ResolveInTx(ctx, pgx.Tx, ...) (string,error) }` vào checkpoint repo; wire `place.Repository` ở `main.go`.
+- `checkpoint.Service.Input` + handler thêm `place_id` optional.
 
-Domain mới: `internal/place/` (model/repository/service/handler). Feed có thể đặt trong
-`place` hoặc domain `discovery` riêng.
+**Acceptance:** check-in 2 lần cùng quán → 1 place, `checkin_count=2`, cả 2 checkpoint có `place_id`. XP vẫn atomic. `go test` xanh.
 
----
-
-## 3. Frontend
-
-- **DiscoverPage** (nối mock → thật): tab "Dành cho bạn" = `/discover/feed` quanh user → render
-  `PostCard` (đã có UI) với data thật (author, place, ảnh, XP). Infinite scroll qua cursor (TanStack Query `useInfiniteQuery`).
-- **Search**: thanh search ở Map + màn search → `/places/search` → tap kết quả → bay map tới place / mở **PlaceDetail**.
-- **PlaceDetailSheet/Page**: ảnh (react-photo-view), avg rating, số check-in, review gần đây, nút
-  **"Cắm cờ tại đây"** → check-in vào place (place-based).
-- **Create tab**: đổi từ check-in GPS tạm thời → **chọn/tìm place rồi cắm cờ** (hoàn thiện TODO).
+> ⚠️ Concurrency: 2 check-in *đồng thời* vào place mới có thể tạo 2 place (chấp nhận ở scale cá nhân; hardening sau bằng advisory lock / normalized unique key).
 
 ---
 
-## 4. Auth refinement — Google redirect + gộp anonymous
+## D2 — BE: search · nearby · detail ✅
 
-**Vấn đề:** hiện `loginGoogle` luôn `signInWithOAuth` → nếu user **đang anonymous** mà đăng nhập
-Google sẽ **tạo tài khoản mới, mất data khách**.
+```
+GET /places/search?q=&lat=&lng=&limit=    trgm: similarity(name,q) > 0.2, ưu tiên gần nếu có lat/lng
+GET /places/nearby?lat&lng&radius&limit    ST_DWithin, sort theo khoảng cách
+GET /places/{id}                           detail: place + AVG(rating) + COUNT + N ảnh + N review gần đây
+```
+- `place.Repository` giữ `mediaBase` để prepend URL ảnh (như checkpoint).
+- Detail = JOIN `checkpoints`/`checkpoint_images` của place: avg rating, tổng check-in, 6 ảnh mới nhất, 5 review (note + author).
+- Handler map lỗi `ErrNotFound`→404, `ErrInvalidInput`→400 (không che như bug cũ).
 
-**Plan:**
-1. `loginGoogle()` rẽ nhánh theo trạng thái:
-   - **đang anonymous** → `supabase.auth.linkIdentity({ provider: 'google', options:{ redirectTo }})`
-     → **giữ nguyên `sub` + data**, sau redirect `is_anonymous` thành false (BE reconcile đã xử lý).
-   - **đang logged-out** → `supabase.auth.signInWithOAuth({ provider:'google', options:{ redirectTo }})`.
-2. **Redirect callback UX:** khi quay về (URL có `?code=`/hash), hiện overlay "Đang hoàn tất đăng
-   nhập..." cho tới khi `onAuthStateChange` resolve (tránh nháy Login/Map). `detectSessionInUrl: true`
-   đã bật → supabase tự xử lý code; chỉ cần che bằng loading.
-3. **onAuthStateChange** (đã có): `SIGNED_IN` → exchange; **`USER_UPDATED`** (link xong) → re-exchange
-   → BE reconcile email + is_anonymous. Không phải thêm nhiều.
-4. **Lỗi identity trùng:** `linkIdentity` fail nếu Google đó đã thuộc tài khoản khác →
-   thêm code `identity_already_exists` vào `authErrors.ts` ("Tài khoản Google này đã được dùng cho
-   tài khoản khác. Đăng nhập trực tiếp?") + cho chọn `signInWithOAuth` (bỏ session khách).
-5. **Cấu hình Supabase:** thêm `redirectTo` (origin + origin/prod Workers) vào **Auth → URL
-   Configuration → Redirect URLs**, nếu không OAuth sẽ bị chặn.
-
-**Files:** `auth/AuthContext.tsx` (`loginGoogle` rẽ nhánh + overlay loading), `lib/authErrors.ts`
-(thêm code), có thể `App.tsx` (overlay khi đang xử lý callback).
+**Acceptance:** search "ca phe" ra place; `/places/{id}` trả aggregate đúng.
 
 ---
 
-## 5. Thứ tự thực thi
+## D3 — BE: discover feed + popular ✅
 
-| Mốc | Nội dung |
-|-----|----------|
-| **A1** | Auth: Google `linkIdentity` cho anonymous + redirect UX + lỗi trùng identity *(làm trước — nhỏ, mở đường cho social)* |
-| **D1** | BE: migration 0006 + place resolution trong tx check-in |
-| **D2** | BE: `/places/search` + `/nearby` + `/{id}` |
-| **D3** | BE: `/discover/feed` (cursor) + `/places/popular` (singleflight + RWMutex cache) |
-| **D4** | FE: DiscoverPage feed thật (useInfiniteQuery) |
-| **D5** | FE: search → PlaceDetail |
-| **D6** | FE: place-based check-in (hoàn thiện tab Create) |
+```
+GET /discover/feed?lat&lng&cursor&limit   checkpoint cộng đồng gần bạn, mới nhất, cursor-based
+GET /places/popular?lat&lng&limit          top theo checkin_count (cache + singleflight)
+```
+- **Feed**: checkpoint + author + place + ảnh đầu, `WHERE ST_DWithin(...) ORDER BY created_at DESC`,
+  cursor = `created_at` (keyset: `created_at < $cursor`). Trả `next_cursor`.
+- **Popular**: cache in-memory **RWMutex + TTL 60s** theo key (làm tròn lat/lng + limit) + `singleflight`
+  để gộp request trùng. `log()` cache hit/miss.
 
-## 6. Rủi ro / lưu ý
-- **Đổi check-in tx:** thêm resolve place vào transaction đang chạy — test kỹ (đừng làm vỡ XP atomic).
-- **pg_trgm threshold 0.3** cần tinh chỉnh theo data thật (tên tiếng Việt có dấu).
-- **Popular cache**: nhớ `log` khi cache giúp/độ trễ; invalidate khi đủ đơn giản (TTL ngắn 30–60s là đủ).
-- **Anonymous link**: chỉ hiện nút "Đăng nhập Google để lưu" cho user khách (đã có UpgradeBanner — thêm nút Google vào đó).
+**Acceptance:** feed phân trang bằng cursor; popular gọi 2 lần liên tiếp → lần 2 hit cache (log).
+
+---
+
+## D4 — FE: Discover feed thật ✅
+
+- `lib/api.ts`: thêm types Place/PlaceDetail/FeedItem + `getFeed(cursor)`, `searchPlaces(q)`, `getPlace(id)`, `getPopular()`, `getNearbyPlaces()`.
+- **DiscoverPage**: tab "Dành cho bạn" = feed thật qua **`useInfiniteQuery`** (cursor) → render `PostCard`
+  (đã có UI) với data thật (author, place, ảnh, XP). Infinite scroll (IntersectionObserver).
+
+**Acceptance:** mở Discover thấy check-in cộng đồng thật, cuộn để tải thêm.
+
+---
+
+## D5 — FE: search → Place detail ✅
+
+- **Search**: thanh search ở Map/Discover → `/places/search` (debounce) → list kết quả → tap → mở **PlaceDetailSheet/Page**.
+- **PlaceDetail**: ảnh (react-photo-view), avg rating, số check-in, review gần đây, nút **"Cắm cờ tại đây"**.
+
+**Acceptance:** tìm 1 place → mở detail → thấy ảnh/review tổng hợp.
+
+---
+
+## D6 — FE: place-based check-in ✅
+
+- Từ Place detail "Cắm cờ tại đây" → mở `CreateCheckpointForm` với `place_id` + lat/lng/name của place (prefill, khóa name).
+- Tab **Create**: đổi từ check-in GPS tạm → **tìm/chọn place rồi cắm cờ** (dùng search D5). Vẫn cho "cắm cờ tại vị trí hiện tại" nếu không chọn place.
+
+**Acceptance:** cắm cờ từ Place detail → `checkin_count` của place tăng, không tạo place trùng.
+
+---
+
+## A1 — Auth refinement (Google + anonymous link) ✅
+*(độc lập với Discovery, làm trước hoặc xen kẽ — đã thống nhất ở plan trước)*
+- `loginGoogle()` rẽ nhánh: **anonymous → `supabase.auth.linkIdentity({provider:'google'})`** (giữ `sub`+data); logged-out → `signInWithOAuth`.
+- Redirect callback: overlay "Đang hoàn tất đăng nhập..." khi URL có `?code=`.
+- `onAuthStateChange` `USER_UPDATED` (đã có) → re-exchange → BE reconcile.
+- Lỗi identity trùng → `authErrors.ts` thêm `identity_already_exists`.
+- Cấu hình **Supabase → Redirect URLs** (localhost + prod Workers).
+
+---
+
+## Thứ tự đề xuất
+`D1 → D2 → D3 → D4 → D5 → D6` (BE trước, FE sau, mỗi mốc ship + test được). `A1` chèn bất kỳ lúc nào.
+
+## Go patterns luyện
+pg_trgm + GIN `similarity()` · PostGIS `ST_DWithin`/KNN · **transaction xuyên package** (place resolve trong tx checkpoint) · **singleflight** + RWMutex TTL cache · cursor/keyset pagination.
+
+## File dự kiến
+- BE: `migrations/0006_*`, `internal/place/*`, sửa `checkpoint/{model,repository,service,handler}.go`, `cmd/server/main.go`. Có thể `internal/discovery` riêng cho feed hoặc gộp vào `place`.
+- FE: mở rộng `lib/api.ts`, `pages/DiscoverPage.tsx` (rewrite), `components/PlaceDetail*.tsx`, search UI, `pages/CreatePage` (place-based).

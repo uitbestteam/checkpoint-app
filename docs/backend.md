@@ -22,6 +22,13 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner) · `DELETE /checkpoints/{id}` (owner)
 - Migration 0004 (`checkpoints` có `location` generated GEOGRAPHY + GIST, `checkpoint_images`). Tests: `levelForXP` (table-driven), service create + validation (mock repo).
 
+### Place / Discovery — Phase 4 ✅ (domain `internal/place`)
+- Migration 0006: bảng `places` (pg_trgm + GIST + `checkin_count`) + `checkpoints.place_id`.
+- `place.ResolveInTx` — match (ST_DWithin 75m + `similarity()`>0.3) hoặc tạo place mới, **trong tx check-in** (atomic với XP); `checkin_count++`. Check-in nhận `place_id` optional.
+- `GET /places/search` (trgm) · `/places/nearby` (ST_DWithin) · `/places/{id}` (detail: avg rating, 6 ảnh + 5 review).
+- `GET /discover/feed?lat&lng&cursor` — feed cộng đồng gần bạn, **keyset cursor** (`created_at`), kèm author + ảnh đầu.
+- `GET /places/popular` — top theo `checkin_count`, **RWMutex TTL 60s cache + singleflight** (gộp request trùng).
+
 ### Hạ tầng & chất lượng
 - JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
 - **CORS** (`go-chi/cors`) — cho FE gọi API, origins qua env `CORS_ALLOWED_ORIGINS`.

@@ -12,7 +12,8 @@
 ```
 Phase 1  ██████████████████  done (auth + profile + PWA)
 Phase 2  ████████████████░░  Checkpoint Core M1–M7 ✅ (chỉ còn M8 polish/deploy)
-Phase 3+ ░░░░░░░░░░░░░░░░░░  chưa bắt đầu
+Phase 4  ██████████████████  Discovery DONE (D1–D6 + A1: place, search, feed, place-based check-in, Google link)
+Phase 3  ░░░░░░░░░░░░░░░░░░  chưa bắt đầu (Journey)
 ```
 
 ---
@@ -32,10 +33,10 @@ Phase 3+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | 9 | Share Check-in Card | ❌ | ❌ | chưa có 2 bên |
 | 10 | Journey Timeline | ❌ | 🟡 | FE: timeline trong AIPlanPage (mock) |
 | 11 | Journey Map | ❌ | ❌ | chưa có 2 bên |
-| 12 | Place Detail | ❌ | ❌ | chưa có 2 bên |
-| 13 | Search Place | ❌ | 🟡 | FE: search bar (UI) trong MapPage |
-| 14 | Basic XP & Level | ✅ | 🟡 | BE: +10 XP/check-in atomic + tính level (M1). FE: badge/level UI |
-| 15 | Discover Basic | ❌ | 🟡 | FE: DiscoverPage feed (mock) |
+| 12 | Place Detail | ✅ | ✅ | BE `/places/{id}` (avg rating, ảnh, review). FE PlaceDetailSheet + "Cắm cờ tại đây" |
+| 13 | Search Place | ✅ | ✅ | BE `/places/search` (pg_trgm). FE search trong Discover (debounce) |
+| 14 | Basic XP & Level | ✅ | 🟡 | BE: +10 XP/check-in atomic + tính level. FE: badge/level UI |
+| 15 | Discover Basic | ✅ | ✅ | BE `/discover/feed` (cursor) + `/places/popular` (cache). FE feed thật (useInfiniteQuery) |
 | 16 | AI Plan Basic | ❌ | 🟡 | FE: AIPlanPage (mock) |
 
 ✅ chạy thật · 🟡 UI/khung có nhưng chưa hoạt động · ❌ chưa làm
