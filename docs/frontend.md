@@ -14,7 +14,8 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 
 ### Auth (đã nối end-to-end ✅)
 - `lib/supabase.ts` — Supabase client (chỉ để login).
-- `lib/api.ts` — token store (localStorage) + `apiFetch` tự gắn Bearer & **auto-refresh khi 401** + `exchange`/`getMe`/`logout`.
+- `lib/api.ts` — token store (localStorage) + `apiFetch` tự gắn Bearer & **re-auth khi 401** + `exchange`/`getMe`/`logout`.
+- **Re-auth 2 tầng + single-flight** (khi 401): (1) app refresh_token → (2) re-exchange từ Supabase session (tầng bền) → chỉ khi **cả 2 fail** mới `onAuthExpired` → logout. Single-flight để 401 đồng thời không đá nhau khi BE rotate refresh token. Refresh TTL nâng 7d→30d.
 - `auth/AuthContext.tsx` — `AuthProvider` + `useAuth`: bootstrap session, login email/Google, sign out.
 - `pages/LoginPage.tsx` — đăng nhập/đăng ký (email + Google + **khách/anonymous**), style theo mockup.
 - `App.tsx` — gate: loading → splash, chưa login → LoginPage, đã login → app.
