@@ -24,13 +24,12 @@ heavily rounded surfaces, pill-shaped primary CTAs, playful-but-clean travel fee
 
 ## Typography
 
-- **Display / headings:** Fredoka (rounded, friendly) — matches the wordmark.
-- **Body / UI:** Be Vietnam Pro — excellent Vietnamese diacritics.
+- **Display / headings & Body / UI:** Montserrat — full Vietnamese diacritics, geometric/clean; used for both headings and body.
 
-Load via Google Fonts (or `next/font`):
+Load via Google Fonts:
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 ```
 
 ## Component cues from the mockups

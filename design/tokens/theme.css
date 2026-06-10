@@ -16,8 +16,8 @@
 
 /* ---- Raw palette + scales (generate Tailwind utilities) ---- */
 @theme {
-  --font-display: "Fredoka", "Be Vietnam Pro", system-ui, sans-serif;
-  --font-body: "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --color-primary-50:  #FFF4EE;

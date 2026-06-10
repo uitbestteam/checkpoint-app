@@ -7,7 +7,7 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 
 ### Hạ tầng
 - Scaffold Vite + React 19 + TypeScript, **build/typecheck sạch**.
-- **Tailwind CSS v4** với toàn bộ **design tokens** từ mockup (`src/index.css`): palette cam/clay/green, dark mode, shadow ấm, radius, font Fredoka + Be Vietnam Pro.
+- **Tailwind CSS v4** với toàn bộ **design tokens** từ mockup (`src/index.css`): palette cam/clay/green, dark mode, shadow ấm, radius, font **Montserrat** (hỗ trợ tiếng Việt, dùng cho cả display + body).
 - **PWA đầy đủ**: icons 192/512 + maskable + apple-touch (orange + map-pin), manifest vi, installable; `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
 - **i18n lỗi auth**: `lib/authErrors.ts` dịch message lỗi Supabase (EN) → tiếng Việt theo error code + fallback theo text.
 - Router 5 route + `AppLayout` (header + `<Outlet/>` + bottom nav).
