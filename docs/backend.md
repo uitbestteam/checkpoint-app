@@ -1,0 +1,57 @@
+# Backend — Inventory
+
+Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
+`github.com/quanluon/checkpoint-app`. Thư mục: [`../backend`](../backend).
+
+## Đã làm (chạy thật)
+
+### Auth (JWKS, không giữ secret Supabase)
+- `POST /auth/exchange` — verify Supabase token qua **JWKS** (ES256, public key, tự xử lý key rotation) → tạo app_token (15m) + refresh_token (7d). Provision user lần đầu.
+- `POST /auth/refresh` — **rotation**: revoke token cũ, cấp cặp mới.
+- `POST /auth/logout` — revoke refresh token.
+- Chỉ chấp nhận ES256/RS256 → chặn alg-confusion attack.
+
+### User Profile
+- `GET /users/me` · `PATCH /users/me` (display_name/bio) · `GET /users/{username}` · `POST /users/me/avatar` (multipart → R2).
+
+### Hạ tầng & chất lượng
+- JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
+- R2 client tự viết bằng **AWS SigV4 thuần stdlib** (`pkg/storage`, 0 dep AWS).
+- Clean arch: `handler / service / repository`, DI qua interface (mock được).
+- `GET /health`, graceful shutdown, error wrapping `%w` + sentinel errors.
+- Migrations: `users` (có denormalized stats), `refresh_tokens` (lưu SHA-256 hash).
+- Dockerfile (distroless), Makefile (22 target), CI (`deploy.yml`), `.golangci.yml`.
+- ✅ `go build` · `go vet` · `golangci-lint` (0 issues).
+
+## File chính
+
+```
+cmd/server/main.go             config + wiring + graceful shutdown
+internal/identity/
+  doc.go model.go token.go
+  repository.go service.go handler.go
+pkg/
+  authctx/  middleware/  respond/  storage/  supabase/
+migrations/                    0001 users, 0002 refresh_tokens
+Dockerfile  Makefile  DEPLOY.md  .github/workflows/deploy.yml
+```
+
+## Còn thiếu / nợ kỹ thuật
+
+- ⏳ **Chưa deploy thật** — Makefile + DEPLOY.md sẵn, cần `make gcp-secrets && make deploy`.
+- ❌ **Chưa có test nào** (service + auth flow nên test trước — mock 3 interface).
+- ⚠️ **R2 SigV4 chưa test với credential thật** — compile OK, cần verify khi dùng avatar upload.
+- ❌ XP/Level mới có cột trong DB, chưa có logic cộng XP.
+- ❌ Toàn bộ Phase 2+ (checkpoint, journey, discovery, gamification, ai).
+
+## Cách chạy
+
+```bash
+cd backend
+make setup            # .env + migrate CLI + tidy
+# điền .env: DATABASE_URL (Session pooler), JWT_SECRET, SUPABASE_URL, R2_*
+make migrate-up
+make run              # :8080
+curl localhost:8080/health
+```
+Deploy: xem [../backend/DEPLOY.md](../backend/DEPLOY.md).

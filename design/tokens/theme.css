@@ -1,0 +1,179 @@
+/* Checkpoint design tokens — Tailwind CSS v4 drop-in.
+ *
+ * Usage in a Next.js / Vite app:
+ *   1. npm i tailwindcss@^4  (and @tailwindcss/vite or the PostCSS plugin)
+ *   2. In your globals.css:
+ *        @import "tailwindcss";
+ *        @import "./theme.css";
+ *   3. Load fonts (see README) and you get utilities like
+ *        bg-primary, text-clay-600, bg-surface, rounded-xl, shadow-card,
+ *        font-display, text-text-muted, etc.
+ *
+ * Dark mode: add class="dark" on <html>. Semantic colors flip automatically.
+ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Raw palette + scales (generate Tailwind utilities) ---- */
+@theme {
+  --font-display: "Fredoka", "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-primary-50:  #FFF4EE;
+  --color-primary-100: #FFE6D5;
+  --color-primary-200: #FFC9A8;
+  --color-primary-300: #FFA877;
+  --color-primary-400: #FB8246;
+  --color-primary-500: #F4511E;
+  --color-primary-600: #D8400F;
+  --color-primary-700: #B3340D;
+  --color-primary-800: #8F2A0C;
+  --color-primary-900: #74240D;
+
+  --color-clay-50:  #FBEEE9;
+  --color-clay-100: #F4D3C7;
+  --color-clay-200: #E3A892;
+  --color-clay-300: #CF7B5F;
+  --color-clay-400: #BE5538;
+  --color-clay-500: #B23A1F;
+  --color-clay-600: #9A311A;
+  --color-clay-700: #7E2814;
+  --color-clay-800: #641F10;
+  --color-clay-900: #4E190D;
+
+  --color-green-50:  #EAF5EC;
+  --color-green-100: #CDE8D2;
+  --color-green-200: #A6D4AE;
+  --color-green-300: #6FB97C;
+  --color-green-400: #3E9A50;
+  --color-green-500: #2E7D32;
+  --color-green-600: #246428;
+  --color-green-700: #1B5E20;
+  --color-green-800: #14501A;
+  --color-green-900: #0E3D13;
+
+  --color-accent-50:  #FEEFEC;
+  --color-accent-100: #FCD3CB;
+  --color-accent-200: #F8A697;
+  --color-accent-300: #F47A63;
+  --color-accent-400: #F25C42;
+  --color-accent-500: #EF4329;
+  --color-accent-600: #D6361E;
+  --color-accent-700: #B22A17;
+
+  --color-neutral-0:   #FFFFFF;
+  --color-neutral-50:  #FAF7F2;
+  --color-neutral-100: #F3EEE6;
+  --color-neutral-200: #E7E0D5;
+  --color-neutral-300: #D5CCBE;
+  --color-neutral-400: #A89E8E;
+  --color-neutral-500: #7C7567;
+  --color-neutral-600: #5C564B;
+  --color-neutral-700: #403B33;
+  --color-neutral-800: #2A2620;
+  --color-neutral-900: #1A1714;
+
+  --color-facebook: #1877F2;
+  --color-apple:    #111111;
+  --color-success:  #2E7D32;
+  --color-warning:  #F59E0B;
+  --color-danger:   #DC2626;
+  --color-info:     #2563EB;
+  --color-gold:     #E8A317;
+
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+
+  --shadow-sm:   0 1px 2px rgba(31, 25, 20, 0.06);
+  --shadow-md:   0 4px 12px rgba(31, 25, 20, 0.08);
+  --shadow-lg:   0 12px 28px rgba(31, 25, 20, 0.12);
+  --shadow-card: 0 6px 20px rgba(120, 70, 40, 0.10);
+  --shadow-cta:  0 8px 20px rgba(244, 81, 30, 0.35);
+
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
+}
+
+/* ---- Semantic tokens (light) ---- */
+:root {
+  --background: var(--color-neutral-50);
+  --foreground: #211C17;
+  --surface: var(--color-neutral-0);
+  --surface-muted: #F5F1EA;
+  --border: #ECE5DA;
+  --input: #ECE5DA;
+
+  --primary: var(--color-primary-500);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--color-green-700);
+  --secondary-foreground: #FFFFFF;
+
+  --muted: var(--color-neutral-100);
+  --muted-foreground: #6B6357;
+  --subtle-foreground: #A89E8E;
+  --ring: var(--color-primary-500);
+
+  --gradient-primary: linear-gradient(135deg, #FF8A3D 0%, #F4511E 100%);
+  --gradient-passport: linear-gradient(150deg, #C2410C 0%, #9A3412 100%);
+  --gradient-xp: linear-gradient(90deg, #1B5E20 0%, #4CAF50 100%);
+}
+
+/* ---- Semantic tokens (dark) ---- */
+.dark {
+  --background: #16130F;
+  --foreground: #F5F0E8;
+  --surface: #211C17;
+  --surface-muted: #2A241E;
+  --border: #36302A;
+  --input: #36302A;
+
+  --primary: var(--color-primary-400);
+  --primary-foreground: #1A1206;
+  --secondary: var(--color-green-400);
+  --secondary-foreground: #0E3D13;
+
+  --muted: #2A241E;
+  --muted-foreground: #B6AC9D;
+  --subtle-foreground: #7C7567;
+  --ring: var(--color-primary-400);
+}
+
+/* ---- Expose semantic tokens as Tailwind utilities ---- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle-foreground: var(--subtle-foreground);
+  --color-ring: var(--ring);
+}
+
+/* ---- Base element defaults ---- */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
