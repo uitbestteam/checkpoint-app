@@ -26,7 +26,7 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - Migration 0006: bảng `places` (pg_trgm + GIST + `checkin_count`) + `checkpoints.place_id`.
 - `place.ResolveInTx` — match (ST_DWithin 75m + `similarity()`>0.3) hoặc tạo place mới, **trong tx check-in** (atomic với XP); `checkin_count++`. Check-in nhận `place_id` optional.
 - `GET /places/search` (trgm) · `/places/nearby` (ST_DWithin) · `/places/{id}` (detail: avg rating, 6 ảnh + 5 review).
-- `GET /discover/feed?lat&lng&cursor` — feed cộng đồng gần bạn, **keyset cursor** (`created_at`), kèm author + ảnh đầu.
+- `GET /discover/feed?lat&lng&cursor` — feed cộng đồng **sắp gần → xa** (`ST_Distance`/KNN, **không giới hạn radius**), keyset cursor `"dist:id"`, trả `distance_m` + author + ảnh đầu.
 - `GET /places/popular` — top theo `checkin_count`, **RWMutex TTL 60s cache + singleflight** (gộp request trùng).
 
 ### Journey — Phase 3 J1–J2 ✅ (domain `internal/journey`)

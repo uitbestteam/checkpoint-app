@@ -33,7 +33,8 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - `lib/maps.ts` (style + categories), `lib/api.ts` (checkpoint endpoints), `components/ui/{Sheet,Toast}`.
 
 ### Discovery (Phase 4 ✅)
-- **DiscoverPage**: feed cộng đồng thật qua **`useInfiniteQuery`** (cursor) + infinite scroll (IntersectionObserver); search địa điểm (debounce, pg_trgm) → kết quả → **PlaceDetailSheet**.
+- **DiscoverPage**: feed cộng đồng **sắp gần → xa** (`distance_m`, hiện "cách X km") qua **`useInfiniteQuery`** (keyset cursor) + infinite scroll (IntersectionObserver callback-ref); search địa điểm (debounce, pg_trgm) → **PlaceDetailSheet**.
+- **PWA no-zoom**: viewport `maximum-scale=1, user-scalable=no` + `touch-action: manipulation` (tắt pinch/double-tap zoom toàn app; map giữ gesture riêng).
 - **PlaceDetailSheet**: ảnh (react-photo-view), avg rating, số lượt cắm cờ, review gần đây, nút **"Cắm cờ tại đây"** → place-based check-in (gửi `place_id`, prefill+khóa tên).
 - **Auth Google + anonymous**: `loginGoogle` rẽ nhánh — khách → `linkIdentity` (giữ data), thường → `signInWithOAuth`; nút "Liên kết Google" trong UpgradeBanner; bắt lỗi OAuth redirect (identity trùng) hiển thị tiếng Việt.
 
