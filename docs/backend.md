@@ -10,12 +10,15 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `POST /auth/refresh` — **rotation**: revoke token cũ, cấp cặp mới.
 - `POST /auth/logout` — revoke refresh token.
 - Chỉ chấp nhận ES256/RS256 → chặn alg-confusion attack.
+- Hỗ trợ **anonymous sign-in** (user không email): cột `email` nullable + `is_anonymous` (migration 0003).
+- **Upgrade khách → tài khoản thật:** `Exchange` reconcile email/is_anonymous theo `sub` (giữ nguyên user + data).
 
 ### User Profile
 - `GET /users/me` · `PATCH /users/me` (display_name/bio) · `GET /users/{username}` · `POST /users/me/avatar` (multipart → R2).
 
 ### Hạ tầng & chất lượng
 - JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
+- **CORS** (`go-chi/cors`) — cho FE gọi API, origins qua env `CORS_ALLOWED_ORIGINS`.
 - R2 client tự viết bằng **AWS SigV4 thuần stdlib** (`pkg/storage`, 0 dep AWS).
 - Clean arch: `handler / service / repository`, DI qua interface (mock được).
 - `GET /health`, graceful shutdown, error wrapping `%w` + sentinel errors.
@@ -32,7 +35,7 @@ internal/identity/
   repository.go service.go handler.go
 pkg/
   authctx/  middleware/  respond/  storage/  supabase/
-migrations/                    0001 users, 0002 refresh_tokens
+migrations/                    0001 users, 0002 refresh_tokens, 0003 anonymous
 Dockerfile  Makefile  DEPLOY.md  .github/workflows/deploy.yml
 ```
 

@@ -11,6 +11,15 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **vite-plugin-pwa** (installable), `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
 - Router 5 route + `AppLayout` (header + `<Outlet/>` + bottom nav).
 
+### Auth (đã nối end-to-end ✅)
+- `lib/supabase.ts` — Supabase client (chỉ để login).
+- `lib/api.ts` — token store (localStorage) + `apiFetch` tự gắn Bearer & **auto-refresh khi 401** + `exchange`/`getMe`/`logout`.
+- `auth/AuthContext.tsx` — `AuthProvider` + `useAuth`: bootstrap session, login email/Google, sign out.
+- `pages/LoginPage.tsx` — đăng nhập/đăng ký (email + Google + **khách/anonymous**), style theo mockup.
+- `App.tsx` — gate: loading → splash, chưa login → LoginPage, đã login → app.
+- `ProfilePage` nối `GET /users/me` (tên, @username, XP, level, số cờ, hành trình) + nút đăng xuất.
+- `components/UpgradeBanner.tsx` + `upgradeAccount()` — khách nâng cấp lên tài khoản thật (`updateUser`), giữ nguyên data.
+
 ### UI components & pages (tĩnh — chưa nối API)
 - **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`.
 - **BottomNav:** 5 tab Map · Discover · Create · AI Plan · Profile (active pill cam/xanh).
@@ -29,10 +38,8 @@ vite.config.ts  wrangler.jsonc  index.html
 
 ## Còn thiếu (quan trọng)
 
-- ❌ **Toàn bộ data là giả, hardcode** trong từng page — chưa fetch gì.
-- ❌ **Chưa có màn Auth/Login** (Supabase) và lưu/refresh token.
-- ❌ **Chưa có API client** gọi backend (`/auth/exchange`, `/users/me`, ...).
-- ❌ Chưa có state management / data fetching (gợi ý: TanStack Query).
+- 🟡 **4 màn còn lại vẫn data giả** (Map/Discover/Create/AIPlan) — auth + Profile đã nối thật.
+- ❌ Chưa có state management / data fetching cache (gợi ý: TanStack Query) — hiện gọi fetch trực tiếp.
 - ❌ Chưa có map thật (gợi ý: Mapbox GL), ảnh thật, hay xử lý GPS.
 - ❌ **PWA icons thật** (`public/icon-192.png`, `icon-512.png` đang được reference nhưng chưa có).
 - ⚠️ `npm audit` báo vài lỗ hổng từ dev-deps (không ảnh hưởng bundle production).

@@ -5,12 +5,12 @@
 ## TL;DR
 
 - **Đang ở Phase 1 (Foundation).**
-- **Backend:** Phase 1 *code xong* (auth + profile chạy thật), chỉ còn **deploy thật** + **viết test**.
-- **Frontend:** mới là **vỏ giao diện (visual shell)** — UI đẹp cho 5 màn nhưng **toàn data giả, chưa nối API, chưa có auth**.
-- **Lệch pha:** FE *trông* đi xa hơn (mockup cho cả các phase sau), BE *chạy* thật hơn (endpoint thật). Bước kế tiếp là **nối FE ↔ BE cho luồng auth** để khớp lại.
+- **Backend:** Phase 1 *code xong* (auth + profile chạy thật, có CORS), chỉ còn **deploy thật** + **viết test**.
+- **Frontend:** vỏ giao diện 5 màn + **luồng auth đã nối thật** (Supabase login → exchange → token → `/users/me`). Các màn khác vẫn data giả.
+- **Auth end-to-end ✅:** login (email/Google) → BE exchange → app_token → Profile hiển thị user thật, auto-refresh khi 401.
 
 ```
-Phase 1  ████████████████░░  BE ~90%  |  FE ~40% (UI only)
+Phase 1  ██████████████████  BE ~92%  |  FE ~55% (auth wired)
 Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đầu (BE)
 ```
 
@@ -20,8 +20,8 @@ Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 
 | # | Feature | Backend | Frontend | Ghi chú |
 |---|---------|:---:|:---:|---|
-| 1 | Authentication | ✅ | ❌ | BE: exchange/refresh/logout + JWKS. FE chưa có màn login/logic |
-| 2 | User Profile | ✅ | 🟡 | BE: get/update/avatar. FE: ProfilePage tĩnh |
+| 1 | Authentication | ✅ | ✅ | **End-to-end**: BE exchange/refresh/logout + JWKS + CORS + **anonymous**; FE login (email/Google/khách) + token store + auto-refresh |
+| 2 | User Profile | ✅ | 🟡 | BE: get/update/avatar. FE: ProfilePage đã nối `GET /users/me` (header/stats thật); update/avatar chưa |
 | 3 | Map | ❌ | 🟡 | FE: MapPage tĩnh (chưa map thật) |
 | 4 | GPS Check-in | ❌ | 🟡 | FE: nút CHECK-IN (UI), chưa gửi GPS |
 | 5 | Create Checkpoint | ❌ | 🟡 | FE: CreatePage form (UI) |
@@ -52,15 +52,16 @@ Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | JWT middleware + JWKS verify | BE | ✅ xong |
 | Migrations (users, refresh_tokens) | BE | ✅ xong |
 | Dockerfile + Makefile + CI + DEPLOY.md | BE | ✅ xong |
+| CORS cho frontend | BE | ✅ xong |
 | **Deploy thật lên Cloud Run** | BE | ⏳ tooling sẵn, chưa chạy `make deploy` |
 | **Unit test cho service/auth** | BE | ❌ chưa |
 | Scaffold Vite+React PWA + tokens | FE | ✅ xong |
 | 5 màn UI (Map/Discover/Create/AIPlan/Profile) | FE | ✅ xong (tĩnh) |
-| **Màn Auth/Login (Supabase) + lưu token** | FE | ❌ chưa |
-| **API client + nối /auth/exchange, /users/me** | FE | ❌ chưa |
+| Màn Login (Supabase) + lưu/refresh token | FE | ✅ xong |
+| API client + nối /auth/exchange, /users/me | FE | ✅ xong |
 | **PWA icons thật** | FE | ❌ chưa |
 
-➡️ **Để "đóng" Phase 1:** (1) `make deploy`, (2) test BE, (3) FE làm màn login + nối auth end-to-end.
+➡️ **Để "đóng" Phase 1:** (1) `make deploy`, (2) test BE, (3) PWA icons. Auth đã chạy end-to-end ✅.
 
 ---
 
