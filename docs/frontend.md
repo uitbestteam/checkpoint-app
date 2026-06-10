@@ -37,6 +37,10 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **PlaceDetailSheet**: ảnh (react-photo-view), avg rating, số lượt cắm cờ, review gần đây, nút **"Cắm cờ tại đây"** → place-based check-in (gửi `place_id`, prefill+khóa tên).
 - **Auth Google + anonymous**: `loginGoogle` rẽ nhánh — khách → `linkIdentity` (giữ data), thường → `signInWithOAuth`; nút "Liên kết Google" trong UpgradeBanner; bắt lỗi OAuth redirect (identity trùng) hiển thị tiếng Việt.
 
+### Journey (Phase 3 ✅)
+- **JourneysSection** (trong Profile): list hành trình + "Bắt đầu/Kết thúc hành trình" (banner active). Tạo journey → set active → check-in tự gắn vào.
+- **JourneyDetailSheet** (lazy → maplibre tách chunk): stats + **map dotted route** (flex-1, cao lên khi kéo Sheet) + timeline. Mỗi point có ảnh → **StopPhotoStack** trên marker (2 lá xếp chồng + "+N" placeholder, bấm → lightbox ảnh của point đó, caption name/note/address); point không ảnh → chấm số. `Sheet grow` = body flex-col để map giãn theo kích thước sheet. BE: `Stop` kèm `note/address/images`.
+
 ### UI components & pages (tĩnh — chưa nối API)
 - **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`.
 - **BottomNav:** 5 tab Map · Discover · Create · AI Plan · Profile (active pill cam/xanh).

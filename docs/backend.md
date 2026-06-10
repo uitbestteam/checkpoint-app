@@ -29,6 +29,12 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `GET /discover/feed?lat&lng&cursor` — feed cộng đồng gần bạn, **keyset cursor** (`created_at`), kèm author + ảnh đầu.
 - `GET /places/popular` — top theo `checkin_count`, **RWMutex TTL 60s cache + singleflight** (gộp request trùng).
 
+### Journey — Phase 3 J1–J2 ✅ (domain `internal/journey`)
+- Migration 0007: `journeys` (+ unique index 1-active/user) + `checkpoints.journey_id`.
+- CRUD: `POST/GET me/GET {id}/PATCH/DELETE /journeys` + `POST /journeys/{id}/checkpoints/{cpId}`. Tạo/xóa cập nhật `users.journey_count` (tx); xóa detach checkpoints.
+- **Active journey**: PATCH `is_active` (clear active cũ trong tx vì unique index); check-in service tự gắn `journey_id` = active journey nếu không truyền.
+- Detail `GET /journeys/{id}`: stats (count, ΣXP, **distance km bằng `ST_MakeLine(... ORDER BY created_at)`/`ST_Length`**) + stops theo thời gian (timeline + map).
+
 ### Hạ tầng & chất lượng
 - JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
 - **CORS** (`go-chi/cors`) — cho FE gọi API, origins qua env `CORS_ALLOWED_ORIGINS`.

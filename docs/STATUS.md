@@ -12,8 +12,9 @@
 ```
 Phase 1  ██████████████████  done (auth + profile + PWA)
 Phase 2  ████████████████░░  Checkpoint Core M1–M7 ✅ (chỉ còn M8 polish/deploy)
-Phase 4  ██████████████████  Discovery DONE (D1–D6 + A1: place, search, feed, place-based check-in, Google link)
-Phase 3  ░░░░░░░░░░░░░░░░░░  chưa bắt đầu (Journey)
+Phase 4  ██████████████████  Discovery DONE (D1–D6 + A1)
+Phase 3  ████████████████░░  Journey J1–J4 ✅ (CRUD, active journey, detail map+timeline+stats); J5 share OG còn
+Phase 5+ ░░░░░░░░░░░░░░░░░░  chưa bắt đầu (Gamification / AI / Polish)
 ```
 
 ---
@@ -31,8 +32,8 @@ Phase 3  ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | 7 | Add Note / Review | ✅ | ✅ | note + rating trong check-in |
 | 8 | Checkpoint Detail | ✅ | ✅ | BE detail+images+author. FE detail sheet (ảnh, note, rating, author) |
 | 9 | Share Check-in Card | ❌ | ❌ | chưa có 2 bên |
-| 10 | Journey Timeline | ❌ | 🟡 | FE: timeline trong AIPlanPage (mock) |
-| 11 | Journey Map | ❌ | ❌ | chưa có 2 bên |
+| 10 | Journey Timeline | ✅ | ✅ | BE journey detail (stops theo thời gian). FE JourneyDetailSheet timeline |
+| 11 | Journey Map | ✅ | ✅ | BE coords + distance (ST_MakeLine). FE polyline MapLibre + markers |
 | 12 | Place Detail | ✅ | ✅ | BE `/places/{id}` (avg rating, ảnh, review). FE PlaceDetailSheet + "Cắm cờ tại đây" |
 | 13 | Search Place | ✅ | ✅ | BE `/places/search` (pg_trgm). FE search trong Discover (debounce) |
 | 14 | Basic XP & Level | ✅ | 🟡 | BE: +10 XP/check-in atomic + tính level. FE: badge/level UI |
@@ -73,7 +74,8 @@ Phase 3  ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 Phase 2–7 (Checkpoint Core → AI → Polish) **backend chưa động tới**. FE đã có sẵn mockup nên khi BE làm xong từng phase chỉ việc thay data giả bằng API. Chi tiết roadmap: [../CHECKPOINT.md](../CHECKPOINT.md).
 
 ➡️ **Phase 2 plan:** [phase-2-plan.md](phase-2-plan.md) (M1–M7 ✅).
-➡️ **Phase 4 Discovery plan:** [phase-4-discovery-plan.md](phase-4-discovery-plan.md) — Place (pg_trgm + PostGIS), search/nearby/feed/popular, + hoàn thiện auth Google redirect & gộp anonymous (`linkIdentity`).
+➡️ **Phase 4 Discovery:** [phase-4-discovery-plan.md](phase-4-discovery-plan.md) — DONE (D1–D6 + A1).
+➡️ **Phase 3 Journey plan (kế tiếp):** [phase-3-journey-plan.md](phase-3-journey-plan.md) — journeys + timeline/map/stats (PostGIS ST_MakeLine), active journey, share card OG.
 
 ---
 
