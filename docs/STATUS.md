@@ -59,9 +59,10 @@ Phase 2+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | 5 màn UI (Map/Discover/Create/AIPlan/Profile) | FE | ✅ xong (tĩnh) |
 | Màn Login (Supabase) + lưu/refresh token | FE | ✅ xong |
 | API client + nối /auth/exchange, /users/me | FE | ✅ xong |
-| **PWA icons thật** | FE | ❌ chưa |
+| PWA đầy đủ (icons, manifest, installable) | FE | ✅ xong |
+| Message lỗi Supabase → tiếng Việt | FE | ✅ xong |
 
-➡️ **Để "đóng" Phase 1:** (1) `make deploy`, (2) test BE, (3) PWA icons. Auth đã chạy end-to-end ✅.
+➡️ **Để "đóng" Phase 1:** (1) `make deploy` (đang chạy), (2) test BE. Auth + PWA xong ✅.
 
 ---
 

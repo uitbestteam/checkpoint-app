@@ -8,7 +8,8 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 ### Hạ tầng
 - Scaffold Vite + React 19 + TypeScript, **build/typecheck sạch**.
 - **Tailwind CSS v4** với toàn bộ **design tokens** từ mockup (`src/index.css`): palette cam/clay/green, dark mode, shadow ấm, radius, font Fredoka + Be Vietnam Pro.
-- **vite-plugin-pwa** (installable), `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
+- **PWA đầy đủ**: icons 192/512 + maskable + apple-touch (orange + map-pin), manifest vi, installable; `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
+- **i18n lỗi auth**: `lib/authErrors.ts` dịch message lỗi Supabase (EN) → tiếng Việt theo error code + fallback theo text.
 - Router 5 route + `AppLayout` (header + `<Outlet/>` + bottom nav).
 
 ### Auth (đã nối end-to-end ✅)
@@ -41,7 +42,6 @@ vite.config.ts  wrangler.jsonc  index.html
 - 🟡 **4 màn còn lại vẫn data giả** (Map/Discover/Create/AIPlan) — auth + Profile đã nối thật.
 - ❌ Chưa có state management / data fetching cache (gợi ý: TanStack Query) — hiện gọi fetch trực tiếp.
 - ❌ Chưa có map thật (gợi ý: Mapbox GL), ảnh thật, hay xử lý GPS.
-- ❌ **PWA icons thật** (`public/icon-192.png`, `icon-512.png` đang được reference nhưng chưa có).
 - ⚠️ `npm audit` báo vài lỗ hổng từ dev-deps (không ảnh hưởng bundle production).
 
 ## Cách chạy
