@@ -1,13 +1,13 @@
 # Checkpoint — Trạng thái dự án
 
-> Cập nhật: 2026-06-10 · Roadmap đầy đủ xem [../CHECKPOINT.md](../CHECKPOINT.md)
+> Cập nhật: 2026-06-11 · Roadmap đầy đủ xem [../CHECKPOINT.md](../CHECKPOINT.md)
 
 ## TL;DR
 
 - **Phase 1 (Foundation): ✅ xong.** **Phase 2 (Checkpoint Core): M1–M7 ✅**, chỉ còn M8 (polish + deploy + test).
 - **Backend:** auth (JWKS + anonymous + upgrade), profile, checkpoint (check-in + XP atomic, spatial map, ảnh→R2) đều chạy thật. Còn: deploy thật, viết test.
 - **Frontend:** auth end-to-end, **map thật (MapLibre)** + check-in GPS + detail, PWA đầy đủ. Discover/AIPlan vẫn data giả.
-- **Đã làm thêm (ngoài roadmap):** anonymous + upgrade tài khoản, re-auth 2 tầng + single-flight, image preview/zoom/xoay, bottom-sheet kéo được, popup xin quyền vị trí, lưu object key (không lưu full URL).
+- **Đã làm thêm (ngoài roadmap):** anonymous + upgrade tài khoản, re-auth 2 tầng + single-flight, image preview/zoom/xoay, bottom-sheet kéo được, popup xin quyền vị trí, lưu object key (không lưu full URL), feed sắp gần→xa, PWA no-zoom, **định vị bền cho iOS PWA** (`lib/geo.ts` — không xin lại quyền sau khi mở lại app).
 
 ```
 Phase 1  ██████████████████  done (auth + profile + PWA)
