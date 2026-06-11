@@ -9,8 +9,6 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - Scaffold Vite + React 19 + TypeScript, **build/typecheck sạch**.
 - **Tailwind CSS v4** với toàn bộ **design tokens** (`src/index.css`): palette cam/clay/green, dark mode, shadow ấm, radius, font **Montserrat** (hỗ trợ tiếng Việt, dùng cho cả display + body). ⚠️ **Token đồng bộ tay** từ design repo riêng (`design/tokens/theme.css`) — sửa bên design trước rồi copy sang; phần PWA no-zoom (`touch-action`/`text-size-adjust`) là web-only. *(TODO: tự động hoá sync — npm package / git submodule / CI copy.)*
 - **PWA đầy đủ**: icons 192/512 + maskable + apple-touch (orange + map-pin), manifest vi, installable; `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
-- **Fix map trắng/mất trên prod** ⭐: gốc là **lệch tên chunk maplibre** — Rollup tách maplibre thành 2 chunk cùng base `maplibre-gl`, 1 cái bị tham chiếu là `gl-<hash>.js` trong khi file emit là `maplibre-gl-<hash>.js` → dangling → 404 → CF SPA fallback trả `index.html` (text/html) → maplibre fail → mất map. **Fix**: `vite.config` `build.rollupOptions.output.manualChunks` gộp `maplibre-gl`+`react-map-gl` thành **1 chunk `maplibre`** tên cố định (verify build: 0 dangling reference).
-- **Chống chunk cũ sau deploy** (lớp phòng thủ): SW `cleanupOutdatedCaches`+`skipWaiting`+`clientsClaim`, `navigateFallbackDenylist:[/^\/assets\//]`; `lazyWithRetry` purge cache+unregister SW rồi reload; `public/_headers` (index.html/sw.js `no-cache`, `/assets/*` immutable).
 - **i18n lỗi auth**: `lib/authErrors.ts` dịch message lỗi Supabase (EN) → tiếng Việt theo error code + fallback theo text.
 - Router 5 route + `AppLayout` (header + `<Outlet/>` + bottom nav).
 
