@@ -26,7 +26,7 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 ### Checkpoint / Map (Phase 2 ✅ — nối API thật)
 - **MapPage**: `react-map-gl/maplibre` + OpenFreeMap, fetch theo viewport (`?bbox`) qua **TanStack Query**, markers theo category. Lazy-load (maplibre ~284KB tách chunk riêng).
 - **CreateCheckpointSheet**: CHECK-IN lấy GPS → form (name/category/note/rating/ảnh) → `POST /checkpoints` + upload ảnh → invalidate query → toast `+XP`.
-- **CheckpointDetailSheet**: tap marker → `GET /checkpoints/{id}` (ảnh, note, rating, author). Ảnh xem bằng **react-photo-view** (zoom / xoay / kéo).
+- **CheckpointDetailSheet**: tap marker → `GET /checkpoints/{id}` (ảnh, note, rating, author). Ảnh xem bằng **react-photo-view** (zoom / xoay / kéo). **Xóa check-in** (chỉ chủ sở hữu — `user_id === user.id`): confirm 2 bước trong sheet (không dùng window.confirm) → `DELETE /checkpoints/{id}` (hard) → invalidate checkpoints/feed/passport/journeys + refresh `getMe` (XP bị trừ lại) + đóng sheet.
 - **Image picker** (lúc tạo): thumbnail list + preview (react-photo-view) + xóa từng ảnh; object URL được revoke khi xóa/unmount.
 - **Check-in 2 kiểu** (content tách khỏi Sheet): `CreateCheckpointForm` + `LocationPermissionContent` render trong **Sheet** (nút Map, qua `useCheckin`) hoặc **full-page** (tab Create → success tự về Map).
 - **LocationPermissionSheet**: chưa grant → popup giải thích rồi mới gọi native prompt. Khi **denied** → hướng dẫn bật lại **theo nền tảng + chế độ PWA** (Android/iOS/desktop × standalone/tab) + tự phát hiện khi user bật lại (Permissions API `onchange` → auto continue). Không có web API mở settings nên chỉ hướng dẫn được.

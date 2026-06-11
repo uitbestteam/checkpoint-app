@@ -19,7 +19,8 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 ### Checkpoint — Phase 2 M1–M3 ✅ (domain `internal/checkpoint`)
 - `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level)
 - `GET /checkpoints?bbox=` ⭐(map, `ST_MakeEnvelope` + GIST) · `GET /checkpoints/nearby` (`ST_DWithin` + KNN)
-- `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner) · `DELETE /checkpoints/{id}` (owner)
+- `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner)
+- `DELETE /checkpoints/{id}` (owner) — **HARD delete trong 1 tx**: xóa row (+ảnh cascade), **trừ lại XP** (xp_event âm `checkin_deleted`, lock FOR UPDATE, recompute level), `checkpoint_count--`, `places.checkin_count--` + **xóa place mồ côi** (NOT EXISTS checkpoint trỏ tới); sau commit best-effort xóa file R2 (`storage.Delete` — SigV4 DeleteObject mới, skip legacy full-URL keys). Handler phân biệt 404/500.
 - Migration 0004 (`checkpoints` có `location` generated GEOGRAPHY + GIST, `checkpoint_images`). Tests: `levelForXP` (table-driven), service create + validation (mock repo).
 
 ### Place / Discovery — Phase 4 ✅ (domain `internal/place`)
