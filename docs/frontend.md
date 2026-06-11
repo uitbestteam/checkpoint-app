@@ -9,6 +9,7 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - Scaffold Vite + React 19 + TypeScript, **build/typecheck sạch**.
 - **Tailwind CSS v4** với toàn bộ **design tokens** (`src/index.css`): palette cam/clay/green, dark mode, shadow ấm, radius, font **Montserrat** (hỗ trợ tiếng Việt, dùng cho cả display + body). ⚠️ **Token đồng bộ tay** từ design repo riêng (`design/tokens/theme.css`) — sửa bên design trước rồi copy sang; phần PWA no-zoom (`touch-action`/`text-size-adjust`) là web-only. *(TODO: tự động hoá sync — npm package / git submodule / CI copy.)*
 - **PWA đầy đủ**: icons 192/512 + maskable + apple-touch (orange + map-pin), manifest vi, installable; `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
+- **Chống chunk cũ sau deploy** (lỗi `Failed to fetch dynamically imported module` / MIME text/html): SW `cleanupOutdatedCaches`+`skipWaiting`+`clientsClaim`, `navigateFallbackDenylist:[/^\/assets\//]` (SW không trả HTML cho asset); `lazyWithRetry` purge cache+unregister SW rồi reload; `public/_headers` (index.html/sw.js `no-cache`, `/assets/*` immutable). Nguyên nhân: SW phục vụ `index.html` cũ trỏ hash chunk đã biến mất + CF SPA fallback trả index.html cho /assets thiếu.
 - **i18n lỗi auth**: `lib/authErrors.ts` dịch message lỗi Supabase (EN) → tiếng Việt theo error code + fallback theo text.
 - Router 5 route + `AppLayout` (header + `<Outlet/>` + bottom nav).
 
