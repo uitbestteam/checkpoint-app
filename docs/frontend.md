@@ -19,7 +19,7 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - `auth/AuthContext.tsx` — `AuthProvider` + `useAuth`: bootstrap session, login email/Google, sign out.
 - `pages/LoginPage.tsx` — đăng nhập/đăng ký (email + Google + **khách/anonymous**), style theo mockup.
 - `App.tsx` — gate: loading → splash, chưa login → LoginPage, đã login → app.
-- `ProfilePage` nối `GET /users/me` (tên, @username, XP, level, số cờ, hành trình) + nút đăng xuất.
+- `ProfilePage` nối `GET /users/me` (tên, @username, bio, XP, level, số cờ, hành trình) + nút đăng xuất. **Sửa hồ sơ** qua `EditProfileSheet`: đổi `display_name`/`bio` (`PATCH /users/me`) + upload avatar (`POST /users/me/avatar`, multipart) → `applyUser()` cập nhật user trong AuthContext ngay (không reload).
 - `components/UpgradeBanner.tsx` + `upgradeAccount()` — khách nâng cấp lên tài khoản thật (`updateUser`), giữ nguyên data.
 
 ### Checkpoint / Map (Phase 2 ✅ — nối API thật)
@@ -40,6 +40,13 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **PWA no-zoom**: viewport `maximum-scale=1, user-scalable=no` + `touch-action: manipulation` (tắt pinch/double-tap zoom toàn app; map giữ gesture riêng).
 - **PlaceDetailSheet**: ảnh (react-photo-view), avg rating, số lượt cắm cờ, review gần đây, nút **"Cắm cờ tại đây"** → place-based check-in (gửi `place_id`, prefill+khóa tên).
 - **Auth Google + anonymous**: `loginGoogle` rẽ nhánh — khách → `linkIdentity` (giữ data), thường → `signInWithOAuth`; nút "Liên kết Google" trong UpgradeBanner; bắt lỗi OAuth redirect (identity trùng) hiển thị tiếng Việt.
+
+### Gamification (Phase 5 ✅)
+- **Profile edit** (`EditProfileSheet`): sửa tên/bio + đổi avatar → `applyUser()` cập nhật ngay (xem mục Auth/Checkpoint).
+- **Cấp độ (G1)**: ProfilePage progress bar dùng `level_progress`/`xp_to_next` thật (bỏ hardcode).
+- **Hộ chiếu (G2)** `PassportSection`: lưới con dấu tỉnh đã check-in (`GET /me/passport`) — tên tỉnh, số lần, ảnh đại diện; empty state.
+- **Bảng xếp hạng (G3)** `LeaderboardPage` (route `/leaderboard`, link từ Profile): top theo XP (`GET /leaderboard`), huy chương 🥇🥈🥉, highlight mình, ghim hàng "mình" nếu ngoài top.
+- **Huy hiệu (G4)** `BadgesSection`: lưới catalog thật (`GET /me/badges`) mở khóa/khóa (🔒 + grayscale), đếm `unlocked/total`. Check-in trả `new_badges` (toast để sau).
 
 ### Journey (Phase 3 ✅)
 - **JourneysSection** (trong Profile): list hành trình + "Bắt đầu/Kết thúc hành trình" (banner active). Tạo journey → set active → check-in tự gắn vào.
