@@ -9,6 +9,7 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - Scaffold Vite + React 19 + TypeScript, **build/typecheck sạch**.
 - **Tailwind CSS v4** với toàn bộ **design tokens** (`src/index.css`): palette cam/clay/green, dark mode, shadow ấm, radius, font **Montserrat** (hỗ trợ tiếng Việt, dùng cho cả display + body). ⚠️ **Token đồng bộ tay** từ design repo riêng (`design/tokens/theme.css`) — sửa bên design trước rồi copy sang; phần PWA no-zoom (`touch-action`/`text-size-adjust`) là web-only. *(TODO: tự động hoá sync — npm package / git submodule / CI copy.)*
 - **PWA đầy đủ**: icons 192/512 + maskable + apple-touch (orange + map-pin), manifest vi, installable; `wrangler.jsonc` (Cloudflare static-assets, SPA fallback).
+- **Fix map prod + cache**: `vite.config` `manualChunks` gộp maplibre thành **1 chunk `maplibre`** (tránh lệch tên `gl-*` vs `maplibre-gl-*` → dangling → mất map). Workbox `cleanupOutdatedCaches`+`skipWaiting`+`clientsClaim`+`navigateFallbackDenylist:[/^\/assets\//]` để bản mới được nhận sau deploy. `lazyWithRetry` chỉ **reload đơn giản** (không unregister-all SW) → **an toàn khi sau này thêm Firebase Cloud Messaging** (FCM dùng SW riêng `firebase-messaging-sw.js`).
 - **i18n lỗi auth**: `lib/authErrors.ts` dịch message lỗi Supabase (EN) → tiếng Việt theo error code + fallback theo text.
 - Router 5 route + `AppLayout` (header + `<Outlet/>` + bottom nav).
 
