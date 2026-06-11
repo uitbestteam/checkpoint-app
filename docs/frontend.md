@@ -55,6 +55,8 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 ### UI components & pages (tĩnh — chưa nối API)
 - **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`, `Skeleton` (+ `DetailSheetSkeleton` dùng chung).
 - **Skeleton loading:** thay text "Đang tải..." bằng skeleton khớp layout (chống nhảy CLS) ở Discover feed (+load thêm), Leaderboard, Hộ chiếu, Huy hiệu, Khoảnh khắc (Profile), và 3 detail sheet (checkpoint/place/journey). Giữ pin-pulse cho splash app + spinner định vị GPS.
+- **Resilience:** `ErrorBoundary` (bọc App) → crash hiện "Có lỗi, tải lại" thay vì trắng màn hình; `lib/lazyWithRetry` → import chunk fail (PWA stale-SW sau deploy) tự reload 1 lần (cờ sessionStorage chống loop), áp cho MapPage; `<Map onError>` log lỗi maplibre.
+- **Image pipeline** (`lib/image.ts` `prepareImage`): ảnh check-in qua **HEIC→JPEG** (`heic2any`, lazy-import — tách chunk, chỉ tải khi gặp HEIC) + **downscale canvas** (max cạnh 1600px, JPEG q0.85) → mọi upload là JPEG nhẹ (< 10 MiB, đúng whitelist BE). Check-in tách lỗi nửa chừng: tạo checkpoint OK nhưng upload ảnh fail → vẫn hoàn tất (không tạo trùng, không báo lỗi sai); `uploadCheckpointImages` map 415/413 → message VN.
 - **BottomNav:** 5 tab Map · Discover · Create · AI Plan · Profile (active pill cam/xanh).
 - **5 màn** dựng theo mockup: MapPage (search + level + faux map + CHECK-IN), DiscoverPage (feed + tabs), CreatePage (form cắm cờ), AIPlanPage (trợ lý AI + timeline), ProfilePage (hộ chiếu + huy hiệu).
 
