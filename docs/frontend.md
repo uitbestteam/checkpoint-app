@@ -53,7 +53,8 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **JourneyDetailSheet** (lazy → maplibre tách chunk): stats + **map dotted route** (flex-1, cao lên khi kéo Sheet) + timeline. Mỗi point có ảnh → **StopPhotoStack** trên marker (2 lá xếp chồng + "+N" placeholder, bấm → lightbox ảnh của point đó, caption name/note/address); point không ảnh → chấm số. `Sheet grow` = body flex-col để map giãn theo kích thước sheet. BE: `Stop` kèm `note/address/images`.
 
 ### UI components & pages (tĩnh — chưa nối API)
-- **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`.
+- **UI primitives:** `Button` (primary/accent/green/outline, pill), `Chip`, `XPBadge`, `Card`, `ImagePlaceholder`, `Skeleton` (+ `DetailSheetSkeleton` dùng chung).
+- **Skeleton loading:** thay text "Đang tải..." bằng skeleton khớp layout (chống nhảy CLS) ở Discover feed (+load thêm), Leaderboard, Hộ chiếu, Huy hiệu, Khoảnh khắc (Profile), và 3 detail sheet (checkpoint/place/journey). Giữ pin-pulse cho splash app + spinner định vị GPS.
 - **BottomNav:** 5 tab Map · Discover · Create · AI Plan · Profile (active pill cam/xanh).
 - **5 màn** dựng theo mockup: MapPage (search + level + faux map + CHECK-IN), DiscoverPage (feed + tabs), CreatePage (form cắm cờ), AIPlanPage (trợ lý AI + timeline), ProfilePage (hộ chiếu + huy hiệu).
 
