@@ -32,7 +32,7 @@ Phase 6+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | 6 | Upload Image | ✅ | ✅ | BE `POST /{id}/images` → R2. FE chọn ảnh khi check-in |
 | 7 | Add Note / Review | ✅ | ✅ | note + rating trong check-in |
 | 8 | Checkpoint Detail | ✅ | ✅ | BE detail+images+author. FE detail sheet (ảnh, note, rating, author) |
-| 9 | Share Check-in Card | ❌ | ❌ | chưa có 2 bên |
+| 9 | Share Check-in Card | n/a | ✅ | **Client-side** (html-to-image → PNG + Web Share API): chia sẻ checkpoint / hành trình / hộ chiếu thành ảnh card. Không cần BE |
 | 10 | Journey Timeline | ✅ | ✅ | BE journey detail (stops theo thời gian). FE JourneyDetailSheet timeline |
 | 11 | Journey Map | ✅ | ✅ | BE coords + distance (ST_MakeLine). FE polyline MapLibre + markers |
 | 12 | Place Detail | ✅ | ✅ | BE `/places/{id}` (avg rating, ảnh, review). FE PlaceDetailSheet + "Cắm cờ tại đây" |

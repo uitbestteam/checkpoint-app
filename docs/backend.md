@@ -33,7 +33,7 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - **G1 XP/Level + event log**: migration 0008 `xp_events`. `AwardXPTx(tx,...)` cộng XP + tính level + ghi event **trong tx check-in** (`SELECT ... FOR UPDATE`); checkpoint repo gọi qua interface (decouple). `XPProgress(xp)` → `xp_to_next`/`level_progress` gắn vào mọi user read (`identity.scanUser`). `levelForXP` chuyển checkpoint → gamification (export `LevelForXP`).
 - **G2 Hộ chiếu**: migration 0009 `checkpoints.province` (reverse-geocode `address.state`, geocode client mở rộng + `Province()`). `GET /me/passport` — gom theo tỉnh (COUNT, MIN/MAX ngày, ảnh đại diện qua subquery).
 - **G3 Bảng xếp hạng**: `GET /leaderboard` — top 100 theo `total_xp` (`RANK() OVER`) + hạng của tôi (`RankOf`), **single-entry TTL 60s cache + singleflight**.
-- **G4 Huy hiệu (rule engine)**: migration 0010 `user_badges`. Catalog + rule trong code (`badges.go`); `EvaluateBadgesTx` chạy **trong tx check-in** → award idempotent (`INSERT ... ON CONFLICT DO NOTHING RETURNING`); `GET /me/badges`. Tests: `LevelForXP`/`XPProgress`/`satisfiedBadges` table-driven.
+- **G4 Huy hiệu (rule engine)**: migration 0010 `user_badges`. Catalog + rule trong code (`badges.go`); `EvaluateBadgesTx` chạy **trong tx check-in** → award idempotent (`INSERT ... ON CONFLICT DO NOTHING RETURNING`), trả `[]Badge` (kèm tên/icon) cho check-in response (`CreateResult.new_badges` → toast khoe huy hiệu FE); `GET /me/badges`. Tests: `LevelForXP`/`XPProgress`/`satisfiedBadges` table-driven.
 
 ### Journey — Phase 3 J1–J2 ✅ (domain `internal/journey`)
 - Migration 0007: `journeys` (+ unique index 1-active/user) + `checkpoints.journey_id`.
