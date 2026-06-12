@@ -50,7 +50,9 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **Bảng xếp hạng (G3)** `LeaderboardPage` (route `/leaderboard`, link từ Profile): top theo XP (`GET /leaderboard`), huy chương 🥇🥈🥉, highlight mình, ghim hàng "mình" nếu ngoài top.
 - **Huy hiệu (G4)** `BadgesSection`: lưới catalog thật (`GET /me/badges`) mở khóa/khóa (🔒 + grayscale), đếm `unlocked/total`.
 - **Toast khoe huy hiệu**: check-in trả `new_badges` (object có tên/icon) → `BadgeUnlockToast` (Map) + màn success place check-in hiện huy hiệu vừa mở. Invalidate `["badges"]`/`["passport"]` sau check-in.
-- **Share card (#9 + J5)**: `lib/share.ts` snapshot DOM node → PNG (`html-to-image`, **lazy-import**, `skipFonts`) → **Web Share API** (file) → fallback download → text. `ShareButton` + 3 card (`share/cards.tsx`): checkpoint (CheckpointDetailSheet), hành trình (JourneyDetailSheet), hộ chiếu (ProfilePage). Card render off-screen, **không nhúng ảnh remote** (tránh CORS taint) → luôn tạo được ảnh.
+- **Share card (#9 + J5)**: `lib/share.ts` snapshot DOM node → PNG (`html-to-image`, **lazy-import**, `skipFonts`) → **Web Share API** → fallback download → text. `ShareButton` + 3 card (`share/cards.tsx`): checkpoint (CheckpointDetailSheet), hành trình (JourneyDetailSheet), hộ chiếu (ProfilePage). Card render off-screen brand-only (tránh CORS taint khi render).
+  - **Đính kèm ảnh gốc**: `shareCardNode` nhận `photoUrls` → fetch ảnh thật → File → share **nhiều file** (card.png + ảnh gốc) qua Web Share L2. Fetch cross-origin **cần R2 CORS**; ảnh nào lỗi thì bỏ qua (degrade về chỉ card).
+  - **Deep link**: share `text` kèm `${window.location.origin}/c/{id}` · `/j/{id}` (origin tự lấy theo môi trường, không env). Route `/c/:id` `/j/:id` (`pages/LinkRoutes.tsx`) mở detail sheet tương ứng; URL sống qua màn login (react-router) → người nhận đăng nhập xong vào đúng chỗ. `JourneyLink` lazy (maplibre không vào main bundle).
 
 ### Journey (Phase 3 ✅)
 - **JourneysSection** (trong Profile): list hành trình + "Bắt đầu/Kết thúc hành trình" (banner active). Tạo journey → set active → check-in tự gắn vào.

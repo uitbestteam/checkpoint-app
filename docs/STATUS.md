@@ -32,14 +32,14 @@ Phase 6+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | 6 | Upload Image | ✅ | ✅ | BE `POST /{id}/images` → R2. FE chọn ảnh khi check-in |
 | 7 | Add Note / Review | ✅ | ✅ | note + rating trong check-in |
 | 8 | Checkpoint Detail | ✅ | ✅ | BE detail+images+author. FE detail sheet (ảnh, note, rating, author) |
-| 9 | Share Check-in Card | n/a | ✅ | **Client-side** (html-to-image → PNG + Web Share API): chia sẻ checkpoint / hành trình / hộ chiếu thành ảnh card. Không cần BE |
+| 9 | Share Check-in Card | n/a | ✅ | **Client-side** (html-to-image → PNG + Web Share): card checkpoint/hành trình/hộ chiếu + **đính kèm ảnh gốc** (cần R2 CORS) + **deep link** `/c/:id`·`/j/:id` (origin tự lấy). Không cần BE |
 | 10 | Journey Timeline | ✅ | ✅ | BE journey detail (stops theo thời gian). FE JourneyDetailSheet timeline |
 | 11 | Journey Map | ✅ | ✅ | BE coords + distance (ST_MakeLine). FE polyline MapLibre + markers |
 | 12 | Place Detail | ✅ | ✅ | BE `/places/{id}` (avg rating, ảnh, review). FE PlaceDetailSheet + "Cắm cờ tại đây" |
 | 13 | Search Place | ✅ | ✅ | BE `/places/search` (pg_trgm). FE search trong Discover (debounce) |
 | 14 | Basic XP & Level | ✅ | ✅ | BE: +10 XP/check-in atomic + **xp_events** + tính level/`xp_to_next`. FE: progress bar số thật |
 | 15 | Discover Basic | ✅ | ✅ | BE `/discover/feed` (cursor) + `/places/popular` (cache). FE feed thật (useInfiniteQuery) |
-| 16 | AI Plan Basic | ❌ | 🟡 | FE: AIPlanPage (mock) |
+| 16 | AI Plan Basic | ❌ | 🟦 | FE: AIPlanPage → empty state **"sắp ra mắt"** (bỏ mock, để sau MVP) |
 
 ✅ chạy thật · 🟡 UI/khung có nhưng chưa hoạt động · ❌ chưa làm
 
