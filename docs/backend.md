@@ -17,7 +17,7 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `GET /users/me` · `PATCH /users/me` (display_name/bio) · `GET /users/{username}` · `POST /users/me/avatar` (multipart → R2).
 
 ### Checkpoint — Phase 2 M1–M3 ✅ (domain `internal/checkpoint`)
-- `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level). Reverse-geocode (address+province) dùng **Photon** (`internal/geocode`, ~200-500ms, nhanh hơn Nominatim 1/s — cache theo toạ độ, **đồng bộ** vì Cloud Run cắt CPU sau response → không async fire-and-forget). Env `GEOCODER_BASE_URL` (default `https://photon.komoot.io`), `GEOCODER_USER_AGENT`, `GEOCODER_ENABLED`.
+- `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level). Address + province **do FE resolve** (gọi Photon từ browser, `lib/photon.ts`) rồi gửi trong payload — BE chỉ sanitize và lưu, không gọi Photon nữa → response nhanh hơn ~200-500ms, không còn lo Cloud Run cắt CPU.
 - Upload ảnh (`AddImages`) chạy **song song** (`errgroup`, giữ thứ tự) → 3 ảnh ~1 round-trip thay vì 3 tuần tự.
 - `GET /checkpoints?bbox=` ⭐(map, `ST_MakeEnvelope` + GIST) · `GET /checkpoints/nearby` (`ST_DWithin` + KNN)
 - `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner)
