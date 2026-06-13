@@ -1,19 +1,20 @@
 # Checkpoint — Trạng thái dự án
 
-> Cập nhật: 2026-06-11 · Roadmap đầy đủ xem [../CHECKPOINT.md](../CHECKPOINT.md)
+> Cập nhật: 2026-06-13 · Roadmap đầy đủ xem [../CHECKPOINT.md](../CHECKPOINT.md)
 
 ## TL;DR
 
 - **Phase 1 ✅ · Phase 2 M1–M7 ✅ · Phase 3 J1–J4 ✅ · Phase 4 ✅ · Phase 5 (Gamification) G1–G4 ✅** (XP events, Hộ chiếu con dấu tỉnh, Bảng xếp hạng, Huy hiệu) + Profile edit. Còn: M8/deploy/test, Share card, AI.
 - **Backend:** auth (JWKS + anonymous + upgrade), profile, checkpoint (check-in + XP atomic, spatial map, ảnh→R2) đều chạy thật. Còn: deploy thật, viết test.
 - **Frontend:** auth end-to-end, **map thật (MapLibre)** + check-in GPS + detail, PWA đầy đủ. Discover/AIPlan vẫn data giả.
-- **Đã làm thêm (ngoài roadmap):** anonymous + upgrade tài khoản, re-auth 2 tầng + single-flight, image preview/zoom/xoay, bottom-sheet kéo được, popup xin quyền vị trí, lưu object key (không lưu full URL), feed sắp gần→xa, PWA no-zoom, **định vị bền cho iOS PWA** (`lib/geo.ts` — không xin lại quyền sau khi mở lại app).
+- **Đã làm thêm (ngoài roadmap):** anonymous + upgrade tài khoản, re-auth 2 tầng + single-flight, image preview/zoom/xoay, bottom-sheet kéo được, popup xin quyền vị trí, lưu object key (không lưu full URL), feed sắp gần→xa, PWA no-zoom, **định vị bền cho iOS PWA** (`lib/geo.ts`), **xóa check-in của mình** (hoàn XP/stats + dọn place mồ côi + xóa ảnh R2), **camera trong app** (react-webcam), **resize/crop avatar** (react-easy-crop), **CI alert Telegram** (BE+FE theo từng step).
+- **Mới (2026-06-13):** **nhiều hành trình active cùng lúc** + dropdown chọn hành trình khi check-in (mặc định chọn active mới nhất, BE validate quyền sở hữu); **geocode đổi sang Photon** (nhanh hơn, không giới hạn 1 req/s); **upload ảnh song song** (errgroup); **share card vẽ bằng Canvas2D** (`lib/shareCard.ts` — fix ảnh trắng trên iOS Safari/PWA do giới hạn `<foreignObject>` của html-to-image).
 
 ```
 Phase 1  ██████████████████  done (auth + profile + PWA)
 Phase 2  ████████████████░░  Checkpoint Core M1–M7 ✅ (chỉ còn M8 polish/deploy)
 Phase 4  ██████████████████  Discovery DONE (D1–D6 + A1)
-Phase 3  ████████████████░░  Journey J1–J4 ✅ (CRUD, active journey, detail map+timeline+stats); J5 share OG còn
+Phase 3  ████████████████░░  Journey J1–J4 ✅ (CRUD, NHIỀU active journey, detail map+timeline+stats, chọn journey khi check-in); J5 share OG còn
 Phase 5  ████████████████░░  Gamification G1–G4 ✅ (XP events, Hộ chiếu, Bảng xếp hạng, Huy hiệu) + Profile edit; còn Share card
 Phase 6+ ░░░░░░░░░░░░░░░░░░  chưa bắt đầu (AI / Polish / Deploy)
 ```
@@ -32,7 +33,7 @@ Phase 6+ ░░░░░░░░░░░░░░░░░░  chưa bắt đ�
 | 6 | Upload Image | ✅ | ✅ | BE `POST /{id}/images` → R2. FE chọn ảnh khi check-in |
 | 7 | Add Note / Review | ✅ | ✅ | note + rating trong check-in |
 | 8 | Checkpoint Detail | ✅ | ✅ | BE detail+images+author. FE detail sheet (ảnh, note, rating, author) |
-| 9 | Share Check-in Card | n/a | ✅ | **Client-side** (html-to-image → PNG + Web Share): card checkpoint/hành trình/hộ chiếu + **đính kèm ảnh gốc** (cần R2 CORS) + **deep link** `/c/:id`·`/j/:id` (origin tự lấy). Không cần BE |
+| 9 | Share Check-in Card | n/a | ✅ | **Client-side** (**Canvas2D** `lib/shareCard.ts` → PNG + Web Share): card checkpoint/hành trình/hộ chiếu + **đính kèm ảnh gốc** (R2 CORS) + **deep link** `/c/:id`·`/j/:id` (origin tự lấy). Canvas2D thay html-to-image để ảnh hiện đúng trên iOS Safari/PWA. Không cần BE |
 | 10 | Journey Timeline | ✅ | ✅ | BE journey detail (stops theo thời gian). FE JourneyDetailSheet timeline |
 | 11 | Journey Map | ✅ | ✅ | BE coords + distance (ST_MakeLine). FE polyline MapLibre + markers |
 | 12 | Place Detail | ✅ | ✅ | BE `/places/{id}` (avg rating, ảnh, review). FE PlaceDetailSheet + "Cắm cờ tại đây" |

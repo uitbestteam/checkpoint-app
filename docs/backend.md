@@ -17,7 +17,8 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `GET /users/me` · `PATCH /users/me` (display_name/bio) · `GET /users/{username}` · `POST /users/me/avatar` (multipart → R2).
 
 ### Checkpoint — Phase 2 M1–M3 ✅ (domain `internal/checkpoint`)
-- `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level)
+- `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level). Reverse-geocode (address+province) dùng **Photon** (`internal/geocode`, ~200-500ms, nhanh hơn Nominatim 1/s — cache theo toạ độ, **đồng bộ** vì Cloud Run cắt CPU sau response → không async fire-and-forget). Env `GEOCODER_BASE_URL` (default `https://photon.komoot.io`), `GEOCODER_USER_AGENT`, `GEOCODER_ENABLED`.
+- Upload ảnh (`AddImages`) chạy **song song** (`errgroup`, giữ thứ tự) → 3 ảnh ~1 round-trip thay vì 3 tuần tự.
 - `GET /checkpoints?bbox=` ⭐(map, `ST_MakeEnvelope` + GIST) · `GET /checkpoints/nearby` (`ST_DWithin` + KNN)
 - `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner)
 - `DELETE /checkpoints/{id}` (owner) — **HARD delete trong 1 tx**: xóa row (+ảnh cascade), **trừ lại XP** (xp_event âm `checkin_deleted`, lock FOR UPDATE, recompute level), `checkpoint_count--`, `places.checkin_count--` + **xóa place mồ côi** (NOT EXISTS checkpoint trỏ tới); sau commit best-effort xóa file R2 (`storage.Delete` — SigV4 DeleteObject mới, skip legacy full-URL keys). Handler phân biệt 404/500.
@@ -37,9 +38,9 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - **G4 Huy hiệu (rule engine)**: migration 0010 `user_badges`. Catalog + rule trong code (`badges.go`); `EvaluateBadgesTx` chạy **trong tx check-in** → award idempotent (`INSERT ... ON CONFLICT DO NOTHING RETURNING`), trả `[]Badge` (kèm tên/icon) cho check-in response (`CreateResult.new_badges` → toast khoe huy hiệu FE); `GET /me/badges`. Tests: `LevelForXP`/`XPProgress`/`satisfiedBadges` table-driven.
 
 ### Journey — Phase 3 J1–J2 ✅ (domain `internal/journey`)
-- Migration 0007: `journeys` (+ unique index 1-active/user) + `checkpoints.journey_id`.
+- Migration 0007: `journeys` + `checkpoints.journey_id`. Migration **0011**: bỏ unique index 1-active → **cho phép nhiều journey active cùng lúc** (partial index `(user_id, updated_at DESC) WHERE is_active`).
 - CRUD: `POST/GET me/GET {id}/PATCH/DELETE /journeys` + `POST /journeys/{id}/checkpoints/{cpId}`. Tạo/xóa cập nhật `users.journey_count` (tx); xóa detach checkpoints.
-- **Active journey**: PATCH `is_active` (clear active cũ trong tx vì unique index); check-in service tự gắn `journey_id` = active journey nếu không truyền.
+- **Nhiều active journey**: PATCH `is_active` chỉ set/clear journey đó (không còn clear-others). Check-in **không tự gắn** nữa — FE gửi `journey_id` user chọn từ dropdown; service gọi `BelongsToUser(userID, journeyID)` validate quyền sở hữu, nếu không phải của user thì bỏ qua (gắn nil) → chặn gắn vào journey người khác.
 - Detail `GET /journeys/{id}`: stats (count, ΣXP, **distance km bằng `ST_MakeLine(... ORDER BY created_at)`/`ST_Length`**) + stops theo thời gian (timeline + map).
 
 ### Hạ tầng & chất lượng
@@ -68,11 +69,10 @@ Dockerfile  Makefile  DEPLOY.md  .github/workflows/deploy.yml
 
 ## Còn thiếu / nợ kỹ thuật
 
-- ⏳ **Chưa deploy thật** — Makefile + DEPLOY.md sẵn, cần `make gcp-secrets && make deploy`.
-- ❌ **Chưa có test nào** (service + auth flow nên test trước — mock 3 interface).
-- ⚠️ **R2 SigV4 chưa test với credential thật** — compile OK, cần verify khi dùng avatar upload.
-- ❌ XP/Level mới có cột trong DB, chưa có logic cộng XP.
-- ❌ Toàn bộ Phase 2+ (checkpoint, journey, discovery, gamification, ai).
+- ✅ **Đã deploy Cloud Run** (CI `deploy.yml` + Telegram alert theo từng step).
+- 🟡 **Test**: có unit test cho `geocode`, `checkpoint` (service create/validation/delete + attach/reject journey), `gamification` (`LevelForXP`/`XPProgress`/`satisfiedBadges`), `journey`. Còn thiếu: auth flow, place/discovery. (Chạy test thủ công — không tự động `go test`.)
+- ⚠️ **R2 SigV4** — PutObject/DeleteObject chạy thật với credential thật (avatar + checkpoint images + xóa).
+- ❌ Phase 6: AI Plan (chưa làm BE).
 
 ## Cách chạy
 
