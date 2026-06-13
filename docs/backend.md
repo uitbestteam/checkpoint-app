@@ -20,7 +20,8 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `POST /checkpoints` (check-in: tạo + cộng **+10 XP atomic** trong transaction, `SELECT total_xp FOR UPDATE`, tính lại level). Address + province **do FE resolve** (gọi Photon từ browser, `lib/photon.ts`) rồi gửi trong payload — BE chỉ sanitize và lưu, không gọi Photon nữa → response nhanh hơn ~200-500ms, không còn lo Cloud Run cắt CPU.
 - Upload ảnh (`AddImages`) chạy **song song** (`errgroup`, giữ thứ tự) → 3 ảnh ~1 round-trip thay vì 3 tuần tự.
 - `GET /checkpoints?bbox=` ⭐(map, `ST_MakeEnvelope` + GIST) · `GET /checkpoints/nearby` (`ST_DWithin` + KNN)
-- `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner)
+- `GET /checkpoints/me` · `GET /checkpoints/{id}` (detail + images + author) · `POST /checkpoints/{id}/images` (multipart → R2, owner, legacy)
+- **Upload trực tiếp từ browser → R2** (presigned URL flow): `POST /checkpoints/{id}/upload-urls` `{ count }` → `[{ upload_url, object_key, thumbnail_upload_url, thumbnail_key }]`; FE PUT thẳng R2 bằng URL đó (self-auth, không cần Authorization header); `POST /checkpoints/{id}/images/link` `{ images [{object_key, thumbnail_key}] }` → BE ghi keys vào DB. Loại bỏ double-hop FE→BE→R2. `PresignUpload(key, ttl)` trên R2 client dùng SigV4 query-string auth + `UNSIGNED-PAYLOAD`.
 - `DELETE /checkpoints/{id}` (owner) — **HARD delete trong 1 tx**: xóa row (+ảnh cascade), **trừ lại XP** (xp_event âm `checkin_deleted`, lock FOR UPDATE, recompute level), `checkpoint_count--`, `places.checkin_count--` + **xóa place mồ côi** (NOT EXISTS checkpoint trỏ tới); sau commit best-effort xóa file R2 (`storage.Delete` — SigV4 DeleteObject mới, skip legacy full-URL keys). Handler phân biệt 404/500.
 - Migration 0004 (`checkpoints` có `location` generated GEOGRAPHY + GIST, `checkpoint_images`). Tests: `levelForXP` (table-driven), service create + validation (mock repo).
 
