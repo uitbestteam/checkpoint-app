@@ -49,6 +49,13 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **PlaceDetailSheet**: ảnh (react-photo-view), avg rating, số lượt cắm cờ, review gần đây, nút **"Cắm cờ tại đây"** → place-based check-in (gửi `place_id`, prefill+khóa tên).
 - **Auth Google + anonymous**: `loginGoogle` rẽ nhánh — khách → `linkIdentity` (giữ data), thường → `signInWithOAuth`; nút "Liên kết Google" trong UpgradeBanner; bắt lỗi OAuth redirect (identity trùng) hiển thị tiếng Việt.
 
+### Comments (Firestore)
+- **Bình luận phẳng trên CheckpointDetailSheet**, lưu Firestore, **đọc/ghi thẳng từ browser** (không qua backend Go). `lib/firebase.ts` init Firebase **chỉ để dùng Firestore** (`initializeApp` + `getFirestore`, không Firebase Auth/FCM — modular SDK tree-shake). Config qua `VITE_FIREBASE_{API_KEY,PROJECT_ID,APP_ID}`.
+- **Data model**: subcollection `checkpoints/{id}/comments/{commentId}` — `text, user_id, username, display_name, avatar_url, created_at(serverTimestamp)`. Sort `created_at desc`.
+- **`lib/comments.ts`**: `fetchComments(cpId, after?)` cursor paging native (`orderBy + limit(20) + startAfter(snapshot)`); `addComment` (author từ `useAuth`), `deleteComment`, `getCommentCount` (`getCountFromServer`).
+- **`CommentSection.tsx`**: `useInfiniteQuery` với `pageParam` = `QueryDocumentSnapshot`; infinite scroll (IntersectionObserver sentinel, pattern giống DiscoverPage); ô nhập chỉ hiện khi đã login; nút xoá chỉ ở comment của mình (`c.user_id === user.id`); header "Bình luận (N)". Invalidate `["comments", id]` + `["comment-count", id]` sau add/delete.
+- **Bảo mật**: không Firebase Auth → `firestore.rules` không verify owner (`request.auth` = null). Quyền xoá **enforce client-side**. Rules: read public, create validate field/length (≤500), update cấm, delete cho phép. Nâng cấp sau (nếu cần): mint Firebase custom token từ backend → `signInWithCustomToken`.
+
 ### Gamification (Phase 5 ✅)
 - **Profile edit** (`EditProfileSheet`): sửa tên/bio + đổi avatar → `applyUser()` cập nhật ngay (xem mục Auth/Checkpoint).
 - **Cấp độ (G1)**: ProfilePage progress bar dùng `level_progress`/`xp_to_next` thật (bỏ hardcode).
