@@ -32,6 +32,12 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `GET /discover/feed?lat&lng&cursor` — feed cộng đồng **sắp gần → xa** (`ST_Distance`/KNN, **không giới hạn radius**), keyset cursor `"dist:id"`, trả `distance_m` + author + ảnh đầu.
 - `GET /places/popular` — top theo `checkin_count`, **RWMutex TTL 60s cache + singleflight** (gộp request trùng).
 
+### Google Places Suggestions (domain `internal/googleplaces`)
+- `GET /places/suggest?lat&lng` (auth required) — gọi **Google Places API (New)** `places:searchNearby` bán kính 100m, trả `[{name, category, place_id}]`. Khi API key trống hoặc API lỗi/quota → trả `[]` (không expose lỗi).
+- **Cache in-memory**: key = `"%.3f,%.3f"` lat/lng (≈111m grid), TTL 1h, max 500 entries (evict random khi đầy). `sync.RWMutex`.
+- **Category mapping**: 14 Google place types → 5 app categories (`cafe/food/nature/view/other`).
+- Env: `GOOGLE_PLACES_API_KEY` (optional — feature tắt khi bỏ trống).
+
 ### Gamification — Phase 5 G1–G4 ✅ (domain `internal/gamification`)
 - **G1 XP/Level + event log**: migration 0008 `xp_events`. `AwardXPTx(tx,...)` cộng XP + tính level + ghi event **trong tx check-in** (`SELECT ... FOR UPDATE`); checkpoint repo gọi qua interface (decouple). `XPProgress(xp)` → `xp_to_next`/`level_progress` gắn vào mọi user read (`identity.scanUser`). `levelForXP` chuyển checkpoint → gamification (export `LevelForXP`).
 - **G2 Hộ chiếu**: migration 0009 `checkpoints.province` (reverse-geocode `address.state`, geocode client mở rộng + `Province()`). `GET /me/passport` — gom theo tỉnh (COUNT, MIN/MAX ngày, ảnh đại diện qua subquery).
