@@ -32,11 +32,21 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - `GET /discover/feed?lat&lng&cursor` — feed cộng đồng **sắp gần → xa** (`ST_Distance`/KNN, **không giới hạn radius**), keyset cursor `"dist:id"`, trả `distance_m` + author + ảnh đầu.
 - `GET /places/popular` — top theo `checkin_count`, **RWMutex TTL 60s cache + singleflight** (gộp request trùng).
 
-### Google Places Suggestions (domain `internal/googleplaces`)
-- `GET /places/suggest?lat&lng` (auth required) — gọi **Google Places API (New)** `places:searchNearby` bán kính 100m, trả `[{name, category, place_id}]`. Khi API key trống hoặc API lỗi/quota → trả `[]` (không expose lỗi).
-- **Cache in-memory**: key = `"%.3f,%.3f"` lat/lng (≈111m grid), TTL 1h, max 500 entries (evict random khi đầy). `sync.RWMutex`.
-- **Category mapping**: 14 Google place types → 5 app categories (`cafe/food/nature/view/other`).
-- Env: `GOOGLE_PLACES_API_KEY` (optional — feature tắt khi bỏ trống).
+### Follow (domain `internal/identity`)
+- Migration 0015: bảng `follows (follower_id, followee_id, created_at)` — composite PK, `CHECK (follower_id != followee_id)`, index trên `followee_id`.
+- `POST /users/{username}/follow` (idempotent `ON CONFLICT DO NOTHING`) · `DELETE /users/{username}/follow` · `GET /users/following → {"ids": [...]}`. Route `/following` đăng ký TRƯỚC `/{username}` để chi không đọc nhầm thành username. Self-follow → 400.
+- **Cache Redis Set** `following:{follower_id}` (TTL 24h): GET đọc `SMEMBERS` (miss → DB → `SADD`+`EXPIRE`); follow/unfollow `DEL` key (invalidate). `redisClient` nil hoặc lỗi → fallback DB. Empty set không cache (rẻ để recompute).
+
+### View count (domain `internal/checkpoint`)
+- Migration 0016: `checkpoints.view_count INT NOT NULL DEFAULT 0` (thêm vào `cpColumns`).
+- `POST /checkpoints/{id}/view` → `IncrementView`: Redis `INCR views:{id}` (seed từ DB bằng `SetNX` lần đầu để không reset về 1), persist DB ngầm qua goroutine với `GREATEST(view_count, n)` (monotonic); Redis lỗi/nil → `UPDATE ... RETURNING` đồng bộ. TTL 7 ngày.
+- `GET /checkpoints/{id}` overlay `view_count` từ Redis nếu có (fresher than DB column).
+
+### Nearby Place Suggestions (domain `internal/locationiq`)
+- `GET /places/suggest?lat&lng` (auth required) — gọi **LocationIQ Nearby** (`us1.locationiq.com/v1/nearby`, tag cafe/restaurant/fast_food/bar/pub/bakery/park/viewpoint/attraction, bán kính 150m, limit 5), trả `[{name, category, place_id}]`. API key trống hoặc lỗi/quota → trả `[]` (không expose lỗi).
+- **Cache in-memory**: key = `"%.3f,%.3f"` lat/lng (≈111m grid), TTL 1h, max 500 entries (evict khi đầy). `sync.RWMutex`.
+- **Category mapping**: OSM place types → 5 app categories (`cafe/food/nature/view/other`).
+- Env: `LOCATIONIQ_API_KEY` (optional — feature tắt khi bỏ trống). Đã wire vào CI deploy (secret).
 
 ### Gamification — Phase 5 G1–G4 ✅ (domain `internal/gamification`)
 - **G1 XP/Level + event log**: migration 0008 `xp_events`. `AwardXPTx(tx,...)` cộng XP + tính level + ghi event **trong tx check-in** (`SELECT ... FOR UPDATE`); checkpoint repo gọi qua interface (decouple). `XPProgress(xp)` → `xp_to_next`/`level_progress` gắn vào mọi user read (`identity.scanUser`). `levelForXP` chuyển checkpoint → gamification (export `LevelForXP`).
