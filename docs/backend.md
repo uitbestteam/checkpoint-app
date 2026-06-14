@@ -61,6 +61,11 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - **Nhiều active journey**: PATCH `is_active` chỉ set/clear journey đó (không còn clear-others). Check-in **không tự gắn** nữa — FE gửi `journey_id` user chọn từ dropdown; service gọi `BelongsToUser(userID, journeyID)` validate quyền sở hữu, nếu không phải của user thì bỏ qua (gắn nil) → chặn gắn vào journey người khác.
 - Detail `GET /journeys/{id}`: stats (count, ΣXP, **distance km bằng `ST_MakeLine(... ORDER BY created_at)`/`ST_Length`**) + stops theo thời gian (timeline + map).
 
+### Public share/discover (optional auth)
+- `pkg/middleware/auth.go` thêm **`OptionalAuth`**: gắn principal nếu có Bearer token hợp lệ, không có/không hợp lệ thì cho qua (anonymous). Handler cá nhân hoá qua `authctx.From` (ok=false → anon).
+- Các endpoint đọc của trang share + Discover for-you chuyển sang optionalAuth (per-route `r.With(optionalAuth)`): `GET /checkpoints/{id}`, `GET /checkpoints/by-user`, `POST /checkpoints/{id}/view`, `GET /journeys/{id}`, `GET /users/{username}`, `GET /checkpoints/{id}/reactions`, `GET /discover/feed`, `GET /places/{id}`. Mutating + `/discover/feed/following` + search/popular/nearby + map bbox giữ `authenticated`.
+- `reaction` repo `Summary`: bỏ qua truy vấn `mine` khi `userID == ""` (tránh lỗi "invalid input syntax for type uuid"). Rate-limit anon theo IP (`ipLimiter.ByIP` ở root).
+
 ### Hạ tầng & chất lượng
 - JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
 - **CORS** (`go-chi/cors`) — cho FE gọi API, origins qua env `CORS_ALLOWED_ORIGINS`.

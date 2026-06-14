@@ -55,6 +55,12 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **Route `/u/:username`** (`UserProfileLink` trong LinkRoutes, route trong App.tsx) — share-card profile (`renderProfileCard` trỏ `/u/{username}`) giờ hoạt động.
 - **API**: `getUserByUsername` (`GET /users/{username}` public sẵn có), `getUserCheckpoints` (`GET /checkpoints/by-user?user_id=&limit=`). Profile xem được khi chưa login (ẩn Follow).
 
+### Public pages khi chưa login
+- **`PublicShareLayout.tsx`** (mới): layout tối giản cho khách (chưa login) — header logo + nút "Đăng nhập" (→ `/login`) + `<Outlet/>`. Mount **chỉ `LocationProvider`** (DiscoverPage cần), KHÔNG mount NotificationProvider/CheckinQueue.
+- **`App.tsx`** nhánh `!user`: render `PublicShareLayout` với landing `/discover` (tối giản) + share routes `/c /j /u` (tái dùng `LinkRoutes`); `/login` → LoginPage; `*` → `/discover`. Authed routes thêm catch-all `*` → `/` (để `/login` sau khi đăng nhập không trắng trang).
+- **`DiscoverPage`** tối giản khi `!user`: ẩn tab "Đang theo dõi" (chỉ for-you), ẩn menu `⋮` (follow/xoá) ở FeedCard; vẫn tap card→detail, avatar→profile.
+- Các sheet (`CheckpointDetailSheet`/`JourneyDetailSheet`/`UserProfileSheet`) đã handle `user` null sẵn (ẩn comment input/follow/delete, vẫn hiện reactions counts + comments list). `getFollowing` skip khi không có token. Data lấy qua endpoint **optional-auth** ở BE.
+
 ### Notifications (Firestore, in-app)
 - **Chuông ở header** (`AppLayout`) + badge số chưa đọc (realtime). 4 loại: **comment / follow / unfollow / reaction** vào checkpoint của bạn (lưu Firestore `users/{uid}/notifications`, client ghi tại action — `lib/notifications.ts` `add*Notification`, bỏ qua self) + **"người bạn follow đăng checkpoint mới"** (KHÔNG lưu — suy ra từ `getFeedFollowing` theo lastSeen).
 - **`context/NotificationProvider`**: merge stored (`onSnapshot`) + derived (following-feed) → sort `created_at desc`; `unreadCount` = `created_at > lastSeen` (localStorage `cp.notif.lastSeen.{uid}`, không write-on-read); `markAllSeen` cập nhật lastSeen. Mount dưới `LocationProvider` (cần coords cho feed).
