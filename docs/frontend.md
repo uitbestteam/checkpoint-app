@@ -49,6 +49,12 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **PlaceDetailSheet**: ảnh (react-photo-view), avg rating, số lượt cắm cờ, review gần đây, nút **"Cắm cờ tại đây"** → place-based check-in (gửi `place_id`, prefill+khóa tên).
 - **Auth Google + anonymous**: `loginGoogle` rẽ nhánh — khách → `linkIdentity` (giữ data), thường → `signInWithOAuth`; nút "Liên kết Google" trong UpgradeBanner; bắt lỗi OAuth redirect (identity trùng) hiển thị tiếng Việt.
 
+### Xem profile người khác
+- **`UserProfileSheet.tsx`** (bottom sheet, stack lên trên như ClusterSheet→Detail): passport card (avatar, tên, @username, bio) + 4 stats (tái dùng markup ProfilePage) + nút **Follow** (ẩn nếu là chính mình / chưa login; dùng `followUser`/`unfollowUser` + invalidate `["following"]`,`["feed-following"]`) + lưới check-in (PhotoView zoom như "Khoảnh khắc", không lồng detail sheet).
+- **Mở từ**: avatar/tên tác giả trong `CheckpointDetailSheet` (tự cover cả Map) + `FeedCard` ở Discover (prop `onOpenProfile`, state `profileUsername` cấp page).
+- **Route `/u/:username`** (`UserProfileLink` trong LinkRoutes, route trong App.tsx) — share-card profile (`renderProfileCard` trỏ `/u/{username}`) giờ hoạt động.
+- **API**: `getUserByUsername` (`GET /users/{username}` public sẵn có), `getUserCheckpoints` (`GET /checkpoints/by-user?user_id=&limit=`). Profile xem được khi chưa login (ẩn Follow).
+
 ### Comments (Firestore)
 - **Bình luận phẳng trên CheckpointDetailSheet**, lưu Firestore, **đọc/ghi thẳng từ browser** (không qua backend Go). `lib/firebase.ts` init Firebase **chỉ để dùng Firestore** (`initializeApp` + `getFirestore`, không Firebase Auth/FCM — modular SDK tree-shake). Config qua `VITE_FIREBASE_{API_KEY,PROJECT_ID,APP_ID}`.
 - **Data model**: subcollection `checkpoints/{id}/comments/{commentId}` — `text, user_id, username, display_name, avatar_url, created_at(serverTimestamp)`. Sort `created_at desc`.

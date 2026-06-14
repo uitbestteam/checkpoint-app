@@ -5,14 +5,14 @@ khoảnh khắc, kiếm XP, build **digital travel passport**, và gợi ý trip
 
 > Mục tiêu: vừa học **Go production patterns** vừa làm **portfolio**.
 
-## Trạng thái — Phase 1 (Foundation)
+## Trạng thái — Phase 1–5 xong (Core + Discovery + Journey + Gamification)
 
 | | Tiến độ | Ghi chú |
 |---|---|---|
-| **Backend** | ~90% | Auth + Profile chạy thật; còn deploy + test |
-| **Frontend** | ~40% | UI 5 màn xong (tĩnh); chưa nối API/auth |
+| **Backend** | ~95% | Auth/Profile/Checkpoint/Journey/Discovery/XP + Follow + View count + **Reactions** chạy thật; còn deploy + test |
+| **Frontend** | ~85% | Nối API/auth end-to-end, map thật + check-in + detail + comments + **reactions**, **bộ icon SVG tự host** (bỏ lucide-react); còn AI Plan |
 
-👉 Chi tiết + bảng so sánh 16 feature: **[docs/STATUS.md](docs/STATUS.md)**
+👉 Chi tiết + bảng so sánh feature: **[docs/STATUS.md](docs/STATUS.md)**
 
 ## Cấu trúc repo
 
