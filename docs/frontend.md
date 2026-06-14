@@ -55,6 +55,12 @@ Thư mục: [`../web`](../web). Design tokens: [`../design/tokens`](../design/to
 - **Route `/u/:username`** (`UserProfileLink` trong LinkRoutes, route trong App.tsx) — share-card profile (`renderProfileCard` trỏ `/u/{username}`) giờ hoạt động.
 - **API**: `getUserByUsername` (`GET /users/{username}` public sẵn có), `getUserCheckpoints` (`GET /checkpoints/by-user?user_id=&limit=`). Profile xem được khi chưa login (ẩn Follow).
 
+### Notifications (Firestore, in-app)
+- **Chuông ở header** (`AppLayout`) + badge số chưa đọc (realtime). 4 loại: **comment / follow / unfollow / reaction** vào checkpoint của bạn (lưu Firestore `users/{uid}/notifications`, client ghi tại action — `lib/notifications.ts` `add*Notification`, bỏ qua self) + **"người bạn follow đăng checkpoint mới"** (KHÔNG lưu — suy ra từ `getFeedFollowing` theo lastSeen).
+- **`context/NotificationProvider`**: merge stored (`onSnapshot`) + derived (following-feed) → sort `created_at desc`; `unreadCount` = `created_at > lastSeen` (localStorage `cp.notif.lastSeen.{uid}`, không write-on-read); `markAllSeen` cập nhật lastSeen. Mount dưới `LocationProvider` (cần coords cho feed).
+- **`NotificationSheet`**: list (avatar actor + mô tả theo type, reaction kèm icon, chấm "mới"); tap comment/reaction/checkpoint → `CheckpointDetailSheet`, follow/unfollow → `UserProfileSheet`; mở sheet → `markAllSeen`.
+- **Bảo mật**: như comments — không Firebase Auth nên rules `users/{uid}/notifications` read/create public (documented). **Firestore vs FCM**: Firestore lo lưu + realtime khi app mở; push-khi-đóng-app cần FCM (để sau). Không đụng backend Go.
+
 ### Comments (Firestore)
 - **Bình luận phẳng trên CheckpointDetailSheet**, lưu Firestore, **đọc/ghi thẳng từ browser** (không qua backend Go). `lib/firebase.ts` init Firebase **chỉ để dùng Firestore** (`initializeApp` + `getFirestore`, không Firebase Auth/FCM — modular SDK tree-shake). Config qua `VITE_FIREBASE_{API_KEY,PROJECT_ID,APP_ID}`.
 - **Data model**: subcollection `checkpoints/{id}/comments/{commentId}` — `text, user_id, username, display_name, avatar_url, created_at(serverTimestamp)`. Sort `created_at desc`.
