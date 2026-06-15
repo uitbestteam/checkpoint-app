@@ -1,0 +1,30 @@
+{
+  "description": "Checkpoint level range icons without embedded numbers/text. Add level labels in HTML/CSS UI.",
+  "ranges": [
+    {
+      "tier": "Bronze",
+      "label": "Level range 1-10",
+      "file": "icons/level-range-bronze.svg"
+    },
+    {
+      "tier": "Silver",
+      "label": "Level range 11-20",
+      "file": "icons/level-range-silver.svg"
+    },
+    {
+      "tier": "Gold",
+      "label": "Level range 21-30",
+      "file": "icons/level-range-gold.svg"
+    },
+    {
+      "tier": "Emerald",
+      "label": "Level range 31-40",
+      "file": "icons/level-range-emerald.svg"
+    },
+    {
+      "tier": "Master",
+      "label": "Level range 41-50",
+      "file": "icons/level-range-master.svg"
+    }
+  ]
+}
