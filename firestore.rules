@@ -20,8 +20,7 @@ service cloud.firestore {
       allow create: if request.resource.data.text is string
                     && request.resource.data.text.size() > 0
                     && request.resource.data.text.size() <= 500
-                    && request.resource.data.user_id is string
-                    && request.resource.data.username is string;
+                    && request.resource.data.user_id is string;
 
       allow update: if false;
 
