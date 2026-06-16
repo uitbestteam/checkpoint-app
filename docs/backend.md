@@ -66,6 +66,13 @@ Go 1.25 · chi · pgx/Supabase · JWT · Cloudflare R2 · Cloud Run. Module
 - Các endpoint đọc của trang share + Discover for-you chuyển sang optionalAuth (per-route `r.With(optionalAuth)`): `GET /checkpoints/{id}`, `GET /checkpoints/by-user`, `POST /checkpoints/{id}/view`, `GET /journeys/{id}`, `GET /users/{username}`, `GET /checkpoints/{id}/reactions`, `GET /discover/feed`, `GET /places/{id}`. Mutating + `/discover/feed/following` + search/popular/nearby + map bbox giữ `authenticated`.
 - `reaction` repo `Summary`: bỏ qua truy vấn `mine` khi `userID == ""` (tránh lỗi "invalid input syntax for type uuid"). Rate-limit anon theo IP (`ipLimiter.ByIP` ở root).
 
+### SEO Share Card & OG Meta (domain `internal/share`)
+- Thêm các HTTP endpoints phục vụ chia sẻ link và SEO:
+  - `GET /share/checkpoint/{id}` — hiển thị card xem trước checkpoint.
+  - `GET /share/journey/{id}` — hiển thị card xem trước hành trình.
+  - `GET /share/user/{username}` — hiển thị card xem trước profile người dùng.
+- Tự động kiểm tra User-Agent: nếu là Crawler (Facebook, Twitter, Zalo, Telegram,...) -> render HTML template với các thẻ Open Graph meta động (`og:title`, `og:description`, `og:image`, `og:url`) để hiển thị preview đẹp mắt. Nếu là người dùng thường -> redirect (HTTP 302) trực tiếp về trang PWA Frontend tương ứng. Có fallback meta refresh / JS redirect trong HTML để đảm bảo người dùng luôn được đưa về ứng dụng.
+
 ### Hạ tầng & chất lượng
 - JWT middleware (`pkg/middleware`), principal qua context (`pkg/authctx`, tránh import cycle).
 - **CORS** (`go-chi/cors`) — cho FE gọi API, origins qua env `CORS_ALLOWED_ORIGINS`.
