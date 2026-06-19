@@ -1,0 +1,43 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: Checkpoint
+      - generic [ref=e9]:
+        - img [ref=e10]
+        - generic [ref=e14]: Using default location (HCMC)
+  - main [ref=e15]:
+    - generic:
+      - generic:
+        - generic: Loading map...
+  - navigation [ref=e17]:
+    - list [ref=e18]:
+      - listitem [ref=e19]:
+        - link "Map" [ref=e20] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e21]:
+            - img [ref=e22]
+            - generic [ref=e26]: Map
+      - listitem [ref=e27]:
+        - link "Discover" [ref=e28] [cursor=pointer]:
+          - /url: /discover
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - generic [ref=e34]: Discover
+      - listitem [ref=e35]:
+        - link "Create" [ref=e36] [cursor=pointer]:
+          - /url: /create
+          - generic [ref=e37]:
+            - img [ref=e38]
+            - generic [ref=e40]: Create
+      - listitem [ref=e41]:
+        - link "Rank" [ref=e42] [cursor=pointer]:
+          - /url: /leaderboard
+          - generic [ref=e43]:
+            - img [ref=e44]
+            - generic [ref=e49]: Rank
+      - listitem [ref=e50]:
+        - link "Profile" [ref=e51] [cursor=pointer]:
+          - /url: /profile
+          - generic [ref=e52]:
+            - img [ref=e53]
+            - generic [ref=e56]: Profile

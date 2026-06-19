@@ -1,0 +1,6 @@
+[     180ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[    1560ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/087c1154-ae71-46d0-a5b6-55c97ad7e877:2785
+[    1560ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/087c1154-ae71-46d0-a5b6-55c97ad7e877:2785
+[    1560ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/087c1154-ae71-46d0-a5b6-55c97ad7e877:2785
+[   10370ms] [ERROR] Access to fetch at 'https://media.checkpoint-app.space/frames/avatar-frame-level-03.svg' from origin 'http://localhost:5174' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5174/:0
+[   10370ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://media.checkpoint-app.space/frames/avatar-frame-level-03.svg:0

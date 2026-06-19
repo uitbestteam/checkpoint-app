@@ -1,0 +1,18 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - heading "Checkpoint" [level=1] [ref=e5]
+    - paragraph [ref=e6]:
+      - text: Explore the world,
+      - text: trace your journey
+  - generic [ref=e7]:
+    - textbox "Email" [ref=e8]: lhongquan.1998@gmail.com
+    - textbox "Password" [ref=e9]: Gunny2.0
+    - button "Processing..." [disabled]:
+      - img
+      - text: Processing...
+  - generic [ref=e14]: or
+  - button "Continue with Google" [ref=e17]
+  - paragraph [ref=e18]:
+    - text: Don't have an account?
+    - button "Sign up now" [ref=e19]
+  - paragraph [ref=e20]: build dev

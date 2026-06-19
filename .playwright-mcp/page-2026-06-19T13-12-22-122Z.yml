@@ -1,0 +1,91 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e7]:
+      - generic [ref=e8]: Checkpoint
+      - generic [ref=e9]:
+        - img [ref=e10]
+        - generic [ref=e14]: Đang dùng vị trí mặc định TP.HCM
+    - button "Thông báo" [ref=e15]:
+      - img [ref=e16]
+      - generic [ref=e20]: "33"
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic:
+          - region "Map" [ref=e24]
+          - button "Map marker" [ref=e25]:
+            - generic [ref=e27] [cursor=pointer]: "2"
+          - button "Map marker" [ref=e28]
+          - button "Map marker" [ref=e30]:
+            - generic [ref=e32] [cursor=pointer]: "15"
+          - button "Map marker" [ref=e33]:
+            - generic [ref=e35] [cursor=pointer]: "13"
+          - button "Map marker" [ref=e36]:
+            - generic [ref=e38] [cursor=pointer]: "4"
+          - button "Map marker" [ref=e39]
+        - generic:
+          - generic:
+            - button "Find my location" [ref=e42] [cursor=pointer]
+            - generic [ref=e44]:
+              - button "Zoom in" [ref=e45] [cursor=pointer]
+              - button "Zoom out" [ref=e47] [cursor=pointer]
+          - group [ref=e49]:
+            - generic "Toggle attribution" [ref=e50] [cursor=pointer]
+      - generic:
+        - button "Lọc theo danh mục" [ref=e52]:
+          - img [ref=e53]
+        - menu:
+          - menuitem:
+            - img
+          - menuitem:
+            - img
+          - menuitem:
+            - img
+          - menuitem:
+            - img
+          - menuitem:
+            - img
+          - menuitem:
+            - img
+      - generic [ref=e57]:
+        - button "Tất cả" [ref=e58]
+        - button "Đang follow" [ref=e59]
+        - button "Của tôi" [ref=e60]
+      - button "CHECK-IN" [ref=e61]:
+        - img [ref=e62]
+        - text: CHECK-IN
+      - generic:
+        - generic:
+          - generic: Đang tải bản đồ…
+  - navigation [ref=e67]:
+    - list [ref=e68]:
+      - listitem [ref=e69]:
+        - link "Bản đồ" [ref=e70] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e71]:
+            - img [ref=e72]
+            - generic [ref=e76]: Bản đồ
+      - listitem [ref=e77]:
+        - link "Khám phá" [ref=e78] [cursor=pointer]:
+          - /url: /discover
+          - generic [ref=e79]:
+            - img [ref=e80]
+            - generic [ref=e84]: Khám phá
+      - listitem [ref=e85]:
+        - link "Tạo mới" [ref=e86] [cursor=pointer]:
+          - /url: /create
+          - generic [ref=e87]:
+            - img [ref=e88]
+            - generic [ref=e90]: Tạo mới
+      - listitem [ref=e91]:
+        - link "Bảng XH" [ref=e92] [cursor=pointer]:
+          - /url: /leaderboard
+          - generic [ref=e93]:
+            - img [ref=e94]
+            - generic [ref=e99]: Bảng XH
+      - listitem [ref=e100]:
+        - link "Cá nhân" [ref=e101] [cursor=pointer]:
+          - /url: /profile
+          - generic [ref=e102]:
+            - img [ref=e103]
+            - generic [ref=e106]: Cá nhân

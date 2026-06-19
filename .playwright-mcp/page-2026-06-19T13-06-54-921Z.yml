@@ -1,0 +1,18 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - heading "Checkpoint" [level=1] [ref=e5]
+    - paragraph [ref=e6]:
+      - text: Khám phá thế giới,
+      - text: lưu dấu hành trình
+  - generic [ref=e7]:
+    - textbox "Email" [ref=e8]
+    - textbox "Mật khẩu" [ref=e9]
+    - button "Đăng nhập" [ref=e10]:
+      - img [ref=e11]
+      - text: Đăng nhập
+  - generic [ref=e14]: hoặc
+  - button "Tiếp tục với Google" [ref=e17]
+  - paragraph [ref=e18]:
+    - text: Bạn chưa có tài khoản?
+    - button "Đăng ký ngay" [ref=e19]
+  - paragraph [ref=e20]: build dev

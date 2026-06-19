@@ -1,0 +1,313 @@
+- generic [ref=e5]:
+  - banner [ref=e6]:
+    - generic [ref=e10]: Checkpoint
+    - button "Thông báo" [ref=e11]:
+      - img [ref=e12]
+      - generic [ref=e16]: "33"
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - paragraph [ref=e22]:
+              - img [ref=e23]
+              - text: Tuần khám phá
+            - heading "Bảng xếp hạng" [level=1] [ref=e27]
+          - img [ref=e29]
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: Top XP
+            - paragraph [ref=e37]: "430"
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: Người chơi
+            - paragraph [ref=e40]: "20"
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: Bạn
+            - paragraph [ref=e43]: "#1"
+      - region "Top 3 nhà khám phá" [ref=e44]:
+        - generic [ref=e45]:
+          - button "Mở hồ sơ QuillLuonSupaVip, hạng 1" [ref=e46]:
+            - generic [ref=e49]:
+              - img [ref=e50]
+              - text: "1"
+            - paragraph [ref=e55]: QuillLuonSupaVip
+            - paragraph [ref=e56]: Lv. 3
+            - generic [ref=e58]:
+              - img [ref=e59]
+              - text: "430"
+          - button "Mở hồ sơ Dang Bao Han, hạng 2" [ref=e66]:
+            - generic [ref=e69]:
+              - img [ref=e70]
+              - text: "2"
+            - paragraph [ref=e74]: Dang Bao Han
+            - paragraph [ref=e75]: Lv. 2
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - text: "210"
+          - button "Mở hồ sơ phamduclong1411_191bc6, hạng 3" [ref=e85]:
+            - generic [ref=e87]:
+              - generic [ref=e88]: P
+              - generic [ref=e89]:
+                - img [ref=e90]
+                - text: "3"
+            - paragraph [ref=e94]: phamduclong1411_191bc6
+            - paragraph [ref=e95]: Lv. 1
+            - generic [ref=e97]:
+              - img [ref=e98]
+              - text: "80"
+      - region "Top nhà khám phá" [ref=e105]:
+        - generic [ref=e106]:
+          - img [ref=e107]
+          - heading "Top nhà khám phá" [level=2] [ref=e111]
+        - button "Mở hồ sơ danh98it_7dec3a, hạng 4" [ref=e113]:
+          - generic [ref=e114]: "4"
+          - generic [ref=e116]: D
+          - generic [ref=e117]:
+            - generic [ref=e118]: danh98it_7dec3a
+            - generic [ref=e119]: Lv. 1
+          - generic [ref=e120]:
+            - generic [ref=e121]:
+              - img [ref=e122]
+              - text: "70"
+            - generic [ref=e129]:
+              - img [ref=e130]
+              - text: Hạng 4
+        - button "Mở hồ sơ Kon Moè 🦄, hạng 5" [ref=e132]:
+          - generic [ref=e133]: "5"
+          - generic [ref=e135]:
+            - generic [ref=e136]: Kon Moè 🦄
+            - generic [ref=e137]: Lv. 1
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - img [ref=e140]
+              - text: "40"
+            - generic [ref=e147]:
+              - img [ref=e148]
+              - text: Hạng 5
+        - button "Mở hồ sơ traveler_7ccfed, hạng 6" [ref=e150]:
+          - generic [ref=e151]: "6"
+          - generic [ref=e153]: T
+          - generic [ref=e154]:
+            - generic [ref=e155]: traveler_7ccfed
+            - generic [ref=e156]: Lv. 1
+          - generic [ref=e157]:
+            - generic [ref=e158]:
+              - img [ref=e159]
+              - text: "30"
+            - generic [ref=e166]:
+              - img [ref=e167]
+              - text: Hạng 6
+        - button "Mở hồ sơ traveler_8f70b4, hạng 7" [ref=e169]:
+          - generic [ref=e170]: "7"
+          - generic [ref=e172]: T
+          - generic [ref=e173]:
+            - generic [ref=e174]: traveler_8f70b4
+            - generic [ref=e175]: Lv. 1
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - img [ref=e178]
+              - text: "20"
+            - generic [ref=e185]:
+              - img [ref=e186]
+              - text: Hạng 7
+        - button "Mở hồ sơ traveler_7f7295, hạng 7" [ref=e188]:
+          - generic [ref=e189]: "7"
+          - generic [ref=e191]: T
+          - generic [ref=e192]:
+            - generic [ref=e193]: traveler_7f7295
+            - generic [ref=e194]: Lv. 1
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - img [ref=e197]
+              - text: "20"
+            - generic [ref=e204]:
+              - img [ref=e205]
+              - text: Hạng 7
+        - button "Mở hồ sơ Quang Hiền, hạng 9" [ref=e207]:
+          - generic [ref=e208]: "9"
+          - generic [ref=e210]: Q
+          - generic [ref=e211]:
+            - generic [ref=e212]: Quang Hiền
+            - generic [ref=e213]: Lv. 1
+          - generic [ref=e214]:
+            - generic [ref=e215]:
+              - img [ref=e216]
+              - text: "10"
+            - generic [ref=e223]:
+              - img [ref=e224]
+              - text: Hạng 9
+        - button "Mở hồ sơ traveler_b5bbb2, hạng 9" [ref=e226]:
+          - generic [ref=e227]: "9"
+          - generic [ref=e229]: T
+          - generic [ref=e230]:
+            - generic [ref=e231]: traveler_b5bbb2
+            - generic [ref=e232]: Lv. 1
+          - generic [ref=e233]:
+            - generic [ref=e234]:
+              - img [ref=e235]
+              - text: "10"
+            - generic [ref=e242]:
+              - img [ref=e243]
+              - text: Hạng 9
+        - button "Mở hồ sơ quanlh151098_291a03, hạng 9" [ref=e245]:
+          - generic [ref=e246]: "9"
+          - generic [ref=e248]: Q
+          - generic [ref=e249]:
+            - generic [ref=e250]: quanlh151098_291a03
+            - generic [ref=e251]: Lv. 1
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - img [ref=e254]
+              - text: "10"
+            - generic [ref=e261]:
+              - img [ref=e262]
+              - text: Hạng 9
+        - button "Mở hồ sơ traveler_2da969, hạng 9" [ref=e264]:
+          - generic [ref=e265]: "9"
+          - generic [ref=e267]: T
+          - generic [ref=e268]:
+            - generic [ref=e269]: traveler_2da969
+            - generic [ref=e270]: Lv. 1
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - img [ref=e273]
+              - text: "10"
+            - generic [ref=e280]:
+              - img [ref=e281]
+              - text: Hạng 9
+        - button "Mở hồ sơ traveler_c6c1e0, hạng 9" [ref=e283]:
+          - generic [ref=e284]: "9"
+          - generic [ref=e286]: T
+          - generic [ref=e287]:
+            - generic [ref=e288]: traveler_c6c1e0
+            - generic [ref=e289]: Lv. 1
+          - generic [ref=e290]:
+            - generic [ref=e291]:
+              - img [ref=e292]
+              - text: "10"
+            - generic [ref=e299]:
+              - img [ref=e300]
+              - text: Hạng 9
+        - button "Mở hồ sơ trihoangvodev_5b0540, hạng 9" [ref=e302]:
+          - generic [ref=e303]: "9"
+          - generic [ref=e305]: T
+          - generic [ref=e306]:
+            - generic [ref=e307]: trihoangvodev_5b0540
+            - generic [ref=e308]: Lv. 1
+          - generic [ref=e309]:
+            - generic [ref=e310]:
+              - img [ref=e311]
+              - text: "10"
+            - generic [ref=e318]:
+              - img [ref=e319]
+              - text: Hạng 9
+        - button "Mở hồ sơ lhquan1998_1cf834, hạng 9" [ref=e321]:
+          - generic [ref=e322]: "9"
+          - generic [ref=e324]: L
+          - generic [ref=e325]:
+            - generic [ref=e326]: lhquan1998_1cf834
+            - generic [ref=e327]: Lv. 1
+          - generic [ref=e328]:
+            - generic [ref=e329]:
+              - img [ref=e330]
+              - text: "10"
+            - generic [ref=e337]:
+              - img [ref=e338]
+              - text: Hạng 9
+        - button "Mở hồ sơ anotherminhnhat_d55727, hạng 9" [ref=e340]:
+          - generic [ref=e341]: "9"
+          - generic [ref=e343]: A
+          - generic [ref=e344]:
+            - generic [ref=e345]: anotherminhnhat_d55727
+            - generic [ref=e346]: Lv. 1
+          - generic [ref=e347]:
+            - generic [ref=e348]:
+              - img [ref=e349]
+              - text: "10"
+            - generic [ref=e356]:
+              - img [ref=e357]
+              - text: Hạng 9
+        - button "Mở hồ sơ traveler_f10292, hạng 9" [ref=e359]:
+          - generic [ref=e360]: "9"
+          - generic [ref=e362]: T
+          - generic [ref=e363]:
+            - generic [ref=e364]: traveler_f10292
+            - generic [ref=e365]: Lv. 1
+          - generic [ref=e366]:
+            - generic [ref=e367]:
+              - img [ref=e368]
+              - text: "10"
+            - generic [ref=e375]:
+              - img [ref=e376]
+              - text: Hạng 9
+        - button "Mở hồ sơ traveler_650aee, hạng 9" [ref=e378]:
+          - generic [ref=e379]: "9"
+          - generic [ref=e381]: T
+          - generic [ref=e382]:
+            - generic [ref=e383]: traveler_650aee
+            - generic [ref=e384]: Lv. 1
+          - generic [ref=e385]:
+            - generic [ref=e386]:
+              - img [ref=e387]
+              - text: "10"
+            - generic [ref=e394]:
+              - img [ref=e395]
+              - text: Hạng 9
+        - button "Mở hồ sơ traveler_b80ff8, hạng 9" [ref=e397]:
+          - generic [ref=e398]: "9"
+          - generic [ref=e400]: T
+          - generic [ref=e401]:
+            - generic [ref=e402]: traveler_b80ff8
+            - generic [ref=e403]: Lv. 1
+          - generic [ref=e404]:
+            - generic [ref=e405]:
+              - img [ref=e406]
+              - text: "10"
+            - generic [ref=e413]:
+              - img [ref=e414]
+              - text: Hạng 9
+        - button "Mở hồ sơ tramnthvn_e289d6, hạng 9" [ref=e416]:
+          - generic [ref=e417]: "9"
+          - generic [ref=e419]: T
+          - generic [ref=e420]:
+            - generic [ref=e421]: tramnthvn_e289d6
+            - generic [ref=e422]: Lv. 1
+          - generic [ref=e423]:
+            - generic [ref=e424]:
+              - img [ref=e425]
+              - text: "10"
+            - generic [ref=e432]:
+              - img [ref=e433]
+              - text: Hạng 9
+  - navigation [ref=e436]:
+    - list [ref=e437]:
+      - listitem [ref=e438]:
+        - link "Bản đồ" [ref=e439] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e440]:
+            - img [ref=e441]
+            - generic [ref=e445]: Bản đồ
+      - listitem [ref=e446]:
+        - link "Khám phá" [ref=e447] [cursor=pointer]:
+          - /url: /discover
+          - generic [ref=e448]:
+            - img [ref=e449]
+            - generic [ref=e453]: Khám phá
+      - listitem [ref=e454]:
+        - link "Tạo mới" [ref=e455] [cursor=pointer]:
+          - /url: /create
+          - generic [ref=e456]:
+            - img [ref=e457]
+            - generic [ref=e459]: Tạo mới
+      - listitem [ref=e460]:
+        - link "Bảng XH" [ref=e461] [cursor=pointer]:
+          - /url: /leaderboard
+          - generic [ref=e462]:
+            - img [ref=e463]
+            - generic [ref=e468]: Bảng XH
+      - listitem [ref=e469]:
+        - link "Cá nhân" [ref=e470] [cursor=pointer]:
+          - /url: /profile
+          - generic [ref=e471]:
+            - img [ref=e472]
+            - generic [ref=e475]: Cá nhân

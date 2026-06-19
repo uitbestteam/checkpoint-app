@@ -1,0 +1,10 @@
+[     725ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[     863ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:5174/login:0
+[   35930ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://zngdcfoeklogvjphhjkp.supabase.co/auth/v1/token?grant_type=password:0
+[   90039ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/1c3a4c9d-5a9b-4c95-8991-969c6bac9e52:2785
+[   90039ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/1c3a4c9d-5a9b-4c95-8991-969c6bac9e52:2785
+[   90040ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/1c3a4c9d-5a9b-4c95-8991-969c6bac9e52:2785
+[  118637ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[  119633ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/02dbf0fe-582c-410c-84fe-2fc4fe07598b:2785
+[  119633ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/02dbf0fe-582c-410c-84fe-2fc4fe07598b:2785
+[  119633ms] [WARNING] Expected value to be of type number, but found null instead. @ blob:http://localhost:5174/02dbf0fe-582c-410c-84fe-2fc4fe07598b:2785
