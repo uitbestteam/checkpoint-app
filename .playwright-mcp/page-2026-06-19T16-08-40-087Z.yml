@@ -1,0 +1,59 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: Checkpoint
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - generic [ref=e15]: Using default location (HCMC)
+      - navigation [ref=e17]:
+        - list [ref=e18]:
+          - listitem [ref=e19]:
+            - link "Map" [ref=e20] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e21]:
+                - img [ref=e22]
+                - generic [ref=e26]: Map
+          - listitem [ref=e27]:
+            - link "Discover" [ref=e28] [cursor=pointer]:
+              - /url: /discover
+              - generic [ref=e29]:
+                - img [ref=e30]
+                - generic [ref=e34]: Discover
+          - listitem [ref=e35]:
+            - link "Create" [ref=e36] [cursor=pointer]:
+              - /url: /create
+              - generic [ref=e37]:
+                - img [ref=e38]
+                - generic [ref=e40]: Create
+          - listitem [ref=e41]:
+            - link "Rank" [ref=e42] [cursor=pointer]:
+              - /url: /leaderboard
+              - generic [ref=e43]:
+                - img [ref=e44]
+                - generic [ref=e49]: Rank
+          - listitem [ref=e50]:
+            - link "Profile" [ref=e51] [cursor=pointer]:
+              - /url: /profile
+              - generic [ref=e52]:
+                - img [ref=e53]
+                - generic [ref=e56]: Profile
+  - main [ref=e57]:
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - img [ref=e61]
+          - textbox "Search place" [ref=e65]:
+            - /placeholder: Search places, cafes, check-in spots...
+        - button "Open filters" [ref=e66] [cursor=pointer]:
+          - img [ref=e67]
+      - generic [ref=e73]:
+        - heading "Trending near you" [level=2] [ref=e74]:
+          - img [ref=e75]
+          - text: Trending near you
+        - paragraph [ref=e78]: Popular check-ins recently
+      - generic [ref=e96]:
+        - heading "Places Near You" [level=2] [ref=e97]:
+          - img [ref=e98]
+          - text: Places Near You
+        - paragraph [ref=e102]: 0 places in current view

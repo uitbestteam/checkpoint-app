@@ -1,0 +1,136 @@
+[     265ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[    1227ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    1232ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[    1233ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    1236ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[    2466ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    2472ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[    2802ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    2806ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[    4707ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    4713ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[    5380ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    5386ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[    8947ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[    8953ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[    9997ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   10002ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   12047ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   12051ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   12325ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   12329ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   13327ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   13333ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   13904ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   13907ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   15570ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   15576ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   16580ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   16585ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   19816ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   19822ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   21158ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   21165ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   36006ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   36008ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   36338ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   36339ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   37241ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   37254ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   37913ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   37917ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   39553ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   39568ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   40500ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   40503ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[   43793ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   43796ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[   45120ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[   45122ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  162773ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[  163442ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  163448ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  163568ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  163572ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  165143ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  165146ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  165383ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  165386ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  167615ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  167621ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  167806ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  167807ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  168741ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[  169039ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  169042ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  169380ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  169383ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  170282ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  170287ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  170907ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  170914ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  172524ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  172530ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  173528ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  173532ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  176768ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  176773ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  178113ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  178118ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  189168ms] [ERROR] %o
+
+%s
+
+%s
+ ReferenceError: NavMenu is not defined
+    at BrowserHeader (http://localhost:5180/src/components/AppLayout.tsx?t=1781885508564:193:30)
+    at Object.react_stack_bottom_frame (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13)
+    at performWorkOnRoot (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:11827:37) The above error occurred in the <BrowserHeader> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[  189168ms] [ERROR] App crashed: ReferenceError: NavMenu is not defined
+    at BrowserHeader (http://localhost:5180/src/components/AppLayout.tsx?t=1781885508564:193:30)
+    at Object.react_stack_bottom_frame (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13)
+    at performWorkOnRoot (http://localhost:5180/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:11827:37) 
+    at BrowserHeader (http://localhost:5180/src/components/AppLayout.tsx?t=1781885508564:175:26)
+    at div (<anonymous>)
+    at LocationProvider (http://localhost:5180/src/location/LocationProvider.tsx:35:36)
+    at AppLayout (http://localhost:5180/src/components/AppLayout.tsx?t=1781885508564:216:20)
+    at RenderedRoute (http://localhost:5180/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5180/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5180/src/context/AuthGate.tsx?t=1781885488111:26:36)
+    at App (http://localhost:5180/src/App.tsx?t=1781885508564:71:29)
+    at UserProfileProvider (http://localhost:5180/src/context/UserProfileProvider.tsx?t=1781885488111:21:39)
+    at AuthProvider (http://localhost:5180/src/auth/AuthContext.tsx?t=1781885488111:25:32)
+    at Router (http://localhost:5180/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5180/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5180/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5180/src/components/ErrorBoundary.tsx?t=1781885488111:7:8) @ http://localhost:5180/src/components/ErrorBoundary.tsx?t=1781885488111:12
+[  194500ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  194504ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  194759ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  194763ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  195778ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  195782ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  196337ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  196341ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  198010ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  198013ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  198907ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  198909ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[  202250ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  202252ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/popular?limit=10&lat=10.776&lng=106.7:0
+[  203566ms] [ERROR] Access to XMLHttpRequest at 'https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0' from origin 'http://localhost:5180' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5180/discover:0
+[  203570ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://api.checkpoint-app.space/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0

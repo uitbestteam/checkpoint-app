@@ -1,0 +1,29 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: Checkpoint
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - generic [ref=e15]: Using default location (HCMC)
+      - button "Menu" [ref=e18]:
+        - img [ref=e19]
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - textbox "Search place" [ref=e28]:
+            - /placeholder: Search places, cafes, check-in spots...
+        - button "Open filters" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+      - generic [ref=e36]:
+        - heading "Trending near you" [level=2] [ref=e37]:
+          - img [ref=e38]
+          - text: Trending near you
+        - paragraph [ref=e41]: Popular check-ins recently
+      - generic [ref=e59]:
+        - heading "Places Near You" [level=2] [ref=e60]:
+          - img [ref=e61]
+          - text: Places Near You
+        - paragraph [ref=e65]: 0 places in current view

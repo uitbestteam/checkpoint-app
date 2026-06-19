@@ -1,0 +1,42 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: Checkpoint
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - generic [ref=e15]: Using default location (HCMC)
+      - generic [ref=e17]:
+        - button "Menu" [expanded] [active] [ref=e18]:
+          - img [ref=e19]
+        - menu [ref=e100]:
+          - menuitem "Map" [ref=e101] [cursor=pointer]:
+            - img [ref=e102]
+            - generic [ref=e106]: Map
+          - menuitem "Discover" [ref=e107] [cursor=pointer]:
+            - img [ref=e108]
+            - generic [ref=e112]: Discover
+          - menuitem "Create" [ref=e113] [cursor=pointer]:
+            - img [ref=e114]
+            - generic [ref=e116]: Create
+          - menuitem "Rank" [ref=e117] [cursor=pointer]:
+            - img [ref=e118]
+            - generic [ref=e123]: Rank
+          - menuitem "Profile" [ref=e124] [cursor=pointer]:
+            - img [ref=e125]
+            - generic [ref=e128]: Profile
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - textbox "Search place" [ref=e28]:
+            - /placeholder: Search places, cafes, check-in spots...
+        - button "Open filters" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+      - generic [ref=e59]:
+        - heading "Places Near You" [level=2] [ref=e60]:
+          - img [ref=e61]
+          - text: Places Near You
+        - paragraph [ref=e65]: 0 places in current view
+      - paragraph [ref=e129]: No places nearby. Be the first to pin here!

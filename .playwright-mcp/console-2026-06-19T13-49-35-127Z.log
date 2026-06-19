@@ -1,1 +1,1028 @@
 [     222ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[  698656ms] [ERROR] %o
+
+%s
+
+%s
+ ReferenceError: PrivacyPolicyPage is not defined
+    at App (http://localhost:5174/src/App.tsx?t=1781877673522:361:88)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13)
+    at performWorkOnRoot (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:11827:37) The above error occurred in the <App> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[  698657ms] [ERROR] App crashed: ReferenceError: PrivacyPolicyPage is not defined
+    at App (http://localhost:5174/src/App.tsx?t=1781877673522:361:88)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13)
+    at performWorkOnRoot (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:11827:37) 
+    at App (http://localhost:5174/src/App.tsx?t=1781877673522:70:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[  756369ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[  766310ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1217114ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://zngdcfoeklogvjphhjkp.supabase.co/auth/v1/token?grant_type=refresh_token:0
+[ 1265204ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1358939ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1420230ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 1420232ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 1421777ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1624334ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/components/ReactionBar.tsx?t=1781878599444:30:39 @ http://localhost:5174/@vite/client:881
+[ 1624334ms] [ERROR] [vite] Failed to reload /src/components/ReactionBar.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1626901ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/components/ReactionBar.tsx?t=1781878599444:30:39 @ http://localhost:5174/@vite/client:881
+[ 1626901ms] [ERROR] [vite] Failed to reload /src/components/NotificationSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1626902ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/components/ReactionBar.tsx?t=1781878599444:30:39 @ http://localhost:5174/@vite/client:881
+[ 1626902ms] [ERROR] [vite] Failed to reload /src/components/AppLayout.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1628381ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1628382ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1634331ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1634331ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1634817ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1634817ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1638671ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1638671ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1639193ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1639193ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1639612ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1639612ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1643494ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1643495ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1643912ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1643912ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1645187ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1645187ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1648122ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1648122ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1649745ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1649746ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1650542ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <NotificationBell> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1650542ms] [ERROR] App crashed: Error: useNotifications must be used within <NotificationProvider>
+    at useNotifications (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878592614:167:19)
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:39:27)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at NotificationBell (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:38:17)
+    at header (<anonymous>)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878601980:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878597686:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878592614:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878592614:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx:12
+[ 1652716ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1657723ms] [WARNING] [2026-06-19T14:17:12.849Z]  @firebase/firestore: Firestore (12.14.0): WebChannelConnection RPC 'Write' stream 0x828cfc48 transport errored. Name: undefined Message: undefined @ http://localhost:5174/node_modules/.vite/deps/chunk-AP7MJW5M.js?v=1a5ac9f3:890
+[ 1657760ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1684684ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878624355:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <Header> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1684684ms] [ERROR] App crashed: Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878624355:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878657846:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878657846:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878642924:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx?t=1781878624355:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878631501:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878624355:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:12
+[ 1686634ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878624355:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <Header> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1686634ms] [ERROR] App crashed: Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878624355:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878657846:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878657846:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878642924:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx?t=1781878624355:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878631501:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878624355:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:12
+[ 1688113ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878624355:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <Header> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1688113ms] [ERROR] App crashed: Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878624355:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878657846:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878657846:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878642924:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878624355:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx?t=1781878624355:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878631501:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878624355:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:12
+[ 1692515ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878662742:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878665954:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <Header> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1692516ms] [ERROR] App crashed: Error: useUserLocation must be used within a LocationProvider
+    at useUserLocation (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878662742:157:19)
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878665954:105:22)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at Header (http://localhost:5174/src/components/AppLayout.tsx?t=1781878665954:101:19)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878666720:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878666720:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878642924:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878665954:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx?t=1781878624355:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878665954:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878659006:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:12
+[ 1694781ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/pages/BadgeCollectionPage.tsx?t=1781878669894:29:25 @ http://localhost:5174/@vite/client:881
+[ 1694781ms] [ERROR] [vite] Failed to reload /src/pages/BadgeCollectionPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1698968ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useAuth must be used within <AuthProvider>
+    at useAuth (http://localhost:5174/src/auth/AuthContext.tsx:212:19)
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx:37:29)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <RouteTracker> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1698969ms] [ERROR] App crashed: Error: useAuth must be used within <AuthProvider>
+    at useAuth (http://localhost:5174/src/auth/AuthContext.tsx:212:19)
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx:37:29)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx:36:20)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878673982:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878673982:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:12
+[ 1699073ms] [WARNING] [2026-06-19T14:17:54.200Z]  @firebase/firestore: Firestore (12.14.0): WebChannelConnection RPC 'Write' stream 0x8c3fad31 transport errored. Name: undefined Message: undefined @ http://localhost:5174/node_modules/.vite/deps/chunk-AP7MJW5M.js?v=1a5ac9f3:890
+[ 1699352ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1711036ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1715820ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878690875:43:24 @ http://localhost:5174/@vite/client:881
+[ 1715820ms] [ERROR] [vite] Failed to reload /src/pages/DiscoverPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1718327ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878693371:43:24 @ http://localhost:5174/@vite/client:881
+[ 1718327ms] [ERROR] [vite] Failed to reload /src/pages/DiscoverPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1719839ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1719855ms] ReferenceError: t is not defined
+    at http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878694648:43:24
+[ 1727206ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1728399ms] [ERROR] %o
+
+%s
+
+%s
+ ReferenceError: t is not defined
+    at PlaceCard (http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878702069:658:21)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13)
+    at performWorkOnRoot (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:11827:37) The above error occurred in the <PlaceCard> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1728399ms] [ERROR] App crashed: ReferenceError: t is not defined
+    at PlaceCard (http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878702069:658:21)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13)
+    at performWorkOnRoot (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:11827:37) 
+    at PlaceCard (http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878702069:650:3)
+    at div (<anonymous>)
+    at section (<anonymous>)
+    at div (<anonymous>)
+    at DiscoverPage (http://localhost:5174/src/pages/DiscoverPage.tsx?t=1781878702069:68:21)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Outlet (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7491:26)
+    at main (<anonymous>)
+    at div (<anonymous>)
+    at NotificationProvider (http://localhost:5174/src/context/NotificationProvider.tsx?t=1781878702069:43:40)
+    at LocationProvider (http://localhost:5174/src/location/LocationProvider.tsx?t=1781878666720:35:36)
+    at CheckinQueueProvider (http://localhost:5174/src/context/CheckinQueue.tsx?t=1781878673982:80:40)
+    at AppLayout (http://localhost:5174/src/components/AppLayout.tsx?t=1781878702069:167:20)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:6626:26)
+    at Routes (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7561:3)
+    at AuthGateProvider (http://localhost:5174/src/context/AuthGate.tsx?t=1781878702069:26:36)
+    at App (http://localhost:5174/src/App.tsx?t=1781878702069:71:29)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878702069:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878702069:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878646323:12
+[ 1745084ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1746295ms] [WARNING] [2026-06-19T14:18:41.422Z]  @firebase/firestore: Firestore (12.14.0): WebChannelConnection RPC 'Listen' stream 0x5ebad845 transport errored. Name: undefined Message: undefined @ http://localhost:5174/node_modules/.vite/deps/chunk-AP7MJW5M.js?v=1a5ac9f3:890
+[ 1746401ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1748044ms] [WARNING] [2026-06-19T14:18:43.171Z]  @firebase/firestore: Firestore (12.14.0): WebChannelConnection RPC 'Listen' stream 0x2fca6015 transport errored. Name: undefined Message: undefined @ http://localhost:5174/node_modules/.vite/deps/chunk-AP7MJW5M.js?v=1a5ac9f3:890
+[ 1748161ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1807300ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1820529ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1854905ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useAuth must be used within <AuthProvider>
+    at useAuth (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878795431:226:19)
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx?t=1781878795431:37:29)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <RouteTracker> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 1854906ms] [ERROR] App crashed: Error: useAuth must be used within <AuthProvider>
+    at useAuth (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878795431:226:19)
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx?t=1781878795431:37:29)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx?t=1781878795431:36:20)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878829822:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878829822:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878795431:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878795431:12
+[ 1855025ms] [WARNING] [2026-06-19T14:20:30.152Z]  @firebase/firestore: Firestore (12.14.0): WebChannelConnection RPC 'Write' stream 0x3e7fe226 transport errored. Name: undefined Message: undefined @ http://localhost:5174/node_modules/.vite/deps/chunk-AP7MJW5M.js?v=1a5ac9f3:890
+[ 1855238ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1938585ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] Failed to reload /src/components/MyCheckpointsSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] Failed to reload /src/components/JourneysSection.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] Failed to reload /src/components/UserProfileSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] Failed to reload /src/components/CheckpointDetailSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938585ms] [ERROR] [vite] Failed to reload /src/context/NotificationProvider.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938586ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938586ms] [ERROR] [vite] Failed to reload /src/pages/ProfilePage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938598ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938598ms] [ERROR] [vite] Failed to reload /src/pages/DiscoverPage.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938599ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938599ms] [ERROR] [vite] Failed to reload /src/components/CreateCheckpointForm.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1938599ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/maps.ts?t=1781878913685:4:25 @ http://localhost:5174/@vite/client:881
+[ 1938599ms] [ERROR] [vite] Failed to reload /src/components/PlaceDetailSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1952596ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878927699:19:12
+    at Array.from (<anonymous>)
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878927699:13:35 @ http://localhost:5174/@vite/client:881
+[ 1952596ms] [ERROR] [vite] Failed to reload /src/components/AvatarCropSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1952596ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878927699:19:12
+    at Array.from (<anonymous>)
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878927699:13:35 @ http://localhost:5174/@vite/client:881
+[ 1952596ms] [ERROR] [vite] Failed to reload /src/components/EditProfileSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1958458ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878933532:19:12
+    at Array.from (<anonymous>)
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878933532:13:35 @ http://localhost:5174/@vite/client:881
+[ 1958458ms] [ERROR] [vite] Failed to reload /src/components/AvatarCropSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1958458ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878933532:19:12
+    at Array.from (<anonymous>)
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878933532:13:35 @ http://localhost:5174/@vite/client:881
+[ 1958458ms] [ERROR] [vite] Failed to reload /src/components/EditProfileSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1964012ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878939123:27:102 @ http://localhost:5174/@vite/client:881
+[ 1964012ms] [ERROR] [vite] Failed to reload /src/components/AvatarCropSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1964012ms] [ERROR] [vite] ReferenceError: t is not defined
+    at http://localhost:5174/src/lib/avatarFrames.ts?t=1781878939123:27:102 @ http://localhost:5174/@vite/client:881
+[ 1964012ms] [ERROR] [vite] Failed to reload /src/components/EditProfileSheet.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1988320ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 1988321ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 1989956ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 1998753ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2112738ms] [ERROR] %o
+
+%s
+
+%s
+ Error: useAuth must be used within <AuthProvider>
+    at useAuth (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878971564:226:19)
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx?t=1781878971564:37:29)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) The above error occurred in the <RouteTracker> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7000
+[ 2112739ms] [ERROR] App crashed: Error: useAuth must be used within <AuthProvider>
+    at useAuth (http://localhost:5174/src/auth/AuthContext.tsx?t=1781878971564:226:19)
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx?t=1781878971564:37:29)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:18509:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:5654:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:7475:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:8525:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:997:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12561:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12424:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:12408:13) 
+    at RouteTracker (http://localhost:5174/src/components/RouteTracker.tsx?t=1781878971564:36:20)
+    at UserProfileProvider (http://localhost:5174/src/context/UserProfileProvider.tsx?t=1781878971564:21:39)
+    at AuthProvider (http://localhost:5174/src/auth/AuthContext.tsx?t=1781879087686:25:32)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:7500:13)
+    at BrowserRouter (http://localhost:5174/node_modules/.vite/deps/react-router-dom.js?v=1a5ac9f3:10787:3)
+    at QueryClientProvider (http://localhost:5174/node_modules/.vite/deps/@tanstack_react-query.js?v=1a5ac9f3:3235:3)
+    at ErrorBoundary (http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878971564:7:8) @ http://localhost:5174/src/components/ErrorBoundary.tsx?t=1781878971564:12
+[ 2112972ms] [WARNING] [2026-06-19T14:24:48.099Z]  @firebase/firestore: Firestore (12.14.0): WebChannelConnection RPC 'Write' stream 0x78cfca19 transport errored. Name: undefined Message: undefined @ http://localhost:5174/node_modules/.vite/deps/chunk-AP7MJW5M.js?v=1a5ac9f3:890
+[ 2113934ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2131863ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 2131864ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 2133668ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2149067ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 2149068ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 2150647ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2152088ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 2152089ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 2153854ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2153881ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/users/me:0
+[ 2153881ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/users/me:0
+[ 2153915ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[ 2153915ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/places/popular?limit=10&lat=10.776&lng=106.7:0
+[ 2154924ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[ 2154930ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/places/popular?limit=10&lat=10.776&lng=106.7:0
+[ 2156930ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/places/nearby?lat=10.776&lng=106.7&limit=20&offset=0:0
+[ 2156936ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8081/places/popular?limit=10&lat=10.776&lng=106.7:0
+[ 2482198ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 2482775ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2483305ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 2483306ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 2484649ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
+[ 2486895ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:963
+[ 2486896ms] [ERROR] WebSocket connection to 'ws://localhost:5174/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/@vite/client:1034
+[ 2488303ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=1a5ac9f3:20102
