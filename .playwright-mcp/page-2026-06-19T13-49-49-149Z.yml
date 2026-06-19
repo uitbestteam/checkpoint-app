@@ -1,0 +1,556 @@
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - banner [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: Checkpoint
+        - generic [ref=e11]:
+          - img [ref=e12]
+          - generic [ref=e16]: Đang dùng vị trí mặc định TP.HCM
+      - button "Thông báo" [active] [ref=e17]:
+        - img [ref=e18]
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - textbox "Tìm địa điểm" [ref=e30]:
+              - /placeholder: Tìm địa điểm, quán cafe…
+          - button "Mở bộ lọc" [ref=e31] [cursor=pointer]:
+            - img [ref=e32]
+        - generic [ref=e36]:
+          - generic [ref=e38]:
+            - heading "Đang hot gần bạn" [level=2] [ref=e39]:
+              - img [ref=e40]
+              - text: Đang hot gần bạn
+            - paragraph [ref=e42]: Nhiều người vừa cắm cờ
+          - generic [ref=e43]:
+            - button "Hạnh Thông Hạnh Thông 4.0 4 6.1km" [ref=e44]:
+              - img "Hạnh Thông" [ref=e46]
+              - generic [ref=e47]:
+                - paragraph [ref=e48]: Hạnh Thông
+                - generic [ref=e49]:
+                  - generic [ref=e50]:
+                    - img [ref=e51]
+                    - text: "4.0"
+                  - generic [ref=e53]:
+                    - img [ref=e54]
+                    - text: "4"
+                  - generic [ref=e56]: 6.1km
+            - button "we dont care we dont care 4.7 4 7.1km" [ref=e57]:
+              - img "we dont care" [ref=e59]
+              - generic [ref=e60]:
+                - paragraph [ref=e61]: we dont care
+                - generic [ref=e62]:
+                  - generic [ref=e63]:
+                    - img [ref=e64]
+                    - text: "4.7"
+                  - generic [ref=e66]:
+                    - img [ref=e67]
+                    - text: "4"
+                  - generic [ref=e69]: 7.1km
+            - button "Ken House Ken House 4.3 3 16.4km" [ref=e70]:
+              - img "Ken House" [ref=e72]
+              - generic [ref=e73]:
+                - paragraph [ref=e74]: Ken House
+                - generic [ref=e75]:
+                  - generic [ref=e76]:
+                    - img [ref=e77]
+                    - text: "4.3"
+                  - generic [ref=e79]:
+                    - img [ref=e80]
+                    - text: "3"
+                  - generic [ref=e82]: 16.4km
+            - button "John house John house 5.0 2 2.3km" [ref=e83]:
+              - img "John house" [ref=e85]
+              - generic [ref=e86]:
+                - paragraph [ref=e87]: John house
+                - generic [ref=e88]:
+                  - generic [ref=e89]:
+                    - img [ref=e90]
+                    - text: "5.0"
+                  - generic [ref=e92]:
+                    - img [ref=e93]
+                    - text: "2"
+                  - generic [ref=e95]: 2.3km
+            - button "Phúc Long Phúc Long 4.0 2 1.2km" [ref=e96]:
+              - img "Phúc Long" [ref=e98]
+              - generic [ref=e99]:
+                - paragraph [ref=e100]: Phúc Long
+                - generic [ref=e101]:
+                  - generic [ref=e102]:
+                    - img [ref=e103]
+                    - text: "4.0"
+                  - generic [ref=e105]:
+                    - img [ref=e106]
+                    - text: "2"
+                  - generic [ref=e108]: 1.2km
+            - button "T1 T1 2 5.9km" [ref=e109]:
+              - img "T1" [ref=e111]
+              - generic [ref=e112]:
+                - paragraph [ref=e113]: T1
+                - generic [ref=e114]:
+                  - generic [ref=e115]:
+                    - img [ref=e116]
+                    - text: "2"
+                  - generic [ref=e118]: 5.9km
+            - button "Lều Lều 4.5 2 6.1km" [ref=e119]:
+              - img "Lều" [ref=e121]
+              - generic [ref=e122]:
+                - paragraph [ref=e123]: Lều
+                - generic [ref=e124]:
+                  - generic [ref=e125]:
+                    - img [ref=e126]
+                    - text: "4.5"
+                  - generic [ref=e128]:
+                    - img [ref=e129]
+                    - text: "2"
+                  - generic [ref=e131]: 6.1km
+            - button "Bánh mì chén Bánh mì chén 4.0 2 6.0km" [ref=e132]:
+              - img "Bánh mì chén" [ref=e134]
+              - generic [ref=e135]:
+                - paragraph [ref=e136]: Bánh mì chén
+                - generic [ref=e137]:
+                  - generic [ref=e138]:
+                    - img [ref=e139]
+                    - text: "4.0"
+                  - generic [ref=e141]:
+                    - img [ref=e142]
+                    - text: "2"
+                  - generic [ref=e144]: 6.0km
+            - button "Khánh Hội Khánh Hội 4.0 2 2.2km" [ref=e145]:
+              - img "Khánh Hội" [ref=e147]
+              - generic [ref=e148]:
+                - paragraph [ref=e149]: Khánh Hội
+                - generic [ref=e150]:
+                  - generic [ref=e151]:
+                    - img [ref=e152]
+                    - text: "4.0"
+                  - generic [ref=e154]:
+                    - img [ref=e155]
+                    - text: "2"
+                  - generic [ref=e157]: 2.2km
+            - button "Lumière Lumière 4.0 2 6.1km" [ref=e158]:
+              - img "Lumière" [ref=e160]
+              - generic [ref=e161]:
+                - paragraph [ref=e162]: Lumière
+                - generic [ref=e163]:
+                  - generic [ref=e164]:
+                    - img [ref=e165]
+                    - text: "4.0"
+                  - generic [ref=e167]:
+                    - img [ref=e168]
+                    - text: "2"
+                  - generic [ref=e170]: 6.1km
+        - generic [ref=e172]:
+          - heading "Địa điểm gần bạn" [level=2] [ref=e173]:
+            - img [ref=e174]
+            - text: Địa điểm gần bạn
+          - paragraph [ref=e177]: 20 địa điểm trong danh sách hiện tại
+        - generic [ref=e178]:
+          - button "Circle k metro Circle k metro Phường Bến Thành, Thành phố Hồ Chí Minh 4.0 1 1 572m Cắm cờ" [ref=e181]:
+            - img "Circle k metro" [ref=e183]
+            - generic [ref=e184]:
+              - generic [ref=e186]:
+                - paragraph [ref=e187]: Circle k metro
+                - paragraph [ref=e188]: Phường Bến Thành, Thành phố Hồ Chí Minh
+              - generic [ref=e189]:
+                - generic [ref=e190]:
+                  - img [ref=e191]
+                  - text: "4.0"
+                - generic [ref=e193]:
+                  - img [ref=e194]
+                  - text: "1"
+                - generic [ref=e196]:
+                  - img [ref=e197]
+                  - text: "1"
+                - generic [ref=e201]:
+                  - img [ref=e202]
+                  - text: 572m
+            - generic [ref=e206]: Cắm cờ
+          - button "Metro opera house Metro opera house Phường Bến Thành, Thành phố Hồ Chí Minh 4.0 1 1 617m Cắm cờ" [ref=e209]:
+            - img "Metro opera house" [ref=e211]
+            - generic [ref=e212]:
+              - generic [ref=e214]:
+                - paragraph [ref=e215]: Metro opera house
+                - paragraph [ref=e216]: Phường Bến Thành, Thành phố Hồ Chí Minh
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - img [ref=e219]
+                  - text: "4.0"
+                - generic [ref=e221]:
+                  - img [ref=e222]
+                  - text: "1"
+                - generic [ref=e224]:
+                  - img [ref=e225]
+                  - text: "1"
+                - generic [ref=e229]:
+                  - img [ref=e230]
+                  - text: 617m
+            - generic [ref=e234]: Cắm cờ
+          - button "Metro Bến Thành Metro Bến Thành Phường Bến Thành, Thành phố Hồ Chí Minh 4.0 1 1 640m Đã cắm" [ref=e237]:
+            - img "Metro Bến Thành" [ref=e239]
+            - generic [ref=e240]:
+              - generic [ref=e242]:
+                - paragraph [ref=e243]: Metro Bến Thành
+                - paragraph [ref=e244]: Phường Bến Thành, Thành phố Hồ Chí Minh
+              - generic [ref=e245]:
+                - generic [ref=e246]:
+                  - img [ref=e247]
+                  - text: "4.0"
+                - generic [ref=e249]:
+                  - img [ref=e250]
+                  - text: "1"
+                - generic [ref=e252]:
+                  - img [ref=e253]
+                  - text: "1"
+                - generic [ref=e257]:
+                  - img [ref=e258]
+                  - text: 640m
+            - generic [ref=e262]: Đã cắm
+          - button "Nhà Hàng The Daun Nhà Hàng The Daun Bến Thành, Khu phố 16, Thành phố Hồ Chí Minh 1 1 651m Cắm cờ" [ref=e265]:
+            - img "Nhà Hàng The Daun" [ref=e267]
+            - generic [ref=e268]:
+              - generic [ref=e270]:
+                - paragraph [ref=e271]: Nhà Hàng The Daun
+                - paragraph [ref=e272]: Bến Thành, Khu phố 16, Thành phố Hồ Chí Minh
+              - generic [ref=e273]:
+                - generic [ref=e274]:
+                  - img [ref=e275]
+                  - text: "1"
+                - generic [ref=e277]:
+                  - img [ref=e278]
+                  - text: "1"
+                - generic [ref=e282]:
+                  - img [ref=e283]
+                  - text: 651m
+            - generic [ref=e287]: Cắm cờ
+          - button "Phúc Long Phúc Long Xóm Chiếu, Thành phố Hồ Chí Minh 4.0 2 3 1.2km Đã cắm" [ref=e290]:
+            - img "Phúc Long" [ref=e292]
+            - generic [ref=e293]:
+              - generic [ref=e295]:
+                - paragraph [ref=e296]: Phúc Long
+                - paragraph [ref=e297]: Xóm Chiếu, Thành phố Hồ Chí Minh
+              - generic [ref=e298]:
+                - generic [ref=e299]:
+                  - img [ref=e300]
+                  - text: "4.0"
+                - generic [ref=e302]:
+                  - img [ref=e303]
+                  - text: "2"
+                - generic [ref=e305]:
+                  - img [ref=e306]
+                  - text: "3"
+                - generic [ref=e310]:
+                  - img [ref=e311]
+                  - text: 1.2km
+            - generic [ref=e315]: Đã cắm
+          - button "Nha Rong Port Historic Site Nha Rong Port Historic Site Xóm Chiếu, Thành phố Hồ Chí Minh 1 1 1.2km Đã cắm" [ref=e318]:
+            - img "Nha Rong Port Historic Site" [ref=e320]
+            - generic [ref=e321]:
+              - generic [ref=e323]:
+                - paragraph [ref=e324]: Nha Rong Port Historic Site
+                - paragraph [ref=e325]: Xóm Chiếu, Thành phố Hồ Chí Minh
+              - generic [ref=e326]:
+                - generic [ref=e327]:
+                  - img [ref=e328]
+                  - text: "1"
+                - generic [ref=e330]:
+                  - img [ref=e331]
+                  - text: "1"
+                - generic [ref=e335]:
+                  - img [ref=e336]
+                  - text: 1.2km
+            - generic [ref=e340]: Đã cắm
+          - button "NOIRE Cafe & Bistro The Mett - Metropole NOIRE Cafe & Bistro The Mett - Metropole An Khanh, Thu Duc, Ho Chi Minh City 1.0 1 2 1.5km Cắm cờ" [ref=e343]:
+            - img "NOIRE Cafe & Bistro The Mett - Metropole" [ref=e345]
+            - generic [ref=e346]:
+              - generic [ref=e348]:
+                - paragraph [ref=e349]: NOIRE Cafe & Bistro The Mett - Metropole
+                - paragraph [ref=e350]: An Khanh, Thu Duc, Ho Chi Minh City
+              - generic [ref=e351]:
+                - generic [ref=e352]:
+                  - img [ref=e353]
+                  - text: "1.0"
+                - generic [ref=e355]:
+                  - img [ref=e356]
+                  - text: "1"
+                - generic [ref=e358]:
+                  - img [ref=e359]
+                  - text: "2"
+                - generic [ref=e363]:
+                  - img [ref=e364]
+                  - text: 1.5km
+            - generic [ref=e368]: Cắm cờ
+          - button "Chiều ở cty Chiều ở cty Phường An Khánh, Thủ Đức, Thành phố Hồ Chí Minh 4.0 1 1 1.5km Cắm cờ" [ref=e371]:
+            - img "Chiều ở cty" [ref=e373]
+            - generic [ref=e374]:
+              - generic [ref=e376]:
+                - paragraph [ref=e377]: Chiều ở cty
+                - paragraph [ref=e378]: Phường An Khánh, Thủ Đức, Thành phố Hồ Chí Minh
+              - generic [ref=e379]:
+                - generic [ref=e380]:
+                  - img [ref=e381]
+                  - text: "4.0"
+                - generic [ref=e383]:
+                  - img [ref=e384]
+                  - text: "1"
+                - generic [ref=e386]:
+                  - img [ref=e387]
+                  - text: "1"
+                - generic [ref=e391]:
+                  - img [ref=e392]
+                  - text: 1.5km
+            - generic [ref=e396]: Cắm cờ
+          - button "Cafe go go Cafe go go Cà phê 2.0 1 4 1.7km Cắm cờ" [ref=e399]:
+            - img "Cafe go go" [ref=e401]
+            - generic [ref=e402]:
+              - generic [ref=e404]:
+                - paragraph [ref=e405]: Cafe go go
+                - paragraph [ref=e406]: Cà phê
+              - generic [ref=e407]:
+                - generic [ref=e408]:
+                  - img [ref=e409]
+                  - text: "2.0"
+                - generic [ref=e411]:
+                  - img [ref=e412]
+                  - text: "1"
+                - generic [ref=e414]:
+                  - img [ref=e415]
+                  - text: "4"
+                - generic [ref=e419]:
+                  - img [ref=e420]
+                  - text: 1.7km
+            - generic [ref=e424]: Cắm cờ
+          - button "ok good ok good Phường Xóm Chiếu, Thành phố Hồ Chí Minh 4.0 1 3 1.7km Cắm cờ" [ref=e427]:
+            - img "ok good" [ref=e429]
+            - generic [ref=e430]:
+              - generic [ref=e432]:
+                - paragraph [ref=e433]: ok good
+                - paragraph [ref=e434]: Phường Xóm Chiếu, Thành phố Hồ Chí Minh
+              - generic [ref=e435]:
+                - generic [ref=e436]:
+                  - img [ref=e437]
+                  - text: "4.0"
+                - generic [ref=e439]:
+                  - img [ref=e440]
+                  - text: "1"
+                - generic [ref=e442]:
+                  - img [ref=e443]
+                  - text: "3"
+                - generic [ref=e447]:
+                  - img [ref=e448]
+                  - text: 1.7km
+            - generic [ref=e452]: Cắm cờ
+    - navigation [ref=e454]:
+      - list [ref=e455]:
+        - listitem [ref=e456]:
+          - link "Bản đồ" [ref=e457] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e458]:
+              - img [ref=e459]
+              - generic [ref=e463]: Bản đồ
+        - listitem [ref=e464]:
+          - link "Khám phá" [ref=e465] [cursor=pointer]:
+            - /url: /discover
+            - generic [ref=e466]:
+              - img [ref=e467]
+              - generic [ref=e471]: Khám phá
+        - listitem [ref=e472]:
+          - link "Tạo mới" [ref=e473] [cursor=pointer]:
+            - /url: /create
+            - generic [ref=e474]:
+              - img [ref=e475]
+              - generic [ref=e477]: Tạo mới
+        - listitem [ref=e478]:
+          - link "Bảng XH" [ref=e479] [cursor=pointer]:
+            - /url: /leaderboard
+            - generic [ref=e480]:
+              - img [ref=e481]
+              - generic [ref=e486]: Bảng XH
+        - listitem [ref=e487]:
+          - link "Cá nhân" [ref=e488] [cursor=pointer]:
+            - /url: /profile
+            - generic [ref=e489]:
+              - img [ref=e490]
+              - generic [ref=e493]: Cá nhân
+  - generic [ref=e496]:
+    - generic [ref=e497]:
+      - heading "Thông báo" [level=2] [ref=e498]
+      - button "Đóng" [ref=e499]:
+        - img [ref=e500]
+    - generic [ref=e503]:
+      - 'button "Dang Bao Han vừa đăng check-in mới: Giờ Coffee 2 giờ" [ref=e504]':
+        - generic [ref=e506]:
+          - paragraph [ref=e507]: "Dang Bao Han vừa đăng check-in mới: Giờ Coffee"
+          - paragraph [ref=e508]: 2 giờ
+      - button "Dang Bao Han đã theo dõi bạn 7 giờ" [ref=e509]:
+        - generic [ref=e511]:
+          - paragraph [ref=e512]: Dang Bao Han đã theo dõi bạn
+          - paragraph [ref=e513]: 7 giờ
+      - button "danh98it_7dec3a đã theo dõi bạn 1 ngày" [ref=e514]:
+        - generic [ref=e516]: D
+        - generic [ref=e517]:
+          - paragraph [ref=e518]: danh98it_7dec3a đã theo dõi bạn
+          - paragraph [ref=e519]: 1 ngày
+      - 'button "danh98it_7dec3a vừa đăng check-in mới: John house 1 ngày" [ref=e520]':
+        - generic [ref=e522]: D
+        - generic [ref=e523]:
+          - paragraph [ref=e524]: "danh98it_7dec3a vừa đăng check-in mới: John house"
+          - paragraph [ref=e525]: 1 ngày
+      - 'button "danh98it_7dec3a vừa đăng check-in mới: John house 1 ngày" [ref=e526]':
+        - generic [ref=e528]: D
+        - generic [ref=e529]:
+          - paragraph [ref=e530]: "danh98it_7dec3a vừa đăng check-in mới: John house"
+          - paragraph [ref=e531]: 1 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: Nép coffee 2 ngày" [ref=e532]':
+        - generic [ref=e534]:
+          - paragraph [ref=e535]: "Dang Bao Han vừa đăng check-in mới: Nép coffee"
+          - paragraph [ref=e536]: 2 ngày
+      - button "traveler_6a1a9c đã bình luận về Gà nướng mắm nhĩ 2 ngày" [ref=e537]:
+        - generic [ref=e539]: T
+        - generic [ref=e540]:
+          - paragraph [ref=e541]: traveler_6a1a9c đã bình luận về Gà nướng mắm nhĩ
+          - paragraph [ref=e542]: 2 ngày
+      - button "traveler_f10292 đã bày tỏ cảm xúc về Phúc Long 3 ngày" [ref=e543]:
+        - generic [ref=e544]:
+          - generic [ref=e545]: T
+          - img [ref=e547]
+        - generic [ref=e549]:
+          - paragraph [ref=e550]: traveler_f10292 đã bày tỏ cảm xúc về Phúc Long
+          - paragraph [ref=e551]: 3 ngày
+      - button "traveler_f10292 đã bày tỏ cảm xúc về Phúc Long 3 ngày" [ref=e552]:
+        - generic [ref=e553]:
+          - generic [ref=e554]: T
+          - img [ref=e556]
+        - generic [ref=e558]:
+          - paragraph [ref=e559]: traveler_f10292 đã bày tỏ cảm xúc về Phúc Long
+          - paragraph [ref=e560]: 3 ngày
+      - button "traveler_f10292 đã bày tỏ cảm xúc về Phúc Long 3 ngày" [ref=e561]:
+        - generic [ref=e562]:
+          - generic [ref=e563]: T
+          - img [ref=e565]
+        - generic [ref=e567]:
+          - paragraph [ref=e568]: traveler_f10292 đã bày tỏ cảm xúc về Phúc Long
+          - paragraph [ref=e569]: 3 ngày
+      - button "traveler_f10292 đã bày tỏ cảm xúc về Phúc Long 3 ngày" [ref=e570]:
+        - generic [ref=e571]:
+          - generic [ref=e572]: T
+          - img [ref=e574]
+        - generic [ref=e576]:
+          - paragraph [ref=e577]: traveler_f10292 đã bày tỏ cảm xúc về Phúc Long
+          - paragraph [ref=e578]: 3 ngày
+      - button "traveler_f10292 đã bình luận về Phúc Long 3 ngày" [ref=e579]:
+        - generic [ref=e581]: T
+        - generic [ref=e582]:
+          - paragraph [ref=e583]: traveler_f10292 đã bình luận về Phúc Long
+          - paragraph [ref=e584]: 3 ngày
+      - button "Dang Bao Han đã bày tỏ cảm xúc về CAFECUB 4 ngày" [ref=e585]:
+        - img [ref=e588]
+        - generic [ref=e590]:
+          - paragraph [ref=e591]: Dang Bao Han đã bày tỏ cảm xúc về CAFECUB
+          - paragraph [ref=e592]: 4 ngày
+      - button "Dang Bao Han đã bình luận về CAFECUB 4 ngày" [ref=e593]:
+        - generic [ref=e595]:
+          - paragraph [ref=e596]: Dang Bao Han đã bình luận về CAFECUB
+          - paragraph [ref=e597]: 4 ngày
+      - button "Dang Bao Han đã bày tỏ cảm xúc về Nha Rong Port Historic Site 4 ngày" [ref=e598]:
+        - img [ref=e601]
+        - generic [ref=e604]:
+          - paragraph [ref=e605]: Dang Bao Han đã bày tỏ cảm xúc về Nha Rong Port Historic Site
+          - paragraph [ref=e606]: 4 ngày
+      - button "lhquan1998_1cf834 đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e607]:
+        - generic [ref=e608]:
+          - generic [ref=e609]: L
+          - img [ref=e611]
+        - generic [ref=e613]:
+          - paragraph [ref=e614]: lhquan1998_1cf834 đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e615]: 5 ngày
+      - 'button "danh98it_7dec3a vừa đăng check-in mới: Phú Thọ Hòa 5 ngày" [ref=e616]':
+        - generic [ref=e618]: D
+        - generic [ref=e619]:
+          - paragraph [ref=e620]: "danh98it_7dec3a vừa đăng check-in mới: Phú Thọ Hòa"
+          - paragraph [ref=e621]: 5 ngày
+      - button "traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e622]:
+        - generic [ref=e623]:
+          - generic [ref=e624]: T
+          - img [ref=e626]
+        - generic [ref=e629]:
+          - paragraph [ref=e630]: traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e631]: 5 ngày
+      - button "traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e632]:
+        - generic [ref=e633]:
+          - generic [ref=e634]: T
+          - img [ref=e636]
+        - generic [ref=e638]:
+          - paragraph [ref=e639]: traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e640]: 5 ngày
+      - button "traveler_7a280d đã bình luận về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e641]:
+        - generic [ref=e643]: T
+        - generic [ref=e644]:
+          - paragraph [ref=e645]: traveler_7a280d đã bình luận về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e646]: 5 ngày
+      - button "traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e647]:
+        - generic [ref=e648]:
+          - generic [ref=e649]: T
+          - img [ref=e651]
+        - generic [ref=e653]:
+          - paragraph [ref=e654]: traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e655]: 5 ngày
+      - button "traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e656]:
+        - generic [ref=e657]:
+          - generic [ref=e658]: T
+          - img [ref=e660]
+        - generic [ref=e662]:
+          - paragraph [ref=e663]: traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e664]: 5 ngày
+      - button "traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7 5 ngày" [ref=e665]:
+        - generic [ref=e666]:
+          - generic [ref=e667]: T
+          - img [ref=e669]
+        - generic [ref=e672]:
+          - paragraph [ref=e673]: traveler_7a280d đã bày tỏ cảm xúc về Trung Tâm Văn Hóa Quận 7
+          - paragraph [ref=e674]: 5 ngày
+      - 'button "danh98it_7dec3a vừa đăng check-in mới: Nhà Hàng The Daun 5 ngày" [ref=e675]':
+        - generic [ref=e677]: D
+        - generic [ref=e678]:
+          - paragraph [ref=e679]: "danh98it_7dec3a vừa đăng check-in mới: Nhà Hàng The Daun"
+          - paragraph [ref=e680]: 5 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: BHD Quang Trung 5 ngày" [ref=e681]':
+        - generic [ref=e683]:
+          - paragraph [ref=e684]: "Dang Bao Han vừa đăng check-in mới: BHD Quang Trung"
+          - paragraph [ref=e685]: 5 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: Lều 5 ngày" [ref=e686]':
+        - generic [ref=e688]:
+          - paragraph [ref=e689]: "Dang Bao Han vừa đăng check-in mới: Lều"
+          - paragraph [ref=e690]: 5 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: Xíu mại chén 5 ngày" [ref=e691]':
+        - generic [ref=e693]:
+          - paragraph [ref=e694]: "Dang Bao Han vừa đăng check-in mới: Xíu mại chén"
+          - paragraph [ref=e695]: 5 ngày
+      - 'button "Quang Hiền vừa đăng check-in mới: Quảng trường Vinh 5 ngày" [ref=e696]':
+        - generic [ref=e698]: Q
+        - generic [ref=e699]:
+          - paragraph [ref=e700]: "Quang Hiền vừa đăng check-in mới: Quảng trường Vinh"
+          - paragraph [ref=e701]: 5 ngày
+      - 'button "danh98it_7dec3a vừa đăng check-in mới: Vĩnh Hội 5 ngày" [ref=e702]':
+        - generic [ref=e704]: D
+        - generic [ref=e705]:
+          - paragraph [ref=e706]: "danh98it_7dec3a vừa đăng check-in mới: Vĩnh Hội"
+          - paragraph [ref=e707]: 5 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: Cube 6 ngày" [ref=e708]':
+        - generic [ref=e710]:
+          - paragraph [ref=e711]: "Dang Bao Han vừa đăng check-in mới: Cube"
+          - paragraph [ref=e712]: 6 ngày
+      - 'button "danh98it_7dec3a vừa đăng check-in mới: Khánh Hội 6 ngày" [ref=e713]':
+        - generic [ref=e715]: D
+        - generic [ref=e716]:
+          - paragraph [ref=e717]: "danh98it_7dec3a vừa đăng check-in mới: Khánh Hội"
+          - paragraph [ref=e718]: 6 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: Hạnh Thông 6 ngày" [ref=e719]':
+        - generic [ref=e721]:
+          - paragraph [ref=e722]: "Dang Bao Han vừa đăng check-in mới: Hạnh Thông"
+          - paragraph [ref=e723]: 6 ngày
+      - 'button "Dang Bao Han vừa đăng check-in mới: Hạnh Thông 6 ngày" [ref=e724]':
+        - generic [ref=e726]:
+          - paragraph [ref=e727]: "Dang Bao Han vừa đăng check-in mới: Hạnh Thông"
+          - paragraph [ref=e728]: 6 ngày
