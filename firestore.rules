@@ -28,13 +28,24 @@ service cloud.firestore {
       allow delete: if true;
     }
 
+    // Best-effort participant index for client-side comment notification fanout.
+    // The backend should own this later; for now rules only validate shape.
+    match /checkpoints/{checkpointId}/comment_participants/{userId} {
+      allow read: if true;
+
+      allow create, update: if request.resource.data.user_id is string
+                            && request.resource.data.user_id == userId;
+
+      allow delete: if false;
+    }
+
     // In-app notifications, written client-side at the action site (comment /
     // follow / reaction). No Firebase Auth → recipient/actor can't be verified;
     // reads are public and creates only shape-validated. Same tradeoff as comments.
     match /users/{uid}/notifications/{notifId} {
       allow read: if true;
 
-      allow create: if request.resource.data.type in ['comment', 'follow', 'unfollow', 'reaction']
+      allow create: if request.resource.data.type in ['comment', 'mention', 'follow', 'unfollow', 'reaction']
                     && request.resource.data.actor_id is string;
 
       allow update, delete: if false;
