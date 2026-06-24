@@ -60,8 +60,10 @@ service cloud.firestore {
                     && request.resource.data.members is list
                     && request.resource.data.created_by is string;
 
-      // Allow updating last_message (preview) and group metadata (name, avatar, members).
-      allow update: if request.resource.data.keys().hasAny(['last_message', 'name', 'avatar_url', 'members', 'member_names']);
+      // Allow any update — client-side enforced (same trade-off as comments).
+      // Room updates include: last_message preview, group metadata (name/avatar/members),
+      // and read timestamps (read.{userId}).
+      allow update: if true;
 
       allow delete: if false;
 
