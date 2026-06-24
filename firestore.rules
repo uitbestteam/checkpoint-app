@@ -40,15 +40,40 @@ service cloud.firestore {
     }
 
     // In-app notifications, written client-side at the action site (comment /
-    // follow / reaction). No Firebase Auth → recipient/actor can't be verified;
-    // reads are public and creates only shape-validated. Same tradeoff as comments.
+    // follow / reaction / chat). No Firebase Auth → recipient/actor can't be
+    // verified; reads are public and creates only shape-validated.
     match /users/{uid}/notifications/{notifId} {
       allow read: if true;
 
-      allow create: if request.resource.data.type in ['comment', 'mention', 'follow', 'unfollow', 'reaction']
+      allow create: if request.resource.data.type in ['comment', 'mention', 'follow', 'unfollow', 'reaction', 'chat_message']
                     && request.resource.data.actor_id is string;
 
       allow update, delete: if false;
+    }
+
+    // ── Chat rooms ──────────────────────────────────────────────────────
+
+    match /rooms/{roomId} {
+      allow read: if true;
+
+      allow create: if request.resource.data.type in ['dm', 'group']
+                    && request.resource.data.members is list
+                    && request.resource.data.created_by is string;
+
+      // Allow updating last_message (preview) and group metadata (name, avatar, members).
+      allow update: if request.resource.data.keys().hasAny(['last_message', 'name', 'avatar_url', 'members', 'member_names']);
+
+      allow delete: if false;
+
+      match /messages/{messageId} {
+        allow read: if true;
+
+        allow create: if request.resource.data.room_id == roomId
+                      && request.resource.data.sender_id is string
+                      && (request.resource.data.text is string || request.resource.data.image_url is string);
+
+        allow update, delete: if false;
+      }
     }
 
     // Everything else is closed by default.

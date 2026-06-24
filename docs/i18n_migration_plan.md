@@ -223,8 +223,8 @@ Dưới đây là khung sườn mẫu của file JSON dịch dựa trên các ch
     "detail": {
       "title": "Check-in Detail",
       "taken_at": "Taken at {{time}}",
-      "delete_confirm": "Delete this check-in?",
-      "delete_button": "Delete check-in"
+      "delete_confirm": "Delete?",
+      "delete_button": "Delete"
     }
   },
   "game": {
