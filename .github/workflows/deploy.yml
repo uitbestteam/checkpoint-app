@@ -18,14 +18,15 @@ jobs:
       run:
         shell: cmd
         working-directory: ./web # Chạy các lệnh NPM bên trong thư mục web
-
     steps:
-      - name: Checkout React App
+      - name: Checkout main repo
         uses: actions/checkout@v4
-        with:
-          repository: 'uitbestteam/checkpoint-app-reactjs'
-          ref: 'main'
-          path: web
+
+      - name: Clone React App
+        working-directory: .
+        run: |
+          if exist web rmdir /s /q web
+          git clone --depth 1 https://github.com/uitbestteam/checkpoint-app-reactjs.git web
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
