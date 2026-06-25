@@ -1,0 +1,14 @@
+name: Test Self-Hosted Runner
+
+on:
+  workflow_dispatch: # Dòng này để xuất hiện nút bấm chạy bằng tay cho bạn test
+
+jobs:
+  check-runner:
+    runs-on: self-hosted # Bắt buộc phải có dòng này để GitHub đẩy job về máy của bạn
+    steps:
+      - name: Kiểm tra kết nối
+        run: |
+          echo "======== KET NOI THANH CONG ========"
+          echo "Job dang chay truc tiep tren may local cua ban!"
+          hostname
