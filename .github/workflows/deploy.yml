@@ -14,10 +14,10 @@ jobs:
   build-and-test:
     runs-on: self-hosted
 
-    # Ép GitHub Actions dùng Command Prompt (cmd) của Windows để tránh lỗi bảo mật của PowerShell
     defaults:
       run:
         shell: cmd
+        working-directory: ./checkpoint-app
 
     steps:
       - name: Checkout source code
@@ -29,10 +29,7 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies
-        # Thay 'npm ci' bằng 'npm install' phòng trường hợp dự án của bạn thiếu file package-lock.json
         run: npm install
 
       - name: Build project
         run: npm run build
-
-      # Tạm thời ẩn bước Test đi để ưu tiên cho việc Build thật chạy thành công trước đã
