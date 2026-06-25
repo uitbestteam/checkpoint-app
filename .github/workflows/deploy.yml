@@ -16,8 +16,7 @@ jobs:
 
     defaults:
       run:
-        shell: cmd
-        working-directory: ./checkpoint-app
+        shell: cmd # Giữ nguyên cmd để không lo bị chặn bởi PowerShell Execution Policy
 
     steps:
       - name: Checkout source code
@@ -26,10 +25,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '24' # Chạy bản Node 24 mới nhất
 
       - name: Install dependencies
-        run: npm install
+        run: npm.cmd install # Thêm đuôi .cmd để Windows CMD gọi trực tiếp không qua trung gian
 
       - name: Build project
-        run: npm run build
+        run: npm.cmd run build
