@@ -16,19 +16,28 @@ jobs:
 
     defaults:
       run:
-        shell: cmd # Giữ nguyên cmd để không lo bị chặn bởi PowerShell Execution Policy
+        shell: cmd
+        working-directory: ./web # Chạy các lệnh NPM bên trong thư mục web
 
     steps:
-      - name: Checkout source code
+      - name: Checkout main repo
         uses: actions/checkout@v4
+
+      # NẾU 'web' là repo riêng, bạn cần pull nó về thư mục 'web' như sau:
+      - name: Checkout frontend code
+        uses: actions/checkout@v4
+        with:
+          repository: uitbestteam/checkpoint-web # Thay bằng repo chứa code frontend thật
+          path: web
+          # token: ${{ secrets.YOUR_GITHUB_TOKEN }} # Bật nếu repo frontend là private
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # Chạy bản Node 24 mới nhất
+          node-version: '22' # Sử dụng bản LTS ổn định
 
       - name: Install dependencies
-        run: npm.cmd install # Thêm đuôi .cmd để Windows CMD gọi trực tiếp không qua trung gian
+        run: npm install
 
       - name: Build project
-        run: npm.cmd run build
+        run: npm run build
