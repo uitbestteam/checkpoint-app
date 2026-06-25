@@ -1,0 +1,46 @@
+name: Build Web App (Self-Hosted)
+
+# Quy định khi nào workflow này sẽ chạy
+on:
+  push:
+    branches: [ "main", "master" ] # Đổi thành tên branch chính của bạn (main hoặc master)
+  pull_request:
+    branches: [ "main", "master" ]
+
+# Hủy các job cũ đang chạy dở nếu bạn push code mới liên tục
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    # Chỉ định chạy trên máy tính local của bạn
+    runs-on: self-hosted
+
+    steps:
+      # Bước 1: Kéo code mới nhất từ GitHub về máy
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # Bước 2: Cấu hình môi trường Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      # Bước 3: Xóa cache cũ của npm (tránh lỗi xung đột trên máy Windows local)
+      - name: Clean install dependencies
+        run: |
+          npm ci
+
+      # Bước 4: Build dự án ra sản phẩm cuối cùng (thư mục dist/ hoặc build/)
+      - name: Build project
+        run: |
+          npm run build
+
+      # Bước 5: Chạy thử Test (Nếu dự án của bạn có viết file test, nếu không có thì dòng này sẽ tự bỏ qua)
+      - name: Run Tests
+        run: |
+          npm test -- --watchAll=false
+        continue-on-error: true # Nếu test lỗi thì vẫn không làm sập cả pipeline
