@@ -45,10 +45,21 @@ service cloud.firestore {
     match /users/{uid}/notifications/{notifId} {
       allow read: if true;
 
-      allow create: if request.resource.data.type in ['comment', 'mention', 'follow', 'unfollow', 'reaction', 'chat_message']
+      allow create: if request.resource.data.type in ['comment', 'mention', 'follow', 'unfollow', 'reaction', 'checkpoint', 'chat_message']
                     && request.resource.data.actor_id is string;
 
       allow update, delete: if false;
+    }
+
+    // Best-effort chat presence. Without Firebase Auth this is shape-only; the
+    // client owns keeping its own row fresh while chat is open.
+    match /presence/{uid} {
+      allow read: if true;
+
+      allow create, update: if request.resource.data.online is bool
+                            && request.resource.data.updated_at is timestamp;
+
+      allow delete: if false;
     }
 
     // ── Chat rooms ──────────────────────────────────────────────────────
