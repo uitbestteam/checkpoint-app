@@ -24,9 +24,11 @@ jobs:
 
       - name: Clone React App
         working-directory: .
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           if exist web rmdir /s /q web
-          git clone --depth 1 https://github.com/uitbestteam/checkpoint-app-reactjs.git web
+          git clone --depth 1 https://%GH_PAT%@github.com/uitbestteam/checkpoint-app-reactjs.git web
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
